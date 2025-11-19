@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avena | Agenda</title>
+    <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Link css -->
+     <link rel="stylesheet" href="/css/style.css">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+     <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+SAS:wght@100..400&family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="background-primary p-0 d-flex flex-column">
+
+    <header class="background-color shadow-sm flex-shrink-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand d-flex align-items-center me-auto " href="#">
+                    <img src="./img/logo-avena-removebg-preview.png" alt="logo-avena" width="40" height="40" class="me-2">
+                    <span class="fs-4 poppins-bold text-name">Avena</span>
+                </a>
+
+                <button class="navbar-toggler border-0 p-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto nunita-bold text-center text-lg-start  mt-3 mt-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-name" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-name active" href="#">Equipes</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-name" href="#">Configurações</a>
+                        </li>
+                         <li class="nav-item d-lg-none mt-3 border-top pt-3">
+                            <div class="d-flex align-items-center justify-content-center nunita-bold text-name">
+                                <i class="bi bi-person-circle fs-4 me-2"></i>
+                                <span>Dr. Júlia Holanda</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-none d-lg-flex align-items-center nunita-bold text-name ms-lg-3">
+                    <span class="me-2">Dr. Júlia Holanda</span>
+                    <i class="bi bi-person-circle fs-3"></i>
+               </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="d-flex justify-content-between align-items-center p-5 flex-shrink-0">
+        <h1 class="nunita-bold mb-0 " id="nomePlano">Plano semanal para João S.</h1>
+    </div>
+    <main class="container-fluid px-4 flex-grow-1 main-desktop-fixed">
+        <div class="row g-4 h-lg-100">
+            <div class="col-lg-9 col-md-8 h-lg-100 d-flex flex-column">
+                <div class="dias-scroll flex-grow-1 scroll-desktop pb-3">
+                    <div class="dias-flex">
+                        
+                        <div class="dia-card p-3">
+                            <div class="mb-3">
+                                <h5 class="nunita-bold mb-0">Segunda</h5>
+                                <span class="mx-1 rea badge bg-primary-subtle text-primary-emphasis">10/Nov</span>
+                            </div>
+
+                            <ul class="mb-3 d-flex flex-column gap-1 list-unstyled" id="dia-segunda"></ul>
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-sm btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#modalAdicionarAtividade" data-day-target-id="dia-segunda">
+                                    <i class="bi bi-plus"></i> Adicionar
+                                </button>
+                            </div>
+                        </div> 
+
+                        <div class="dia-card p-3">
+                                <div class="mb-3">
+                                    <h5 class="nunita-bold mb-0">Terça</h5>
+                                    <span class="mx-1 badge bg-primary-subtle text-primary-emphasis">11/Nov</span>
+                                </div>
+
+                                <ul class="mb-3 d-flex flex-column gap-1 list-unstyled" id="dia-terca">
+                                </ul>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary w-100"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalAdicionarAtividade"
+                                    data-day-target-id="dia-terca">
+                                        <i class="bi bi-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                        </div>  
+
+                         <div class="dia-card p-3">
+                                <div class="mb-3">
+                                    <h5 class="nunita-bold mb-0">Quarta</h5>
+                                    <span class="mx-1 badge bg-primary-subtle text-primary-emphasis">12/Nov</span>
+                                </div>
+
+                                <ul class="mb-3 d-flex flex-column gap-1 list-unstyled" id="dia-quarta">
+                                </ul>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary w-100"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalAdicionarAtividade"
+                                    data-day-target-id="dia-quarta">
+                                        <i class="bi bi-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                        </div> 
+                        
+                        <div class="dia-card p-3">
+                                <div class="mb-3">
+                                    <h5 class="nunita-bold mb-0">Quinta</h5>
+                                    <span class="mx-1 badge bg-primary-subtle text-primary-emphasis">13/Nov</span>
+                                </div>
+
+                                <ul class="mb-3 gap-1 flex-column d-flex list-unstyled" id="dia-quinta">
+                                </ul>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary w-100"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalAdicionarAtividade"
+                                    data-day-target-id="dia-quinta">
+                                        <i class="bi bi-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                        </div> 
+
+                         <div class="dia-card p-3">
+                                <div class="mb-3">
+                                    <h5 class="nunita-bold mb-0">Sexta</h5>
+                                    <span class="mx-1 badge bg-primary-subtle text-primary-emphasis">14/Nov</span>
+                                </div>
+
+                                <ul class="mb-3 d-flex flex-column gap-1 list-unstyled" id="dia-sexta">
+                                </ul>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary w-100"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalAdicionarAtividade"
+                                    data-day-target-id="dia-sexta">
+                                        <i class="bi bi-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                        </div> 
+
+                         <div class="dia-card p-3">
+                                <div class="mb-3">
+                                    <h5 class="nunita-bold mb-0">Sábado</h5>
+                                    <span class="mx- badge bg-primary-subtle text-primary-emphasis">15/Nov</span>
+                                </div>
+
+                                <ul class="mb-3 d-flex flex-column gap-1 list-unstyled" id="dia-sabado">
+                                </ul>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary w-100"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalAdicionarAtividade"
+                                    data-day-target-id="dia-sabado">
+                                        <i class="bi bi-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                        </div> 
+
+                        <div class="dia-card p-3">
+                                <div class="mb-3">
+                                    <h5 class="nunita-bold mb-0">Domingo</h5>
+                                    <span class="mx-1 badge bg-primary-subtle text-primary-emphasis">16/Nov</span>
+                                </div>
+
+                                <ul class="mb-3 gap-1 flex-column d-flex list-unstyled" id="dia-domingo">
+                                </ul>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary w-100"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalAdicionarAtividade"
+                                    data-day-target-id="dia-domingo">
+                                        <i class="bi bi-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 h-lg-100 d-flex flex column">
+                <div class="biblioteca-scroll scroll-desktop pe-2 bg-white p-3 rounded-4 shadow flex-column flex-grow-1 overflow-hidden h-lg-100 text-center">
+                    <i class="bi bi-bell-fill"></i>
+                    <span class="nunita-bold mb-3 flex-shrink-0">NOTIFICAÇÕES</span>
+
+                    <div class="mt-4 mx-5 background-color px-0  rounded-5">
+                        <p class="mx-3">ONTEM</p>
+                    </div>
+
+                    <div class="mb-4 background-primary rounded-4 p-3">
+                        <p>Jogo da Memória realizado com sucesso!</p>
+                    </div>
+
+                    <div class="background-primary rounded-4 p-3">
+                        <p>Sons antes de Dormir não <br>realizado!</p>
+                    </div>
+
+                    <div class="mt-4 mx-5 background-color px-0  rounded-5">
+                        <p class="mx-3">HOJE</p>
+                    </div>
+
+                    <div class="background-primary rounded-4 p-3">
+                        <p>Próximo Exercício: respiração Guiada às 20:00</p>
+                    </div>
+
+                    <div class="btn-perfil rounded-4" style="background-color: #4c9386;">
+                        <a href="#" class="text-decoration-none ">
+                            <div class="mt-5  mx-4 d-flex p-0 ">
+                                <p class="mx-3 mt-2 fs-4 text-white nunita-bold">Ativar Alarmes</p>
+                                <i class="bi fs-2 bi-bell-fill" style="color: #a8dac2;"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+
+    <div class="modal fade" id="modalAdicionarAtividade" tabindex="-1" aria-labelledby="modalAdicionarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable"> <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAdicionarLabel">Adicionar Atividade</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="corpoModalBiblioteca">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNovaAtividade" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Criar Nova Atividade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form  id="formNovaAtividade">
+                        <div class="mb-3">
+                            <label for="inputNomeAtividade" class="form-label">Nome da Atividade</label>
+                            <input type="text" class="form-control" id="inputNomeAtividade" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="inputDescAtividade">Descrição: (Ex: Cognitivo • 15 min)</label>
+                            <input type="text" class="form-control" id="inputDescAtividade">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnSalvarAtividade">Salvar Atividade</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

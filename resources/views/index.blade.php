@@ -18,9 +18,9 @@
             <ul>
                 <li><a class="a" href="#inicio">Início</a></li>
                 <li><a class="a" href="#sobre">Sobre</a></li>
-                <li><a class="a" href="#recursos">Recursos</a></li>
                 <li><a class="a" href="#profissionais">Para profissionais</a></li>
                 <li><a class="a" href="#pacientes">Para pacientes</a></li>
+                <li><a class="a" href="#feedback">FeedBack</a></li>
                 <li><a class="a" href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -34,9 +34,8 @@
         <div class="header-info">
             <h1>Crie, acompanhe e fortaleça rotinas terapêuticas personalizadas.</h1>
             <p>O cuidado continua — dentro e fora do consultório.</p>
-            <a class="btn" href="/register" >Cadastre-se</a>
+            <a class="btn" href="/cadastro/passo-1" >Cadastre-se</a>
         </div>
-        
     </header>
 
 

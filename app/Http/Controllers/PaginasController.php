@@ -23,10 +23,6 @@ class PaginasController extends Controller
         return view('password');
     }
 
-    public function register() {
-        return view('register');
-    }
-
     public function schedule() {
         return view('schedule');
     }

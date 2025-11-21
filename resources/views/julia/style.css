@@ -1,0 +1,1325 @@
+
+body{
+    --altura-painel-scroll: calc(100vh - 200px);
+}
+
+.background-primary {
+    background-image: linear-gradient(
+        to right,
+        #7fa5b2,
+        #a1d1c1
+    );
+    flex-grow: 1;
+}
+
+.button-color{
+    background-color: #4c9386;
+    color: white;
+}
+
+.button-gradient {
+    background-image: linear-gradient(
+        to right,
+        #99d1e4,
+        #b9e8d8
+    );
+}
+
+.poppins-bold{
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nunita-bold{
+    font-family: "nunito", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.background-color{
+    background-color: #e8e8e8;
+}
+
+.background-select {
+    background-color: #e9f2f6;
+}
+
+.text-name {
+    color: #102542;
+}
+
+.arrow-color{
+    color: #377292;
+}
+
+.form{
+  border: none; /* Remove a borda padrão do Bootstrap */
+  border-radius: 0; /* Remove as bordas arredondadas */
+  border-bottom: 2px solid #ced4da; /* Adiciona apenas a linha inferior */
+  padding-left: 0; /* Remove o padding padrão para alinhar à esquerda */
+}
+
+/* Remove o brilho azul (box-shadow) ao focar no input */
+.form-control:focus {
+  box-shadow: none;
+  border-color: #495057; /* Muda a cor da linha inferior ao focar */
+}
+
+.text-welcome{
+    color: #1b3558;
+}
+
+.text-secundary{
+    color: #848484;
+}
+
+.btn-perfil {
+    transition: all 0.2s ease-in-out
+}
+
+.btn-perfil:hover{
+    border-color: #102542 !important;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    transform: translateY(-3px);
+}
+
+.footer-link {
+    font-size: 14px;
+    color: var(--bs-secondary-color);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.cop{
+    color: var(--bs-secondary-color);
+    font-size: 14px;
+}
+
+.footer-link:hover{
+    color: var(--bs-dark);
+}
+
+.biblioteca-scroll{
+    height: var(--altura-painel-scroll);
+    overflow-y: auto;
+}
+
+.atividade-card{ 
+    cursor: pointer;
+}
+
+.dia-card{
+    min-width: 250px;
+    height: 43rem;
+    background-color: #e8e8e8;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dias-flex{
+    display: flex;
+    gap: 1rem;
+    min-width: min-content;
+}
+
+.dias-scroll{
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.nome-paciente { 
+    color: #2c7265;
+    font-weight: 700;
+}
+
+.row.g-4 > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-white.shadow,
+.dias-scroll,
+.dias-flex {
+  height: 100%;
+}
+
+.navbar-nav .nav-link{
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::after{
+    content: '';
+    position: absolute;
+
+    background-color: #0d6efd;
+    height: 2px;
+
+    bottom: 5px;
+
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #0d6efd;
+}
+
+.navbar-nav .nav-link:hover::after{
+    width: 70%;
+}
+
+.navbar-nav .nav-link.active::after{
+    width: 70%;
+}
+
+.login-card-custom{
+    border-radius: 100px 100px 100px 100px;
+    overflow: hidden;
+    max-width: 500px;
+    width: 100%;
+    height: 600px;
+}
+
+.login-image-container{
+    position: relative;
+
+    z-index: 1;
+}
+
+.drag-over-active{
+    transform: sclae(1.1);
+    box-shadow: 0 0 15px rgba(0,123,255,0.7);
+    opacity: 1 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.login-image-container::before{
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    width: 70%;
+    height: 100%;
+
+    background-image: url(/img/logo-avena-removebg-preview.png);
+
+    opacity: 0.1;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 992px) { /* Breakpoint 'lg' do Bootstrap */
+    html, body {
+        height: 100%;
+        overflow: hidden; /* Impede rolagem dupla no desktop */
+    }
+    .main-desktop-fixed {
+        height: calc(100vh - 76px - 106px) !important; /* Ajuste fino da altura: 100vh - header - título */
+        overflow: hidden;
+    }
+    .h-lg-100 {
+        height: 100% !important;
+     }
+    .scroll-desktop {
+        overflow-y: auto !important;
+     }
+}
+ @media (max-width: 991.98px) {
+    .main-desktop-fixed {
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .scroll-desktop {
+        overflow-y: visible !important;
+         height: auto !important;
+     }
+    .col-lg-3 {
+         margin-bottom: 1.5rem;
+    }
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+/* TELABASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #7fa5b2, #a1d1c1);
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: #eef0f3;
+    padding: 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #d4d6d8;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1c2a44;
+    font-family: Verdana, sans-serif !important;
+    text-transform: none !important;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1c2a44;
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+.menu a.active {
+    border-bottom: 2px solid #1c2a44;
+}
+
+.divider {
+    width: 2px;
+    height: 25px;
+    background: #c2c5c9;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1c2a44;
+    font-size: 16px;
+}
+
+.perfil img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*jointeam*/
+
+.retangulo {
+    position: relative;
+    z-index: 2;
+    top: 120px;       /* posição do retângulo na página */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 600px;
+    border: 2px solid #1b3558;
+    background-color: rgba(255, 255, 255, 0.57); /* transparente */
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+
+    padding-top: 30px;          /* distância do topo do retângulo */
+    text-align: center;          /* centraliza horizontal */
+    display: flex;
+    flex-direction: column;      
+    align-items: center;         /* centraliza horizontal */
+}
+
+.retangulo h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 50px;
+    color: #2f415a;
+    margin: 0;
+}
+
+.retangulo p {
+    font-size: 20px;
+    color: #102542;
+    text-align: center;
+    margin-top: 70px; /* distância do h1 */
+}
+.input-box input {
+    width: 500px;
+    height: 70px;
+    border: 2px solid #1b3558;
+    border-radius: 13px;
+    padding: 10px 15px;
+    font-size: 18px;
+    outline: none;
+}
+
+.input-box {
+    margin-top: 50px; /* distância do p */
+}
+
+.btn-ingressar {
+    background-color: #2d3e56;
+    color: #fff;
+    border: none;
+    border-radius: 51px;
+    width: 25%;
+    padding: 12px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 50px; /* distancia da caixa de texto */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* centraliza dentro do retangulo */
+}
+
+.btn-ingressar:hover {
+    opacity: 0.9;
+}
+
+/*logo*/
+
+.logo-avena {
+    position: absolute;
+    top: 53%;          
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 790px;     /* ajusta o tamanho */
+    opacity: 0.20;    /* transparência */
+    z-index: 1;       /* atrás */
+}
+
+
+.titulo-equipes {
+    color: #102542;
+    font-size: 30px;
+    font-family: Verdana, sans-serif;
+
+    position: relative;   /* permite mover sem afetar outros */
+    top: 20px;            /* desce apenas o h1 */
+    margin-left: 40px;    /* mantém o deslocamento da esquerda */
+}
+
+.pesquisa-equipes {
+    display: block;        /* vira bloco pra permitir margin auto */
+    margin: 0 auto;        /* centraliza SOZINHA */
+    position: relative;
+    top: -15px;      /* distância do h1 */
+    
+    width: 500px;
+    height: 40px;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: 1px solid #2f415a;
+    background-color: rgba(255, 255, 255, 0.57); /* transparente */
+    border-radius: 8px;
+    outline: none;
+}
+
+/*botão de ingressar em nova equipe*/
+
+.btn-ingressar {
+    position: absolute;      /* fixa no canto da tela */
+    top: 35px;               /* distância do topo */
+    right: 20px;             /* distância da direita */
+    
+    background-color: #4c9386;
+    color: #ffffff;
+    border: none;
+    border-radius: 51px;     /* arredondamento dos cantos */
+    padding: 6px 2px;      /* tamanho do botão */
+    width: 220px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+}
+
+.btn-ingressar:hover {
+    background-color: #3b6f6a; /* opcional: muda cor ao passar o mouse */
+}
+
+.linha-separadora {
+    width: 100%;               /* largura da linha */
+    height: 3px;              /* espessura */
+    background-color: #2f415a; /* cor da linha */
+    margin: 0.5px auto 0 auto; /* espaço acima e centraliza horizontalmente */
+    border: none;             /* remove bordas padrão do <hr> */
+}
+
+.nova-caixa {
+    position: relative;
+    top: 40px;  /* distância da linha separadora */
+    left: 0;    /* posicionada à esquerda da tela */
+    margin-left: 40px;
+
+    width: 300px;   /* largura da caixa */
+    height: 160px;  /* altura da caixa */
+    
+    border: 2px solid #1b3558;
+    background-color: rgba(255, 255, 255, 0.57); /* transparente */
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* conteúdo começa do topo */
+    align-items: flex-start;     /* conteúdo alinhado à esquerda */
+}
+
+.nova-caixa p {
+    color: #102542;               /* cor do texto */
+    font-family: Verdana, sans-serif;
+    font-size: 18px;              /* ajusta o tamanho que quiser */
+    
+    position: relative;           /* permite mover sem afetar outros elementos */
+    top: 30px;                   /* distância do topo da caixa, ajusta para baixo */
+    left: 60px;                   /* distância da esquerda da caixa, ajusta pro lado */
+    
+    text-align: center;           /* centraliza o conteúdo do texto dentro da largura dele */
+    width: calc(100% - 40px);     /* opcional: deixa o texto ocupar quase toda a largura da caixa */
+}
+
+.nova-caixa .linha-conteudo {
+    display: flex;          /* alinha os filhos em linha */
+    align-items: center;    /* alinha verticalmente quadrado e texto */
+    gap: 15px;              /* espaço entre quadrado e texto */
+}
+
+.container-quadrado {
+    position: relative; /* permite mexer no quadrado sem afetar o P */
+}
+
+/* agora você pode mover só o quadrado dentro do container */
+.mini-quadrado {
+    position: absolute;  /* dentro do container */
+    top: 1px;            /* ajusta pra baixo */
+    left: 0px;           /* ajusta pra direita */
+    /* resto do CSS permanece igual */
+    width: 80px;
+    height: 65px;
+    background-color: #377292;
+    color: #ffffff;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/*plano-paciente*/
+
+.titulo-plano {
+    font-family: Verdana, sans-serif;
+    font-size: 40px;
+    color: #2c7265;      /* cor padrão do texto */
+    text-align: left;     /* alinha à esquerda */
+    margin-top: 20px;     /* distância do topo da página */
+    margin-left: 20px;    /* distância da esquerda da página */
+}
+
+/* cores específicas com spans */
+.titulo-plano span.preto {
+    color: black;
+}
+
+.titulo-plano span.verde {
+    color: #2c7265;
+}
+
+/* Container que mantém todos os retângulos lado a lado */
+.container-semana {
+    display: flex;
+    gap: 15px;            /* espaço entre retângulos */
+    margin: 30px 20px;    /* distância do topo e das laterais */
+}
+
+/* Estilo compartilhado para os 5 primeiros retângulos */
+.dia-semana {
+    background-color: rgba(255,255,255,0.57);
+    border: 0px solid #1b3558;
+    border-radius: 13px;
+    width: 280px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+/* Retângulo independente */
+.notificações {
+    background-color: rgba(255,255,255,0.57);
+    border: 0px solid #1b3558;
+    border-radius: 50px;
+    width: 350px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    color: #102542;
+    text-align: center;
+
+    /* aqui você pode ajustar a posição individual do último sem mexer nos outros */
+    margin-left: 20px; /* aumenta a separação do grupo */
+
+}
+
+/* Estilo dos dias da semana */
+.dia-semana {
+    background-color: rgba(255,255,255,0.57);
+    border-radius: 13px;
+    width: 280px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    margin-right: 15px; /* distância entre os dias */
+}
+
+/* Container interno dos mini-retângulos */
+.dia-semana .mini-retangulos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 90%;
+    align-items: center;
+}
+
+/* Mini-retângulos padrão (gradiente) */
+.dia-semana .mini-retangulo {
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #9ac0cd, #97bdb0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+/*imagens atividades*/
+.mini-retangulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.mini-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 6px; /* opcional */
+}
+
+.notif-1 {
+    margin: 30px auto 0 auto;
+    width: 25%;
+    height: 30px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #9ac0cd, #97bdb0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.notif-2 {
+    margin: 40px auto 0 auto;
+    width: 300px;
+    height: 80px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #9ac0cd, #97bdb0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.notif-3 {
+    margin: 40px auto 0 auto;
+    width: 300px;
+    height: 80px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #9ac0cd, #97bdb0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.notif-4 {
+    margin: 40px auto 0 auto;
+    width: 25%;
+    height: 30px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #9ac0cd, #97bdb0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.notif-5 {
+    margin: 40px auto 0 auto;
+    width: 300px;
+    height: 80px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #9ac0cd, #97bdb0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.notif-6 {
+    margin: 70px auto 0 auto;
+    width: 90%;
+    height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #4c9386, #4c9386);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.retangulo1 {
+    position: relative;
+    z-index: 2;
+    top: 120px;       /* posição do retângulo na página */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 600px;
+    border: 2px solid #1b3558;
+    background-color: rgba(255, 255, 255, 0.57); /* transparente */
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+
+    padding-top: 30px;          /* distância do topo do retângulo */
+    text-align: center;          /* centraliza horizontal */
+    display: flex;
+    flex-direction: column;      
+    align-items: center;         /* centraliza horizontal */
+}
+
+.retangulo1 h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 50px;
+    color: #2f415a;
+    margin: 0;
+    margin-top: 110px;
+}
+
+.btn-ingressar1 {
+    background-color: #2d3e56;
+    color: #fff;
+    border: none;
+    border-radius: 51px;
+    width: 30%;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 100px; /* distancia da caixa de texto */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* centraliza dentro do retangulo */
+}
+
+.btn-ingressar1:hover {
+    opacity: 0.9;
+}
+
+/* Container da logo + texto */
+.logo-texto-container {
+    display: flex;              /* deixa horizontal */
+    align-items: center;        /* centraliza verticalmente */
+    justify-content: center;    /* centraliza horizontalmente */
+    gap: -5px;                  /* espaço entre logo e texto */
+    margin-bottom: 20px;        /* distancia do H1 */
+}
+
+/* Logo */
+.logo-retangulo {
+    width: 60px;
+    height: auto;
+    margin-top: -15px;
+}
+
+/* Texto AVENA */
+.nome-avena-retangulo {
+    font-family: Verdana, sans-serif;
+    font-size: 32px;
+    color: #102542;
+    font-weight: bold;
+}
+
+/*titulo equipe*/
+
+.retangulo2 {
+    position: relative;
+    z-index: 2;
+    top: 120px;       /* posição do retângulo na página */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 600px;
+    border: 2px solid #1b3558;
+    background-color: rgba(255, 255, 255, 0.57); /* transparente */
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+
+    padding-top: 30px;          /* distância do topo do retângulo */
+    text-align: center;          /* centraliza horizontal */
+    display: flex;
+    flex-direction: column;      
+    align-items: center; 
+}
+
+.logo-texto-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* espaço entre logo e texto */
+    margin-bottom: 20px;
+}
+
+.logo-retangulo2 {
+    width: 50px;
+    height: auto;
+}
+
+.nome-avena-retangulo2 {
+    font-family: Verdana, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #102542;
+}
+
+.input-retangulo2 {
+    width: 500px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* borda visível */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.5); /* branco 50% transparente */
+    color: #102542; /* cor do texto digitado */
+}
+
+.input-retangulo2::placeholder {
+    color: #555; /* placeholder mais escuro pra ficar visível */
+    opacity: 1;
+}
+
+.botoes-retangulo2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.btn-cancelar2, .btn-criar2 {
+    padding: 20px 125px;
+    border-radius: 100px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 80%;
+    
+}
+
+.btn-cancelar2 {
+    background-color: #ccc;
+    color: #333;
+    margin-left: 40px;  /* aumenta a distância da borda esquerda do retângulo */
+    margin-top: 100px;   /* distância do conteúdo acima */
+}
+
+.btn-criar2 {
+    background-color: #2d3e56;
+    color: #fff;
+    margin-left: 150px;  /* aumenta a distância da borda esquerda do retângulo */
+    margin-top: 100px;   /* distância do conteúdo acima */
+}
+
+.retangulo2 p {
+    font-family: Verdana, sans-serif; /* muda a fonte */
+    font-size: 20px;                  /* ajusta o tamanho */
+    color: #102542;                   /* cor do texto */
+    margin: 15px 0 5px 0;             /* distância em cima e embaixo */
+    text-align: left;                 /* alinhamento do texto dentro do retângulo */
+}
+
+/*copiar codigo*/
+
+.codigo-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 20px auto;
+    font-family: Verdana, sans-serif;
+}
+
+.codigo-input {
+    padding: 10px;
+    border: 2px solid #2d3e56;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* branco semi-transparente */
+}
+
+.retangulo3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza tudo horizontalmente */
+    justify-content: flex-start; /* começa do topo */
+    width: 1000px;
+    height: 600px;
+    margin: 120px auto 0 auto; /* centraliza o retângulo na página */
+    position: relative;
+    border: 2px solid #1b3558;
+    background-color: rgba(255, 255, 255, 0.57);
+    border-radius: 13px;
+    padding-top: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.logo-texto-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-retangulo {
+    width: 50px;
+    height: auto;
+}
+
+.nome-avena-retangulo {
+    font-family: Verdana, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #102542;
+}
+
+.codigo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; /* distância do botão */
+}
+
+.codigo-container label {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #102542;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.codigo-input {
+    width: 500px; /* ajusta a largura do input */
+    max-width: 90%;
+    padding: 15px;
+    border: 2px solid #102542;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin-bottom: 10px; /* distância do texto explicativo */
+}
+
+.codigo-explicacao {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    color: #102542;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botão */
+.botoes-retangulo2 {
+    display: flex;
+    justify-content: center; /* centraliza o botão */
+    width: 100%;
+}
+
+.btnconcluido3 {
+    padding: 15px 80px; /* distância interna do botão */
+    border-radius: 50px;
+    border: none;
+    background-color: #102542;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 55px; /* distância do input / retângulo */
+}
+
+/*PÁGINA EQUIPE PROFISSIONAL*/
+
+.btn-criarequipe {
+    position: absolute;      /* fixa no canto da tela */
+    top: 80px;               /* distância do topo */
+    right: 20px;             /* distância da direita */
+    
+    background-color: #4c9386;
+    color: #ffffff;
+    border: none;
+    border-radius: 51px;     /* arredondamento dos cantos */
+    padding: 6px 2px;      /* tamanho do botão */
+    width: 220px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+}
+
+.btn-criarequipe:hover {
+    background-color: #3b6f6a; /* opcional: muda cor ao passar o mouse */
+}
+
+.linha-separadora {
+    width: 100%;               /* largura da linha */
+    height: 3px;              /* espessura */
+    background-color: #2f415a; /* cor da linha */
+    margin: 0.5px auto 0 auto; /* espaço acima e centraliza horizontalmente */
+    border: none;             /* remove bordas padrão do <hr> */
+}
+
+.nova-caixa {
+    position: relative;
+    top: 40px;  /* distância da linha separadora */
+    left: 0;    /* posicionada à esquerda da tela */
+    margin-left: 40px;
+
+    width: 300px;   /* largura da caixa */
+    height: 160px;  /* altura da caixa */
+    
+    border: 2px solid #1b3558;
+    background-color: rgba(255, 255, 255, 0.57); /* transparente */
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* conteúdo começa do topo */
+    align-items: flex-start;     /* conteúdo alinhado à esquerda */
+}
+
+.nova-caixa p {
+    color: #102542;               /* cor do texto */
+    font-family: Verdana, sans-serif;
+    font-size: 18px;              /* ajusta o tamanho que quiser */
+    
+    position: relative;           /* permite mover sem afetar outros elementos */
+    top: 30px;                   /* distância do topo da caixa, ajusta para baixo */
+    left: 60px;                   /* distância da esquerda da caixa, ajusta pro lado */
+    
+    text-align: center;           /* centraliza o conteúdo do texto dentro da largura dele */
+    width: calc(100% - 40px);     /* opcional: deixa o texto ocupar quase toda a largura da caixa */
+}
+
+.nova-caixa .linha-conteudo {
+    display: flex;          /* alinha os filhos em linha */
+    align-items: center;    /* alinha verticalmente quadrado e texto */
+    gap: 15px;              /* espaço entre quadrado e texto */
+}
+
+.container-quadrado {
+    position: relative; /* permite mexer no quadrado sem afetar o P */
+}
+
+/* agora você pode mover só o quadrado dentro do container */
+.mini-quadrado {
+    position: absolute;  /* dentro do container */
+    top: 1px;            /* ajusta pra baixo */
+    left: 0px;           /* ajusta pra direita */
+    /* resto do CSS permanece igual */
+    width: 80px;
+    height: 65px;
+    background-color: #377292;
+    color: #ffffff;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/*sala de atividades*/
+
+/* LISTA DE USUÁRIOS */
+.lista-usuarios h2 {
+    margin-left: 50px;
+    font-family: Verdana, sans-serif;
+    color: #2f415a;
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.usuario-item {
+    margin-left: 80px;
+    background: white;
+    border-radius: 50px;
+
+    /* padding SEM ERRO */
+    padding: 30px 20px;
+
+    /* largura controlada */
+    width: 400px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+    font-family: Verdana, sans-serif;
+    color: #102542;
+}
+
+.usuario-item span {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    color: #102542;
+}
+
+/* GRID DE PACIENTES */
+.usuarios-scroll {
+    height: 80vh;
+    overflow-y: auto;
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 40px;
+
+    justify-content: center;
+    grid-auto-rows: min-content; 
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* NOTIFICAÇÕES — CONTAINER */
+.notificacoes-container {
+    margin-left: 100px;
+    width: 35%;
+    background: #f4f8f8;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 70px;
+
+    font-family: Verdana, sans-serif;
+    color: #102542;
+}
+
+.notif-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.notificacoes-scroll {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+/* TITULOS DE DATA */
+.notif-data {
+    background: linear-gradient(to right, #b4d9e6, #c1e0d5);
+    border-radius: 20px;
+    width: fit-content;
+    padding: 5px 15px;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+/* CARTÕES */
+.notif-card {
+    background: linear-gradient(to right, #b1d5e0, #b0d8ca);
+    padding: 18px 30px;     /* Aumentei para não ficar apertado */
+    border-radius: 15px;
+    width: 400px; 
+    margin: 0 auto 30px;    /* <-- ISSO CENTRALIZA */
+    font-family: Verdana, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 17px;
+}
+
+.hora {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* CONTAINER PRINCIPAL */
+.sala-container {
+    display: flex;
+    padding: 70px;
+    gap: 40px;
+    background: linear-gradient(to bottom right, #a3d3d7, #8bbbc0);
+    height: calc(100vh - 80px);
+}
+
+/*PÁGINA BASE NDE CONFIGURAÇÕES */
+
+body.layout-config {
+    background: linear-gradient(
+        to right,
+        #9ac0cd 0%,
+        #9ac0cd 30%,
+        #b8d3d8 30%,
+        #b8d3d8 100%
+    );
+    height: 100vh;
+    margin: 0;
+}
+
+.config-header {
+    padding: 30px 40px;
+}
+
+.config-header h1 {
+    font-family: Verdana, sans-serif;
+    color: #102542;
+    font-size: 32px;
+    margin: 0;
+}
+
+.config-header hr {
+    width: 100vw;
+    margin-left: calc(50% - 50vw); /* força encostar na esquerda da tela */
+    margin-top: 30px;      /* distância do topo → aumente se quiser mais */
+    border: none;
+    border-top: 3px solid #2f415a;
+}
+
+
+body.base-config main {
+    padding: 0;
+}
+
+.pesquisa-config {
+    display: block;
+    width: 500px;
+    height: 30px;
+    padding: 30px 50px;
+
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+
+    border: 1px solid #2f415a;
+    background-color: rgba(255, 255, 255, 0.57);
+    border-radius: 8px;
+    outline: none;
+
+    margin-top: 20px;      /* distância abaixo da linha */
+    margin-left: 30px;     /* ← AFASTA DA ESQUERDA */
+}
+
+.config-topicos {
+    margin-left: 30px;              /* mesmo alinhamento da caixa */
+    margin-top: 25px;               /* espaço abaixo da pesquisa */
+    font-family: Verdana, sans-serif;
+    color: #102542;
+}
+
+.config-topicos p {
+    font-size: 18px;
+    margin-bottom: 12px;            /* espaço entre os itens */
+    cursor: pointer;                /* dá sensação de item clicável */
+}

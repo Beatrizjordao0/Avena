@@ -38,7 +38,7 @@
                 </form>
             </div>
             <div class="etapa-atual">
-                @yield('etapa')/5
+                @yield('etapa')/3
             </div>
         </div>
 </body>

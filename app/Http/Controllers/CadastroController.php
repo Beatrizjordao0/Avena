@@ -43,14 +43,6 @@ class CadastroController extends Controller
                 session(['cadastro.senhaConfirm' => $senhaConfirm]);
 
                 return redirect()->route('cadastro.cadastro-4');
-
-            case 4:
-                
-                return redirect()->route('cadastro.cadastro-5');
-            
-            case 5:
-
-                return redirect()->route('cadastro.cadastro-5');
         }
     }
 }

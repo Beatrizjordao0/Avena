@@ -10,7 +10,7 @@ class Terapeuta extends Model
 {
     protected $table = 'terapeuta';
     protected $primaryKey = 'id_terapeuta';
-    protected $fillable = ['user_id','file_doc_prof','file_rg'];
+    protected $fillable = ['user_id','file_doc_prof','file_rg','cpf',];
 
     public function user(): BelongsTo
     {

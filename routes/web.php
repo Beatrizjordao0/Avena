@@ -4,6 +4,35 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\CadastroController;
 
+Route::post('/cadastro/salvar-etapa', [CadastroController::class, 'salvarEtapa'])
+    ->name('cadastro.salvarEtapa');
+
+Route::get('/cadastro', function () {
+    return view('cadastro.cadastro-1');
+})->name('cadastro.cadastro-1');
+
+Route::get('/cadastro/passo-2', function () {
+    return view('cadastro.cadastro-2');
+})->name('cadastro.cadastro-2');
+
+Route::get('/cadastro/passo-3', function () {
+    return view('cadastro.cadastro-3');
+})->name('cadastro.cadastro-3');
+
+Route::get('/cadastro/passo-4', function () {
+    return view('cadastro.cadastro-4'); // tela de concluir
+})->name('cadastro.cadastro-4');
+
+Route::get('/cadastro/passo-5', function () {
+    return view('cadastro.cadastro-5'); // cadastro concluído
+})->name('cadastro.cadastro-5');
+
+Route::get('/cadastro/reiniciar', function () {
+    session()->forget('cadastro');
+    return redirect()->route('cadastro.cadastro-1');
+})->name('cadastro.reiniciar');
+
+
 Route::get("/", [PaginasController::class, 'index']);
 
 Route::get("/login", [PaginasController::class, 'login']);
@@ -20,23 +49,3 @@ Route::get('/schedule', [PaginasController::class, 'schedule']);
 
 Route::post('/cadastro/salvar-etapa', [CadastroController::class, 'salvarEtapa'])
     ->name('cadastro.salvarEtapa');
-
-Route::get('/cadastro/passo-1', function () {
-    return view('cadastro.cadastro-1');
-})->name('cadastro.cadastro-1');
-
-Route::get('/cadastro/passo-2', function () {
-    return view('cadastro.cadastro-2');
-})->name('cadastro.cadastro-2');
-
-Route::get('/cadastro/passo-3', function () {
-    return view('cadastro.cadastro-3');
-})->name('cadastro.cadastro-3');
-
-Route::get('/cadastro/passo-4', function () {
-    return view('cadastro.cadastro-4');
-})->name('cadastro.cadastro-4');
-
-Route::get('/cadastro/passo-5', function () {
-    return view('cadastro.cadastro-5');
-})->name('cadastro.cadastro-5');

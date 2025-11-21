@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class CadastroController extends Controller
 {
@@ -14,35 +15,89 @@ class CadastroController extends Controller
         switch ($etapa) {
 
             case 1:
-                $nome = $request->input("nome");
-                $sobrenome = $request->input("sobrenome");
-                $cpf = $request->input("cpf");
-                $data_nascimento = $request->input("data_nascimento");
+                // Etapa 1: nome, sobrenome, data de nascimento
+                $request->validate([
+                    'name' => 'required|string|max:100',
+                    'sobrenome' => 'required|string|max:100',
+                    'data_nascimento' => 'required|date',
+                ], [
+                    'name.required' => 'O campo nome é obrigatório.',
+                    'sobrenome.required' => 'O campo sobrenome é obrigatório.',
+                    'data_nascimento.required' => 'O campo data de nascimento é obrigatório.',
+                ]);
 
-                session(['cadastro.nome' => $nome]);
-                session(['cadastro.sobrenome' => $sobrenome]);
-                session(['cadastro.cpf' => $cpf]);
-                session(['cadastro.data_nascimento' => $data_nascimento]);
+                session([
+                    'cadastro.name' => $request->input("name"),
+                    'cadastro.sobrenome' => $request->input("sobrenome"),
+                    'cadastro.data_nascimento' => $request->input("data_nascimento"),
+                ]);
 
                 return redirect()->route('cadastro.cadastro-2');
 
             case 2:
-                $email = $request->input("email");
-                $emailConfirm = $request->input("emailConfirm");
+                // Etapa 2: email
+                $request->validate([
+                    'email' => 'required|email|max:255|unique:users,email',
+                    'emailConfirm' => 'required|email|max:255',
+                ], [
+                    'email.required' => 'O campo email é obrigatório.',
+                    'email.email' => 'O campo email deve ser um endereço de email válido.',
+                    'email.max' => 'O campo email não pode ter mais de 255 caracteres.',
+                    'email.unique' => 'Este email já está cadastrado.',
+                    'emailConfirm.required' => 'O campo de confirmação de email é obrigatório.',
+                    'emailConfirm.email' => 'O campo de confirmação de email deve ser um endereço de email válido.',
+                    'emailConfirm.max' => 'O campo de confirmação de email não pode ter mais de 255 caracteres.',
+                ]);
 
-                session(['cadastro.email' => $email]);
-                session(['cadastro.emailConfirm' => $emailConfirm]);
-        
+                // Verifica se email e emailConfirm coincidem
+                if ($request->input('email') !== $request->input('emailConfirm')) {
+                    return back()->withErrors(['emailConfirm' => 'Os emails não coincidem.'])->withInput();
+                }
+
+                session([
+                    'cadastro.email' => $request->input("email"),
+                ]);
+
                 return redirect()->route('cadastro.cadastro-3');
 
             case 3:
-                $senha = $request->input("senha");
-                $senhaConfirm = $request->input("senhaConfirm");
+                // Etapa 3: senha
+                $request->validate([
+                    'senha' => 'required|string|min:6',
+                    'senhaConfirm' => 'required|string|min:6',
+                ], [
+                    'senha.required' => 'O campo senha é obrigatório.',
+                    'senha.min' => 'A senha deve conter no mínimo 6 caracteres.',
+                    'senhaConfirm.required' => 'O campo de confirmação de senha é obrigatório.',
+                    'senhaConfirm.min' => 'A senha de confirmação deve conter no mínimo 6 caracteres.',
+                ]);
 
-                session(['cadastro.senha' => $senha]);
-                session(['cadastro.senhaConfirm' => $senhaConfirm]);
+                // Verifica se senha e senhaConfirm coincidem
+                if ($request->input('senha') !== $request->input('senhaConfirm')) {
+                    return back()->withErrors(['senhaConfirm' => 'As senhas não coincidem.'])->withInput();
+                }
+
+                session([
+                    'cadastro.senha' => $request->input('senha'),
+                ]);
 
                 return redirect()->route('cadastro.cadastro-4');
+
+            case 4:
+                // Etapa 4: concluir cadastro
+                $user = User::create([
+                    'name' => session('cadastro.name'),
+                    'sobrenome' => session('cadastro.sobrenome'),
+                    'data_nascimento' => session('cadastro.data_nascimento'),
+                    'email' => session('cadastro.email'),
+                    'password' => Hash::make(session('cadastro.senha')),
+                    'tipo_conta' => 'P', // padrão paciente
+                ]);
+
+                // Limpa a session temporária
+                session()->forget('cadastro');
+
+                return redirect()->route('cadastro.cadastro-5');
         }
     }
 }

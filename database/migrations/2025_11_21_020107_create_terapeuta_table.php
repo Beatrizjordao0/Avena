@@ -12,6 +12,7 @@ class CreateTerapeutaTable extends Migration
             $table->id('id_terapeuta'); // increments
             $table->foreignId('user_id')->unique()->constrained('users')->onDelete('cascade'); 
             // unique porque um usuário pode ser um terapeuta uma vez (especialização)
+            $table->integer('cpf')->nullable()->unique(); // cpf
             $table->string('file_doc_prof')->nullable();
             $table->string('file_rg')->nullable();
             $table->timestamps(); // create_time/update_time equivalentes

@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id(); // id
             $table->string('name'); // nome
             $table->string('sobrenome'); // sobrenome
-            $table->integer('cpf')->nullable()->unique(); // cpf
             $table->date('data_nascimento'); // data de nascimento
             $table->string('email')->unique();
             $table->string('password'); // senha

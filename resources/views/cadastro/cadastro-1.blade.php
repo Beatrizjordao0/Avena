@@ -4,15 +4,12 @@
 
 @section('form-content')
     <label>Nome:</label>
-    <input type="text" name="nome" placeholder="Gabriela">
+    <input type="text" name="name" placeholder="Gabriela" value="{{ old('name', session('cadastro.name')) }}">
 
     <label>Sobrenome:</label>
-    <input type="text" name="sobrenome" placeholder="Silva">
+    <input type="text" name="sobrenome" placeholder="Silva" value="{{ old('sobrenome', session('cadastro.sobrenome')) }}">
 
-    <label>CPF:</label>
-    <input type="text" name="cpf" placeholder="000.000.000-00">
 
     <label>Data de Nascimento:</label>
-    <input type="date" name="data_nascimento" placeholder="00/00/0000">
-
+    <input type="date" name="data_nascimento" value="{{ old('data_nascimento', session('cadastro.data_nascimento')) }}">
 @endsection

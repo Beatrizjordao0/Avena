@@ -11,7 +11,14 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->trustProxies(
+            '*',
+            \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR
+            | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST
+            | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT
+            | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO
+            | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PREFIX
+        );
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

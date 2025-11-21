@@ -12,15 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->id(); // id
+            $table->string('name'); // nome
+            $table->string('sobrenome'); // sobrenome
+            $table->integer('cpf')->nullable()->unique(); // cpf
+            $table->date('data_nascimento'); // data de nascimento
             $table->string('email')->unique();
+            $table->string('password'); // senha
+            $table->string('file_foto_perfil')->nullable(); // arquivo de perfil
+            $table->enum('tipo_conta', ['P','T'])->default('P'); // tipo conta
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamps(); // create_time e update_time
         });
 
+        // outras tabelas padrão
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');

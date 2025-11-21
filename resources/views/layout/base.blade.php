@@ -6,6 +6,8 @@
     <title>@yield('title', 'Avena')</title>
 
     <link rel="stylesheet" href="/css/style.css">
+
+    @stack('styles')
 </head>
 
 <body>
@@ -14,7 +16,7 @@
     <header class="navbar">
         <div class="left-nav">
             <div class="logo">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                <img src="/img/logo-avena-removebg-preview.png" alt="Logo" style="height:50px;">  
                 <span>AVENA</span>
             </div>
         </div>
@@ -22,14 +24,17 @@
         <nav class="menu">
             <a href="#">Início</a>
             <span class="divider"></span>
-            <a href="#" class="active">Equipes</a>
+            <a href="#">Equipes</a>
             <span class="divider"></span>
             <a href="#">Configurações</a>
         </nav>
 
+
+
+
         <div class="perfil">
-            <span>Dr. Júlia Evelyn</span>
-            <img src="{{ asset('images/perfil.png') }}" alt="Foto">
+            <span>Dra. Júlia Evelyn</span>
+            <img src="/img/julia-profissional.png" alt="Foto" style="height:50px;">
         </div>
     </header>
 

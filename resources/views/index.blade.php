@@ -44,7 +44,7 @@
                 <p>rotinas terapêuticas personalizadas.</p>
             </div>
             </div>
-            <a class="btn" href="/cadastro/passo-1" >Cadastre-se</a>
+            <a class="btn" href="/cadastro" >Cadastre-se</a>
         </div>
     </header>
 

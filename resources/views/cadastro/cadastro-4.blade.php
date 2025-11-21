@@ -7,7 +7,11 @@
 
     <ul>
         <li><strong>Nome:</strong> {{ session('cadastro.name') }} {{ session('cadastro.sobrenome') }}</li>
-        <li><strong>Data de Nascimento:</strong> {{ session('cadastro.data_nascimento') }}</li>
+        <li>
+            <p><strong>Data de Nascimento:</strong> 
+                {{ date('d/m/Y', strtotime(session('cadastro.data_nascimento'))) }}
+            </p>
+        </li>
         <li><strong>Email:</strong> {{ session('cadastro.email') }}</li>
     </ul>
 

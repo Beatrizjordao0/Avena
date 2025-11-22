@@ -1,8 +1,350 @@
-.error-message {
-    color: blue;
-    font-size: 0.9rem;
-    margin-top: 4px;
-    margin-bottom: 8px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(45deg, #7fa5b2, #88c8af);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    flex-direction: row;
+    align-items: stretch;
+    min-width: 100vh;
+
+
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
 }
 
 
+
+body::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.poppins-bold {
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nunita-bold {
+    font-family: "nunito", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-name {
+    color: #102542;
+}
+
+.arrow-color {
+    color: #377292;
+}
+
+.formform-heading{
+    font-size: 14px;
+    margin-top: 54px;
+    margin-bottom: 39px;
+}
+
+.formform-heading h1{
+    color: #102542;
+}
+
+.formform-heading p{
+    color: #848484;
+    font-size: 10px;
+    text-align: start;
+    margin-left: 7px;
+}
+
+.form-container{
+    margin-top: -34px;
+}
+
+.left-side-container {
+    background-color: #e0e8ee;
+    padding: 42px;
+    border-radius: 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 450px;
+    width: 80%;
+    margin-top: 80px;
+    margin-left: 120px;
+    position: relative;
+    height: 520px;
+}
+
+.logo {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.logo img{
+    height: 30px;
+    margin-right: 5px;
+}
+
+.top-form-help-and-back{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    max-width: 80%;
+    position: absolute;
+    top: 20px;
+}
+
+.top-form-help-and-back a {
+    color: #848484;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.top-form-help-and-back .fa-arrow-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #555;
+    font-size: 1rem;
+}
+
+.form-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+
+
+.form-heading p { /* Para o "Segundo passo! Preencha dados para contato" */
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+
+
+form input[type="email"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+form input[type="email"]:focus {
+    border-color: #3490dc;
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(52, 144, 220, 0.2);
+}
+
+.btn-next {
+    margin-top: 40px;
+    padding: 12px 25px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+    background: linear-gradient(45deg, #7fa5b2, #88c8af);
+    box-shadow: 0 4px 10px rgba(137, 196, 220, 0.4);
+}
+
+.btn-next:hover {
+    opacity: 0.95;
+    box-shadow: 0 6px 15px rgba(137, 196, 220, 0.6);
+}
+
+.btn-next .fa-arrow-right { /* Ícone dentro do botão */
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-perfil {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-perfil:hover {
+    border-color: #102542 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.etapa-atual {
+    position: absolute;
+    bottom: 50px; /* Ajuste a posição para o rodapé */
+    color: #aaa;
+    font-size: 0.9em;
+    right: 22px;
+}
+
+.footer-links {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #555; /* Cor cinza escura */
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:nth-child(2){
+    color: white;
+}
+
+.form-column{
+    flex: 1;
+}
+
+.form-column input:not([type="hidden"]){
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-column label{
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.form-row input[type="text"],
+.form-row input[type="date"],
+.form-row input[type="email"],
+.form-row input[type="password"] {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    padding: 12px 15px; /* Aumenta o padding interno para um toque maior */
+    margin-bottom: 20px; /* Espaçamento abaixo do campo */
+    font-size: 1rem;
+    line-height: 1.5; /* Altura da linha para melhor leitura */
+    font-family: var(--font-primary); /* Garante que a fonte do corpo seja usada */
+
+    color: var(--color-text-dark, #333); /* Cor do texto */
+    background-color: #f9f9f9; /* Fundo levemente acinzentado */
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas (suave) */
+
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para o efeito de foco */
+}
+
+.form-row input:focus {
+    border-color: var(--color-primary, #5cb85c); /* Mudar a borda para a cor primária */
+    box-shadow: 0 0 0 3px rgba(92, 184, 92, 0.2); /* Adiciona um brilho suave (anel) */
+    outline: none; /* Remove o outline padrão do navegador */
+    background-color: #ffffff; /* Fundo branco no foco */
+}
+
+.form-row input::placeholder {
+    color: #999999;
+    font-weight: 400;
+} 
+
+.right-side-container{
+    top: 34px;
+    left: 30px;
+    height: 85vh;
+    width: 79%;
+    position: relative;
+
+    background-image: url('../img/logo-avena-removebg-preview.png'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    position: relative;
+}
+
+.right-side-image::after {
+    content: ""; /* Essencial para pseudo-elementos */
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    height: 85vh;
+    width: 79%;
+
+    background-color: #ffffff; /* Cor branca para "lavar" a imagem */
+
+    opacity: 1; /* Ajuste este valor (0.0 a 1.0). 0.3 significa 30% de opacidade */
+    z-index: 1; 
+}
+
+.background-content{
+    text-align: center;
+    color: #102542;
+    padding: 30px;
+
+    z-index: 2;
+    border-radius: 10px;
+    max-width: 80%;
+    
+}
+
+.background-content h1{
+    font-size: 29px;
+}
+
+.background-content p{
+    font-size: 13px;
+}

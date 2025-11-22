@@ -108,20 +108,12 @@ Route::middleware(['auth'])->group(function () {
 
 // AGENDA
 
-Route::get('/agenda/{id}', [AgendaController::class, 'show'])->name('agenda.show');
-
-
+// Route::get('/agenda/{id}', [AgendaController::class, 'show'])->name('agenda.show');
 
 
 // ==============================
 // OUTRAS ROTAS
 // ==============================
-Route::get('/desativada', [PaginasController::class, 'desativada']);
-Route::get('/email', [PaginasController::class, 'email']);
-Route::get('/password', [PaginasController::class, 'password']);
-Route::get('/register', [PaginasController::class, 'register']);
-Route::get('/schedule', [PaginasController::class, 'schedule']);
-
 Route::get('/jointeam', [PaginasController::class, 'jointeam']);
 
 Route::get('/equipes', [PaginasController::class, 'equipes'])->name('equipes');

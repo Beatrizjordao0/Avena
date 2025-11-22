@@ -50,18 +50,19 @@
 
         <hr class="linha-config">
 
+            <!-- Opções de contas -->
         <div class="contas-opcoesinfo">
             <p class="linha1info">Nome de usuário</p>
-            <p class="info1-">Júlia evelyn</p>
+            <p class="info1-">{{ $user->name }} {{ $user->sobrenome }}</p>
 
             <p class="linha2info">E-mail</p>
-            <p class="info2-">Exemplo@email.com</p>
+            <p class="info2-">{{ $user->email }}</p>
 
             <p class="linha3info">Data de nascimento</p>
-            <p class="info3-">00/00/0000</p>
+            <p class="info3-">{{ $user->data_nascimento }}</p>
 
             <p class="linha4info">Alterar sua senha</p>
-            <p class="info4-">Altere sua senha a qualquer momento.</p>
+            a. <a href="{{ route('alterar.senha') }}" class="info4-">Clique aqui</a>
         </div>
 
         <!-- Caixinha de pesquisa aqui -->

@@ -156,7 +156,7 @@ public function storeUpgrade(Request $request)
         return view('equipe.show', compact('grupo', 'user'));
     }
 
-    // Exibe o código do grupo
+    // Exibrue o código do gpo
     public function mostrarCodigo($codigo)
     {
         $grupo = GruposTerapia::where('cod_gp', $codigo)->firstOrFail();

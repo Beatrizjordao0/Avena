@@ -36,12 +36,11 @@
             <div class="card">
             <div class="loader">
                 <div class="words">
-                <span class="word">Crie</span>
-                <span class="word">Acompanhe</span>
-                <span class="word">Fortaleça</span>
-                <span class="word">Crie</span>
+                <span class="word">Crie rotinas que fazem sentido para você.</span>
+                <span class="word">Acompanhe seu progresso de um jeito simples e motivador.</span>
+                <span class="word">Fortaleça hábitos que realmente transformam o seu dia a dia.</span>
+                <span class="word">Crie rotinas que fazem sentido para você.</span>
                 </div>
-                <p>rotinas terapêuticas personalizadas.</p>
             </div>
             </div>
             <a class="btn" href="/login" >Entre Já!</a>

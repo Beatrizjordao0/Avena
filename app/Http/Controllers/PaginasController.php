@@ -2,25 +2,16 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class PaginasController extends Controller
 {
 
      public function index() {
         return view('index');
-    }
-
-    public function email() {
-        return view('email');
-    }
-
-    public function password() {
-        return view('password');
-    }
-
-    public function schedule() {
-        return view('schedule');
     }
 
     public function jointeam() {
@@ -60,7 +51,12 @@ class PaginasController extends Controller
     }
 
     public function informacoesconta() {
-        return view('informacoesconta');
+
+        $user = Auth::user();
+
+        return view('informacoesconta', [
+            'user' => $user
+        ]);
     }
 
     public function privacidade() {

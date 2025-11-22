@@ -42,15 +42,18 @@
 
         <div class="config-header">
             <h1>Configurações</h1>
-            <h2 class="titulo-contas">Contas</h2>
+            <h2 class="titulo-contas">Privacidade e segurança</h2>
         </div>
 
         <hr class="linha-config">
 
         <div class="contas-opcoes">
-            <p class="linha1">Informações da Conta</p>
-            <p class="linha2">Mudar para conta profissional</p>
-            <p class="linha3">Exclua sua conta</p>
+            <p class="linha1-priv">Saiba mais sobre privacidade na Avena</p>
+
+            <p class="info1-priv">Central de privacidade</p>
+            <p class="info2-priv">Política de privacidade</p>
+            <p class="info3-priv">Fale conosco</p>
+
         </div>
 
         <!-- Caixinha de pesquisa aqui -->

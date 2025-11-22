@@ -49,3 +49,27 @@ Route::get('/schedule', [PaginasController::class, 'schedule']);
 
 Route::post('/cadastro/salvar-etapa', [CadastroController::class, 'salvarEtapa'])
     ->name('cadastro.salvarEtapa');
+
+Route::get('/jointeam', [PaginasController::class, 'jointeam']);
+
+Route::get('/equipes', [PaginasController::class, 'equipes']);
+
+Route::get('/planopaciente', [PaginasController::class, 'planopaciente']);
+
+Route::get('/criarequipe', [PaginasController::class, 'criarequipe']);
+
+Route::get('/tituloequipe', [PaginasController::class, 'tituloequipe']);
+
+Route::get('/equipecriada', [PaginasController::class, 'equipecriada']);
+
+Route::get('/equipesneuro', [PaginasController::class, 'equipesneuro']);
+
+Route::get('/salaatividades', [PaginasController::class, 'salaatividades']);
+
+Route::get('/contas', [PaginasController::class, 'contas']);
+
+Route::get('/informacoesconta', [PaginasController::class, 'informacoesconta']);
+
+Route::get('/privacidade', [PaginasController::class, 'privacidade']);
+
+Route::get('/acessibilidade', [PaginasController::class, 'acessibilidade']);

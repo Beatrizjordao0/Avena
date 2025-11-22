@@ -1250,7 +1250,7 @@ body {
     height: calc(100vh - 80px);
 }
 
-/*PÁGINA BASE NDE CONFIGURAÇÕES */
+/*PÁGINA DE CONFIGURAÇÕES - contas */
 
 body.layout-config {
     background: linear-gradient(
@@ -1264,25 +1264,34 @@ body.layout-config {
     margin: 0;
 }
 
+/* ---------- CABEÇALHO CONFIGURAÇÕES + CONTAS LADO A LADO ---------- */
+
 .config-header {
+    display: flex;
+    align-items: center;
+    gap: 350px;     /* ----- DISTÂNCIA ENTRE CONFIGURAÇÕES E CONTAS ----- */
     padding: 30px 40px;
+    color: #102542;
 }
 
-.config-header h1 {
+.titulo-config,
+.titulo-contas {
     font-family: Verdana, sans-serif;
     color: #102542;
     font-size: 32px;
     margin: 0;
 }
 
-.config-header hr {
+/* Linha separadora */
+.linha-config {
     width: 100vw;
-    margin-left: calc(50% - 50vw); /* força encostar na esquerda da tela */
-    margin-top: 30px;      /* distância do topo → aumente se quiser mais */
+    margin-left: calc(50% - 50vw);
+    margin-top: 10px;
     border: none;
     border-top: 3px solid #2f415a;
 }
 
+/* ---------- RESTANTE DO SEU CSS ORIGINAL ---------- */
 
 body.base-config main {
     padding: 0;
@@ -1294,7 +1303,7 @@ body.base-config main {
     height: 30px;
     padding: 30px 50px;
 
-    font-size: 14px;
+    font-size: 15px;
     font-family: Verdana, sans-serif;
 
     border: 1px solid #2f415a;
@@ -1303,18 +1312,238 @@ body.base-config main {
     outline: none;
 
     margin-top: 20px;      /* distância abaixo da linha */
-    margin-left: 30px;     /* ← AFASTA DA ESQUERDA */
+    margin-left: 30px;     /* afastado da esquerda */
 }
 
 .config-topicos {
-    margin-left: 30px;              /* mesmo alinhamento da caixa */
-    margin-top: 25px;               /* espaço abaixo da pesquisa */
+    margin-left: 40px;
+    margin-top: 35px;
+    font-family: Verdana, sans-serif;
+    color: #102542;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .config-topicos p {
+    font-size: 22px !important;
+    margin-bottom: 12px !important;
+}
+
+.linha1, .linha2, .linha3, .linha4 {
+    position: absolute;
+    left: 610px; /* controla o quanto vai pra direita */
+    font-family: Verdana, sans-serif;
+    color: #102542;
+    font-size: 25px;
+}
+
+/* ajusta verticalmente */
+.linha1 { top: 200px; }
+.linha2 { top: 300px; }
+.linha3 { top: 400px; }
+.linha4 { top: 500px; }
+
+/* TEXTOS ENTRE AS LINHAS */
+.info1, .info2, .info3, .info4 {
+    position: absolute;
+    left: 610px;       /* mesmo alinhamento */
+    font-family: Verdana, sans-serif;
+    color: #334;
+    font-size: 16px;
+}
+
+/* AGORA VOCÊ POSICIONA ENTRE ELAS */
+.info1 { top: 235px; }  /* entre linha1 e linha2 */
+.info2 { top: 335px; }  /* entre linha2 e linha3 */
+.info3 { top: 435px; }  /* entre linha3 e linha4 */
+.info4 { top: 535px; }  /* após linha4 */
+
+.linha1-priv {
+    position: absolute;
+    left: 610px; /* controla o quanto vai pra direita */
+    font-family: Verdana, sans-serif;
+    color: #102542;
+    font-size: 25px;
+}
+
+/* ajusta verticalmente */
+.linha1-priv { top: 230px; }
+
+
+/* TEXTOS ENTRE AS LINHAS */
+.info1-priv, .info2-priv, .info3-priv {
+    position: absolute;
+    left: 610px;       /* mesmo alinhamento */
+    font-family: Verdana, sans-serif;
+    color: #334;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+/* AGORA VOCÊ POSICIONA ENTRE ELAS */
+.info1-priv { top: 295px; }  /* entre linha1 e linha2 */
+.info2-priv { top: 345px; }  /* entre linha2 e linha3 */
+.info3-priv { top: 395px; }  /* entre linha3 e linha4 */
+
+.info3-acess {
+    position: absolute;
+    left: 650px;       /* mesmo alinhamento */
+    font-family: Verdana, sans-serif;
+    color: #334;
+    font-size: 16px;
+}
+.info3-acess { top: 160px; }  /* entre linha3 e linha4 */
+
+/* Garante que tudo dentro do main possa usar posicionamento absoluto */
+main {
+    position: relative;
+}
+
+/* Container dos retângulos — move para a DIREITA e para CIMA */
+.caixas-direita {
+    position: absolute;
+    right: 60px;     /* ⬅️ afasta da borda direita */
+    top: 230px;       /* ⬅️ sobe os elementos na tela */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;        /* distância entre os dois retângulos */
+}
+
+/* Cada retângulo */
+.caixa-item {
+    width: 1250px;
+    height: 85px;
+
+    background: #b7cfd080;
+    border: 2px solid #2f415a;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    padding: 12px;
+
     font-family: Verdana, sans-serif;
     color: #102542;
 }
 
-.config-topicos p {
+/* Ícone dentro dos retângulos */
+.icone {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+}
+/*botão ligar e desligar modo escur9o*/
+
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    position: absolute;
+    top: 30px;     /* diminua para subir */
+    left: 1150px;    /* aumente para ir mais à direita */
+}
+
+.toggle {
+    position: relative;
+    width: 55px;
+    height: 28px;
+    display: inline-block;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+/* Quando LIGADO */
+.toggle input:checked + .slider {
+    background-color: #2f415a;
+}
+
+.toggle input:checked + .slider:before {
+    transform: translateX(27px);
+}
+
+.toggle-text {
+    font-family: Verdana, sans-serif;
+    color: #102542;
     font-size: 18px;
-    margin-bottom: 12px;            /* espaço entre os itens */
-    cursor: pointer;                /* dá sensação de item clicável */
+}
+
+
+/*scrull p aumenmtar fonte*/
+
+.slider-wrapper {
+    position: absolute;
+    top: 165px;    /* diminua para subir */
+    left: 1050px;   /* aumente para ir mais para a direita */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slider-text {
+    font-family: Verdana, sans-serif;
+    color: #102542;
+    font-size: 18px;
+}
+
+/* Slider estilizado */
+.font-slider {
+    -webkit-appearance: none;
+    width: 150px;     /* largura do slider */
+    height: 6px;
+    background: #d0d0d0;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Linha do slider */
+.font-slider::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #999999;
+    border-radius: 2px;
+}
+
+/* Bolinha */
+.font-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #2f415a;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -8px;
+    transition: 0.2s;
+}
+
+.font-slider::-webkit-slider-thumb:hover {
+    background: #102542;
 }

@@ -1,12 +1,12 @@
 @extends('layout.base')
 
 @section('content')
-    <img src="/img/logo-avena-removebg-preview.png" class="logo-avena2">
+    <img src="/img/logo-avena-removebg-preview-dark.png" class="logo-avena2">
 
     <div class="retangulo2">
         <!-- LOGO + NOME -->
         <div class="logo-texto-container">
-            <img src="/img/logo-avena-removebg-preview.png" class="logo-retangulo">
+            <img src="/img/logo-avena-removebg-preview-dark.png" class="logo-retangulo">
             <span class="nome-avena-retangulo">AVENA</span>
         </div>
 

@@ -1,7 +1,7 @@
 @extends('layout.base')
 
 @section('content')
-    <img src="/img/logo-avena-removebg-preview.png" class="logo-avena">  
+    <img src="/img/logo-avena-removebg-preview-dark.png" class="logo-avena">  
 
     <button class="btn-ingressar">Ingressar em uma<br>
     nova equipe</button>

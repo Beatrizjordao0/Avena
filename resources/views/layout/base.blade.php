@@ -16,7 +16,7 @@
     <header class="navbar">
         <div class="left-nav">
             <div class="logo">
-                <img src="/img/logo-avena-removebg-preview.png" alt="Logo" style="height:50px;">  
+                <img src="/img/logo-avena-removebg-preview-drak.png" alt="Logo" style="height:50px;">  
                 <span>AVENA</span>
             </div>
         </div>

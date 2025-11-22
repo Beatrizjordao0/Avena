@@ -18,7 +18,7 @@
     <header class="navbar">
         <div class="left-nav">
             <div class="logo">
-                <img src="/img/logo-avena-removebg-preview.png" alt="Logo" style="height:50px;">  
+                <img src="/img/logo-avena-removebg-preview-dark.png" alt="Logo" style="height:50px;">  
                 <span>AVENA</span>
             </div>
         </div>
@@ -31,9 +31,6 @@
             <a href="#">Configurações</a>
         </nav>
 
-
-
-
         <div class="perfil">
             <span>Dra. Júlia Evelyn</span>
             <img src="/img/julia-profissional.png" alt="Foto" style="height:50px;">
@@ -45,15 +42,33 @@
 
         <div class="config-header">
             <h1>Configurações</h1>
-            <hr>
+            <h2 class="titulo-contas">Informações da conta</h2>
+        </div>
+
+        <hr class="linha-config">
+
+        <div class="contas-opcoes">
+            <p class="linha1">Nome de usuário</p>
+            <p class="info1">Seu nome público no sistema</p>
+
+            <p class="linha2">E-mail</p>
+            <p class="info2">Endereço usado para login e avisos</p>
+
+            <p class="linha3">Data de nascimento</p>
+            <p class="info3">Usado para segurança e verificação</p>
+
+            <p class="linha4">Alterar sua senha</p>
+            <p class="info4">Mantenha sua conta protegida</p>
         </div>
 
         <!-- Caixinha de pesquisa aqui -->
         <input type="text" class="pesquisa-config" placeholder="Localizar em configurações">
 
-        <p>Contas</p>
-        <p>Privacidade e Segurança</p>
-        <p>Acessibilidade</p>
+        <div class="config-topicos">
+            <p>Contas</p>
+            <p>Privacidade e Segurança</p>
+            <p>Acessibilidade</p>
+        </div>
 
         @yield('content')
     </main>

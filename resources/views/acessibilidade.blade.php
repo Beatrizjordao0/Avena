@@ -42,15 +42,14 @@
 
         <div class="config-header">
             <h1>Configurações</h1>
-            <h2 class="titulo-contas">Contas</h2>
+            <h2 class="titulo-contas">Acessibilidade</h2>
         </div>
 
         <hr class="linha-config">
 
         <div class="contas-opcoes">
-            <p class="linha1">Informações da Conta</p>
-            <p class="linha2">Mudar para conta profissional</p>
-            <p class="linha3">Exclua sua conta</p>
+            <p class="info3-acess">Gerencie os aspectos da sua experiência com a Avena. Essas configurações afetam todas as contas da Avena neste navegador.</p>
+
         </div>
 
         <!-- Caixinha de pesquisa aqui -->
@@ -61,6 +60,32 @@
             <p>Privacidade e Segurança</p>
             <p>Acessibilidade</p>
         </div>
+
+        <div class="caixas-direita">
+            <div class="caixa-item">
+                <img src="/img/simbolomodoescuro.png" class="icone">
+                <p>Tema</p>
+            </div>
+
+            <div class="toggle-wrapper">
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <div class="caixa-item">
+                <img src="/img/aumentarfonte.png" class="icone">
+                <p>Aumentar tamanho da fonte</p>
+            </div>
+
+            <div class="slider-wrapper">
+                <input type="range" min="12" max="32" value="16" class="font-slider">
+            </div>
+
+        </div>
+
 
         @yield('content')
     </main>

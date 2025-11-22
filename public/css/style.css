@@ -2,6 +2,55 @@ body {
     --altura-painel-scroll: calc(100vh - 200px);
 }
 
+.btn-salvar-plano {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #4c9386; /* verde */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.btn-salvar-plano:hover {
+    background-color: #417c71;
+}
+
+.dia-semana {
+    position: relative;
+}
+
+.btn-add-atividade {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4c9386; /* Verde */
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+
+.btn-add-atividade:hover {
+    background-color: #417c71;
+    transform: scale(1.1);
+}
+
+
 .background-primary {
     background-image: linear-gradient(to right, #7fa5b2, #a1d1c1);
     flex-grow: 1;
@@ -252,6 +301,29 @@ body {
     outline: none;
     box-shadow: none;
 }
+
+.login-card-custom input.form-control {
+    border-radius: 14px;
+    padding: 14px;
+    border: 1.8px solid #7fa5b2;
+}
+
+button[type="submit"] {
+    width: 250px !important;
+    padding: -10px 0 !important;
+    border-radius: 60px!important;
+    display: block !important;
+    margin: 0 auto !important;  /* CENTRALIZA */
+    display: block !important;  /* garante centralização */
+    margin-top: 40px!important;
+}
+
+.login-image-container .p-4.p-sm-5.mt-sm-5.text-center {
+    margin-left: 90px !important; /* ajuste o valor */
+}
+
+
+
 
 /* TELABASE */
 * {
@@ -1370,6 +1442,15 @@ main .config-topicos p {
     margin-bottom: 12px !important;
 }
 
+.titulo-contasinfo {
+    position: relative;   /* permite mover */
+    font-size: 30px;      /* ajuste como quiser */
+    color: #102542;       /* cor que você quiser */
+    margin-top: 5px; 
+    left: 40px;     
+}
+
+
 .linha1, .linha2, .linha3, .linha4 {
     position: absolute;
     left: 610px; /* controla o quanto vai pra direita */
@@ -1379,10 +1460,10 @@ main .config-topicos p {
 }
 
 /* ajusta verticalmente */
-.linha1 { top: 200px; }
-.linha2 { top: 300px; }
-.linha3 { top: 400px; }
-.linha4 { top: 500px; }
+.linha1 { top: 160px; }
+.linha2 { top: 260px; }
+.linha3 { top: 360px; }
+.linha4 { top: 460px; }
 
 /* TEXTOS ENTRE AS LINHAS */
 .info1, .info2, .info3, .info4 {
@@ -1394,10 +1475,36 @@ main .config-topicos p {
 }
 
 /* AGORA VOCÊ POSICIONA ENTRE ELAS */
-.info1 { top: 235px; }  /* entre linha1 e linha2 */
-.info2 { top: 335px; }  /* entre linha2 e linha3 */
-.info3 { top: 435px; }  /* entre linha3 e linha4 */
-.info4 { top: 535px; }  /* após linha4 */
+.info1 { top: 195px; }  /* entre linha1 e linha2 */
+.info2 { top: 295px; }  /* entre linha2 e linha3 */
+.info3 { top: 395px; }  /* entre linha3 e linha4 */
+.info4 { top: 495px; }  /* após linha4 */
+
+.btn-voltarplano-conta {
+    position: absolute; /* Permite movimentar livremente */
+    top: 30px;          /* Ajuste para subir/descer */
+    left: 600px;         /* Ajuste para esquerda/direita */
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%; /* deixa redondo */
+    padding: 5px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 99; /* garante que fique por cima */
+}
+
+/* tamanho da imagem da seta */
+.seta-iconconta {
+    width: 24px;
+    height: 24px;
+}
+
 
 .linha1-priv {
     position: absolute;

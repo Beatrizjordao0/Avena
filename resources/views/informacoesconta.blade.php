@@ -39,10 +39,12 @@
 
     {{-- CONTEÚDO DAS PÁGINAS --}}
     <main>
-
+        <a href="/sala" class="btn-voltarplano-conta">
+            <img src="/img/seta.png" class="seta-iconconta">
+        </a>
         <div class="config-header">
             <h1>Configurações</h1>
-            <h2 class="titulo-contas">Informações da conta</h2>
+            <h2 class="titulo-contasinfo">Informações da conta</h2>
         </div>
 
         <hr class="linha-config">

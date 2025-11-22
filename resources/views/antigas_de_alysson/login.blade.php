@@ -31,9 +31,9 @@
                 <div class="m-4 d-flex">
                     <a class="navbar-brand d-flex align-items-center" href="#">
     
-                        <img src="/img/logo-avena-removebg-preview.png" alt="avena-logo" class="me-2 navbar-logo-img" width="40"height="40">
+                        <img src="/img/logo-avena-removebg-preview-dark.png" alt="avena-logo" class="me-2 navbar-logo-img" width="70"height="70">
 
-                        <span class="fs-4 poppins-bold text-name">Avena</span>
+                        <span class="fs-4 poppins-bold text-name">AVENA</span>
                     </a>
                 </div>
                 
@@ -99,8 +99,10 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="border border-1 button-gradient mt-3 py-0 px-5 rounded-4 w-50 btn-perfil">
-                            <p class="text-welcome fs-5 mt-2 pt-1 nunita-bold">Login</p>
+                        <button type="submit" 
+                        style="margin-top: 600px;"
+                        class="border border-1 button-gradient mt-3 py-0 px-5 rounded-4 btn-perfil btn-login-custom-margin">
+                            <span class="text-welcome fs-5 nunita-bold">Login</span>
                         </button>
                     </div>
                 </form>

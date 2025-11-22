@@ -64,9 +64,54 @@ Route::post('/logout', [LoginController::class, 'logout'])
 // ==============================
 // EQUIPE
 // ==============================
-Route::get('/equipe', [EquipeController::class, 'index'])
-    ->middleware('auth')
-    ->name('equipe');
+
+Route::get('/equipe', [EquipeController::class, 'equipe_index']) ->middleware('auth') ->name('equipe');
+
+
+Route::middleware(['auth'])->group(function () {
+
+    // ==========================
+    // CRIAR EQUIPES (TERAPEUTA)
+    // ==========================
+    Route::get('/equipe/create', [EquipeController::class, 'create'])
+        ->name('equipe.create');
+    Route::post('/equipe/criar', [EquipeController::class, 'store'])
+        ->name('equipe.store');
+
+    // ==========================
+    // UPGRADE PACIENTE -> TERAPEUTA
+    // ==========================
+    Route::get('/equipe/upgrade', [EquipeController::class, 'upgrade'])
+        ->name('equipe.upgrade');
+    Route::post('/equipe/upgrade', [EquipeController::class, 'storeUpgrade'])
+        ->name('equipe.storeUpgrade');
+
+    // ==========================
+    // ENTRAR EM GRUPO VIA CÓDIGO
+    // ==========================
+    Route::post('/equipe/join', [EquipeController::class, 'join'])
+        ->name('equipe.join');
+
+    // ==========================
+    // MOSTRAR DETALHES DE UM GRUPO
+    // ==========================
+    Route::get('/equipe/{id}', [EquipeController::class, 'show'])
+        ->name('equipe.show');
+
+    // ==========================
+    // MOSTRAR CÓDIGO DO GRUPO
+    // ==========================
+    Route::get('/equipe/codigo/{codigo}', [EquipeController::class, 'mostrarCodigo'])
+        ->name('equipe.codigo');
+});
+
+
+// AGENDA
+
+Route::get('/agenda/{id}', [AgendaController::class, 'show'])->name('agenda.show');
+
+
+
 
 // ==============================
 // OUTRAS ROTAS

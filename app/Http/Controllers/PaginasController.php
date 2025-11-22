@@ -11,10 +11,6 @@ class PaginasController extends Controller
         return view('index');
     }
 
-    public function login() { 
-        return view("login");
-    }
-
     public function email() {
         return view('email');
     }

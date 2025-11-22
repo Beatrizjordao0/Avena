@@ -3,6 +3,10 @@
 @section('content')
 
 <div class="sala-container">
+    
+    <a href="/sala" class="btn-voltar">
+        <img src="/img/seta.png" class="seta-icon">
+    </a>
 
     <div class="lista-usuarios">
         <h2>Sala de atividades - Dra. Júlia Evelyn</h2>

@@ -5,18 +5,18 @@
 
 <div class="retangulo2">
     <h1>Transforme sua conta em Terapeuta</h1>
-
+<br><br>
     <form action="{{ route('equipe.storeUpgrade') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label>CPF:</label>
+        <label>CPF:</label> <br>
         <input class="input-retangulo2" type="text" name="cpf" placeholder="Digite seu CPF" required>
-
-        <label>Documento profissional (opcional):</label>
+<br>
+        <label>Documento profissional (opcional):</label><br>
         <input class="input-retangulo2" type="file" name="file_doc_prof">
-
-        <label>RG (opcional):</label>
+<br>
+        <label>RG (opcional):</label><br>
         <input class="input-retangulo2" type="file" name="file_rg">
-
+<br>
         <button type="submit" class="btn-criar2">Enviar</button>
     </form>
 </div>

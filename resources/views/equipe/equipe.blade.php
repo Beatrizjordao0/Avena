@@ -15,19 +15,16 @@
     <button class="btn-ingressar" style="display: inline-flex; width: auto; margin: 0;" onclick="document.getElementById('join-form').style.display='block'">
         Ingressar em uma nova equipe
     </button>
+
+
 </div>
 
 
-
-
-
-
-
-
 <!-- Form de ingresso via código -->
+
 <form id="join-form" action="{{ route('equipe.join') }}" method="POST" style="display:none;">
     @csrf
-    <input type="text" name="codigo" placeholder="Digite o código da equipe">
+    <input class="pesquisa-equipes" type="text" name="codigo" placeholder="Digite o código da equipe">
     <button type="submit" class="btn-criar2">Entrar</button>
 </form>
 
@@ -38,20 +35,27 @@
 
 <div class="linha-separadora"></div>
 
+
+
+
 @foreach($equipes as $grupo)
 <div class="nova-caixa">
     <div class="linha-conteudo">
         <div class="container-quadrado">
-            <div class="mini-quadrado">{{ substr($grupo->nome_gp,0,2) }}</div>
+            <div class="mini-quadrado">
+                @if($user->tipo_conta === 'T')
+                    {{ substr($grupo->nome_gp,0,2) }}
+                @else
+                    {{ substr($grupo->grupo->nome_gp,0,2) }}
+                @endif
+            </div>
         </div>
         
         @if($user->tipo_conta === 'T')
-            {{-- Terapeuta vai para a tela de gestão do grupo --}}
             <a href="{{ route('equipe.show', $grupo->id_gp_terapia) }}" class="nome-grupo-link">
                 <p>{{ $grupo->nome_gp }}</p>
             </a>
         @else
-            {{-- Paciente vai para a agenda do grupo --}}
             <a href="{{ route('agenda.show', $grupo->id_gp) }}" class="nome-grupo-link">
                 <p>{{ $grupo->grupo->nome_gp }}</p>
             </a>
@@ -59,6 +63,7 @@
     </div>
 </div>
 @endforeach
+
     <div class="logout-container" style="margin-top: 30px;">
         <form action="{{ route('logout') }}" method="POST">
             @csrf

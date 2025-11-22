@@ -15,7 +15,7 @@
         <div class="col-12 col-sm-7 login-image-container">
             <div class="m-4 d-flex">
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="/img/logo-avena-removebg-preview.png" alt="avena-logo" class="me-2 navbar-logo-img" width="40" height="40">
+                    <img src="/img/logo-avena-removebg-preview-dark.png" alt="avena-logo" class="me-2 navbar-logo-img" width="40" height="40">
                     <span class="fs-4 poppins-bold text-name">Avena</span>
                 </a>
             </div>

@@ -24,11 +24,11 @@
         </div>
 
         <nav class="menu">
-            <a href="#">Início</a>
+            <a href="{{ route('home') }}">Início</a>
             <span class="divider"></span>
-            <a href="#">Equipes</a>
+            <a href="{{ route('equipes') }}">Equipes</a>
             <span class="divider"></span>
-            <a href="#">Configurações</a>
+            <a href="#" class="active">Configurações</a>
         </nav>
 
         <div class="perfil">
@@ -48,7 +48,7 @@
         <hr class="linha-config">
 
         <div class="contas-opcoes">
-            <p class="linha1">Informações da Conta</p>
+            <a href="{{ route('informacoes.conta') }}" class="linha1">Informações da Conta</a>
             <p class="linha2">Mudar para conta profissional</p>
             <p class="linha3">Exclua sua conta</p>
         </div>
@@ -57,10 +57,11 @@
         <input type="text" class="pesquisa-config" placeholder="Localizar em configurações">
 
         <div class="config-topicos">
-            <p>Contas</p>
-            <p>Privacidade e Segurança</p>
-            <p>Acessibilidade</p>
+            <a href="{{ route('contas') }}" class="active">Contas</a>
+            <a href="{{ route('privacidade') }}">Privacidade e Segurança</a>
+            <a href="{{ route('acessibilidade') }}">Acessibilidade</a>
         </div>
+
 
         @yield('content')
     </main>

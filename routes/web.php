@@ -7,7 +7,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\EquipeController;
 
 // index
-Route::get("/", [PaginasController::class, 'index']);
+Route::get('/', [PaginasController::class, 'index'])->name('home');
+
 
 // ==============================
 // CADASTRO
@@ -78,9 +79,10 @@ Route::get('/schedule', [PaginasController::class, 'schedule']);
 
 Route::get('/jointeam', [PaginasController::class, 'jointeam']);
 
-Route::get('/equipes', [PaginasController::class, 'equipes']);
+Route::get('/equipes', [PaginasController::class, 'equipes'])->name('equipes');
 
-Route::get('/planopaciente', [PaginasController::class, 'planopaciente']);
+
+Route::get('/planopaciente', [PaginasController::class, 'planopaciente'])->name('planopaciente');
 
 Route::get('/criarequipe', [PaginasController::class, 'criarequipe']);
 
@@ -92,10 +94,15 @@ Route::get('/equipesneuro', [PaginasController::class, 'equipesneuro']);
 
 Route::get('/salaatividades', [PaginasController::class, 'salaatividades']);
 
-Route::get('/contas', [PaginasController::class, 'contas']);
+Route::get('/contas', [PaginasController::class, 'contas'])->name('contas');
 
-Route::get('/informacoesconta', [PaginasController::class, 'informacoesconta']);
 
-Route::get('/privacidade', [PaginasController::class, 'privacidade']);
+Route::get('/config', function () {
+    return view('contas');
+})->name('config');
 
-Route::get('/acessibilidade', [PaginasController::class, 'acessibilidade']);
+Route::get('/informacoes-conta', [PaginasController::class, 'informacoesConta'])->name('informacoes.conta');
+
+Route::get('/privacidade', [PaginasController::class, 'privacidade'])->name('privacidade');
+
+Route::get('/acessibilidade', [PaginasController::class, 'acessibilidade'])->name('acessibilidade');

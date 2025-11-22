@@ -326,6 +326,15 @@ button[type="submit"] {
     text-transform: uppercase !important;
 }
 
+.navbar-logo-img {
+    margin-top: -12px !important; /* Suba mais ou menos ajustando o valor */
+    margin-left: 10px !important;
+}
+
+.text-name {
+    margin-left: -10px !important; /* puxa o texto de volta */
+}
+
 
 
 /* TELABASE */
@@ -385,6 +394,38 @@ body {
 .menu a.active {
     border-bottom: 2px solid #1c2a44;
 }
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #1c2a44;
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+/* Linha invisível inicial */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #1c2a44;
+    transition: width 0.3s ease;
+}
+
+/* Hover: anima a linha */
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Active permanente */
+.menu a.active::after {
+    width: 100%;
+}
+
+
 
 .divider {
     width: 2px;
@@ -457,7 +498,7 @@ body {
     margin-top: 50px; /* distância do p */
 }
 
-.btn-ingressar {
+.btn-ingressar2 {
     background-color: #2d3e56;
     color: #fff;
     border: none;
@@ -472,7 +513,7 @@ body {
     margin-right: auto; /* centraliza dentro do retangulo */
 }
 
-.btn-ingressar:hover {
+.btn-ingressar2:hover {
     opacity: 0.9;
 }
 
@@ -480,13 +521,24 @@ body {
 
 .logo-avena {
     position: absolute;
-    top: 53%;          
+    top: 183%;          
     left: 80%;
     transform: translate(-50%, -50%);
     width: 790px;     /* ajusta o tamanho */
     opacity: 0.20;    /* transparência */
     z-index: 1;       /* atrás */
 }
+
+.logo-avenajoin {
+    position: absolute;
+    top: 73%;          
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 790px;     /* ajusta o tamanho */
+    opacity: 0.20;    /* transparência */
+    z-index: 1;       /* atrás */
+}
+
 
 
 .titulo-equipes {
@@ -519,7 +571,7 @@ body {
 
 .btn-ingressar {
     position: absolute;      /* fixa no canto da tela */
-    top: 35px;               /* distância do topo */
+    top: 15px;               /* distância do topo */
     right: 20px;             /* distância da direita */
     
     background-color: #4c9386;
@@ -733,8 +785,51 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #000000;
     font-size: 14px;
+}
+
+/* Ícones */
+.sino {
+    width: 22px;
+    height: auto;
+}
+
+.sino-on {
+    display: none;
+}
+
+/* Textos */
+.txt-on {
+    display: none;
+}
+
+/* Botão */
+.botao-alarme {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+#alarme-toggle-1:checked + .botao-alarme .sino-off,
+#alarme-toggle-2:checked + .botao-alarme .sino-off {
+    display: none;
+}
+
+#alarme-toggle-1:checked + .botao-alarme .sino-on,
+#alarme-toggle-2:checked + .botao-alarme .sino-on {
+    display: inline;
+}
+
+#alarme-toggle-1:checked + .botao-alarme .txt-off,
+#alarme-toggle-2:checked + .botao-alarme .txt-off {
+    display: none !important;
+}
+
+#alarme-toggle-1:checked + .botao-alarme .txt-on,
+#alarme-toggle-2:checked + .botao-alarme .txt-on {
+    display: inline !important;
 }
 
 /*sab e domingo*/
@@ -1440,11 +1535,30 @@ body.base-config main {
     gap: 15px;
 }
 
-main .config-topicos p {
-    font-size: 22px !important;
-    margin-bottom: 12px !important;
+.config-topicos {
+    display: flex;
+    flex-direction: column;   /* um embaixo do outro */
+    align-items: flex-start;  /* impede esticar */
+    gap: 15px;
 }
 
+.config-topicos a {
+    color: #102542;
+    display: inline-block !important; /* impede ocupar largura total */
+    font-size: 22px;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent; /* linha invisível por padrão */
+    transition: 0.3s;
+}
+
+.config-topicos a:hover {
+    border-bottom: 2px solid #102542;
+}
+
+.config-topicos a.active {
+    border-bottom: 2px solid #102542 !important; /* linha fixa */
+}
 .titulo-contasinfo {
     position: relative;   /* permite mover */
     font-size: 30px;      /* ajuste como quiser */
@@ -1460,15 +1574,26 @@ main .config-topicos p {
     font-family: Verdana, sans-serif;
     color: #102542;
     font-size: 25px;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent; /* linha invisível */
+    transition: 0.3s;
 }
 
+.linha1:hover,
+.linha2:hover,
+.linha3:hover,
+.linha4:hover {
+    border-bottom: 2px solid #102542; /* só aparece no hover */
+}
 /* ajusta verticalmente */
 .linha1 { top: 160px; }
-.linha2 { top: 260px; }
-.linha3 { top: 360px; }
+.linha2 { top: 230px; }
+.linha3 { top: 300px; }
 .linha4 { top: 460px; }
 
-/* TEXTOS ENTRE AS LINHAS */
 .info1, .info2, .info3, .info4 {
     position: absolute;
     left: 610px;       /* mesmo alinhamento */
@@ -1482,6 +1607,36 @@ main .config-topicos p {
 .info2 { top: 295px; }  /* entre linha2 e linha3 */
 .info3 { top: 395px; }  /* entre linha3 e linha4 */
 .info4 { top: 495px; }  /* após linha4 */
+
+.linha1info, .linha2info, .linha3info, .linha4info {
+    position: absolute;
+    left: 610px; /* controla o quanto vai pra direita */
+    font-family: Verdana, sans-serif;
+    color: #102542;
+    font-size: 25px;
+}
+
+/* ajusta verticalmente */
+.linha1info { top: 160px; }
+.linha2info { top: 240px; }
+.linha3info { top: 320px; }
+.linha4info { top: 400px; }
+
+
+/* TEXTOS ENTRE AS LINHAS */
+.info1-, .info2-, .info3-, .info4- {
+    position: absolute;
+    left: 610px;       /* mesmo alinhamento */
+    font-family: Verdana, sans-serif;
+    color: #334;
+    font-size: 16px;
+}
+
+/* AGORA VOCÊ POSICIONA ENTRE ELAS */
+.info1- { top: 195px; }  /* entre linha1 e linha2 */
+.info2- { top: 275px; }  /* entre linha2 e linha3 */
+.info3- { top: 355px; }  /* entre linha3 e linha4 */
+.info4- { top: 435px; }  /* após linha4 */
 
 .btn-voltarplano-conta {
     position: absolute; /* Permite movimentar livremente */
@@ -1518,7 +1673,7 @@ main .config-topicos p {
 }
 
 /* ajusta verticalmente */
-.linha1-priv { top: 230px; }
+.linha1-priv { top: 150px; }
 
 
 /* TEXTOS ENTRE AS LINHAS */
@@ -1532,9 +1687,9 @@ main .config-topicos p {
 }
 
 /* AGORA VOCÊ POSICIONA ENTRE ELAS */
-.info1-priv { top: 295px; }  /* entre linha1 e linha2 */
-.info2-priv { top: 345px; }  /* entre linha2 e linha3 */
-.info3-priv { top: 395px; }  /* entre linha3 e linha4 */
+.info1-priv { top: 215px; }  /* entre linha1 e linha2 */
+.info2-priv { top: 265px; }  /* entre linha2 e linha3 */
+.info3-priv { top: 315px; }  /* entre linha3 e linha4 */
 
 .info3-acess {
     position: absolute;

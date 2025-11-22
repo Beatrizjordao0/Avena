@@ -24,11 +24,11 @@
         </div>
 
         <nav class="menu">
-            <a href="#">Início</a>
+            <a href="{{ route('home') }}">Início</a>
             <span class="divider"></span>
-            <a href="#">Equipes</a>
+            <a href="{{ route('equipes') }}">Equipes</a>
             <span class="divider"></span>
-            <a href="#">Configurações</a>
+            <a href="#" class="active">Configurações</a>
         </nav>
 
         <div class="perfil">
@@ -56,9 +56,9 @@
         <input type="text" class="pesquisa-config" placeholder="Localizar em configurações">
 
         <div class="config-topicos">
-            <p>Contas</p>
-            <p>Privacidade e Segurança</p>
-            <p>Acessibilidade</p>
+            <a href="{{ route('contas') }}">Contas</a>
+            <a href="{{ route('privacidade') }}">Privacidade e Segurança</a>
+            <a href="{{ route('acessibilidade') }}" class="active">Acessibilidade</a>
         </div>
 
         <div class="caixas-direita">

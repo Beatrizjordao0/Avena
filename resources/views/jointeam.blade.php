@@ -1,7 +1,12 @@
 @extends('layout.base')
 
+@php
+    $activeMenu = 'equipes';
+@endphp
+
+
 @section('content')
-    <img src="/img/logo-avena-removebg-preview-dark.png" class="logo-avena">
+    <img src="/img/logo-avena-removebg-preview-dark.png" class="logo-avenajoin">
 
     <div class="retangulo">
         <h1>Ingresse na sua Equipe de Acompanhamento</h1>
@@ -12,7 +17,8 @@
             <input type="text" placeholder="Digite aqui...">
         </div>
 
-        <button class="btn-ingressar">Ingressar</button>
+        
+        <a href="/equipes" class="btn-ingressar2">Ingressar</a>
     </div>
 @endsection
 

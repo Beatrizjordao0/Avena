@@ -1,5 +1,10 @@
 @extends('layout.base')
 
+@php
+    $activeMenu = 'equipes';
+@endphp
+
+
 @section('content')
 
 <h1 class="titulo-plano">
@@ -28,8 +33,8 @@
 <!-- ================= SEMANA 1 ================= -->
 <div class="container-semana semana-1">
     
-    <a href="/sala" class="btn-voltarplano">
-        <img src="/img/seta.png" class="seta-icon2">
+    <a href="/equipes" class="btn-voltarplano">
+        <img src="/img/seta.png" alt="Voltar" class="seta-icon2">
     </a>
 
     <div class="dia-semana segunda">Segunda (24/11)
@@ -89,7 +94,17 @@
             <div class="notif-3">Sons antes de Dormir <br> não realizado!</div>
             <div class="notif-4">Hoje</div>
             <div class="notif-5">Próximo Exercicio: <br> Respiração Guiada </div>
-            <div class="notif-6">Ativar alarmes</div>
+            <div class="notif-6">
+                <input type="checkbox" id="alarme-toggle-1" hidden>
+
+                <label for="alarme-toggle-1" class="botao-alarme">
+                    <img src="/img/sinos.png" class="sino sino-off">
+                    <img src="/img/sino.png" class="sino sino-on">
+
+                    <span class="txt-off">Ativar alarme</span>
+                    <span class="txt-on">Desativar alarme</span>
+                </label>
+            </div>
         </div>
     </div>
 
@@ -107,7 +122,7 @@
         <div class="mini-retangulos">
             <div class="mini-retangulo">
                 <img src="/img/quebra.png" class="mini-logo">
-                Atividade exemplo
+                Jogo da Memória
             </div>
         </div>
     </div>
@@ -116,7 +131,7 @@
         <div class="mini-retangulos">
             <div class="mini-retangulo">
                 <img src="/img/lotus.png" class="mini-logo">
-                Atividade exemplo
+                Sons antes de Dormir
             </div>
         </div>
     </div>
@@ -128,12 +143,20 @@
             <div class="notifsemana2-3">Sons antes de Dormir <br> não realizado!</div>
             <div class="notifsemana2-4">Hoje</div>
             <div class="notifsemana2-5">Próximo Exercicio: <br> Respiração Guiada </div>
-            <div class="notifsemana2-6">Ativar alarmes</div>
+            <div class="notif-6">
+                <input type="checkbox" id="alarme-toggle-2" hidden>
+
+                <label for="alarme-toggle-2" class="botao-alarme">
+                    <img src="/img/sinos.png" class="sino sino-off">
+                    <img src="/img/sino.png" class="sino sino-on">
+
+                    <span class="txt-off">Ativar alarme</span>
+                    <span class="txt-on">Desativar alarme</span>
+                </label>
+            </div>
         </div>
     </div>
 
-</div>
-
-    
+</div>    
 
 @endsection

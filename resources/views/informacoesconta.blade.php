@@ -24,11 +24,11 @@
         </div>
 
         <nav class="menu">
-            <a href="#">Início</a>
+            <a href="{{ route('home') }}">Início</a>
             <span class="divider"></span>
-            <a href="#">Equipes</a>
+            <a href="{{ route('equipes') }}">Equipes</a>
             <span class="divider"></span>
-            <a href="#">Configurações</a>
+            <a href="#" class="active">Configurações</a>
         </nav>
 
         <div class="perfil">
@@ -39,9 +39,10 @@
 
     {{-- CONTEÚDO DAS PÁGINAS --}}
     <main>
-        <a href="/sala" class="btn-voltarplano-conta">
+        <a href="{{ route('contas') }}" class="btn-voltarplano-conta">
             <img src="/img/seta.png" class="seta-iconconta">
         </a>
+
         <div class="config-header">
             <h1>Configurações</h1>
             <h2 class="titulo-contasinfo">Informações da conta</h2>
@@ -49,27 +50,27 @@
 
         <hr class="linha-config">
 
-        <div class="contas-opcoes">
-            <p class="linha1">Nome de usuário</p>
-            <p class="info1">Seu nome público no sistema</p>
+        <div class="contas-opcoesinfo">
+            <p class="linha1info">Nome de usuário</p>
+            <p class="info1-">Júlia evelyn</p>
 
-            <p class="linha2">E-mail</p>
-            <p class="info2">Endereço usado para login e avisos</p>
+            <p class="linha2info">E-mail</p>
+            <p class="info2-">Exemplo@email.com</p>
 
-            <p class="linha3">Data de nascimento</p>
-            <p class="info3">Usado para segurança e verificação</p>
+            <p class="linha3info">Data de nascimento</p>
+            <p class="info3-">00/00/0000</p>
 
-            <p class="linha4">Alterar sua senha</p>
-            <p class="info4">Mantenha sua conta protegida</p>
+            <p class="linha4info">Alterar sua senha</p>
+            <p class="info4-">Altere sua senha a qualquer momento.</p>
         </div>
 
         <!-- Caixinha de pesquisa aqui -->
         <input type="text" class="pesquisa-config" placeholder="Localizar em configurações">
 
         <div class="config-topicos">
-            <p>Contas</p>
-            <p>Privacidade e Segurança</p>
-            <p>Acessibilidade</p>
+            <a href="{{ route('contas') }}" class="active">Contas</a>
+            <a href="{{ route('privacidade') }}">Privacidade e Segurança</a>
+            <a href="{{ route('acessibilidade') }}">Acessibilidade</a>
         </div>
 
         @yield('content')

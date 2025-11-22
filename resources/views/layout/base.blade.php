@@ -22,13 +22,12 @@
         </div>
 
         <nav class="menu">
-            <a href="#">Início</a>
+            <a href="/inicio" class="{{ request()->is('inicio') ? 'active' : '' }}">Início</a>
             <span class="divider"></span>
-            <a href="#">Equipes</a>
+            <a href="/equipes" class="{{ ($activeMenu ?? '') === 'equipes' ? 'active' : '' }}">Equipes</a>
             <span class="divider"></span>
-            <a href="#">Configurações</a>
+            <a href="{{ url('/contas') }}" class="{{ request()->is('contas') ? 'active' : '' }}">Configurações</a>
         </nav>
-
 
 
 

@@ -3,7 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\CadastroController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\EquipeController;
 
+// index
+Route::get("/", [PaginasController::class, 'index']);
+
+// ==============================
+// CADASTRO
+// ==============================
 Route::post('/cadastro/salvar-etapa', [CadastroController::class, 'salvarEtapa'])
     ->name('cadastro.salvarEtapa');
 
@@ -24,7 +32,7 @@ Route::get('/cadastro/passo-4', function () {
 })->name('cadastro.cadastro-4');
 
 Route::get('/cadastro/passo-5', function () {
-    return view('cadastro.cadastro-5'); // cadastro concluído
+    return view('cadastro.cadastro-5'); // concluído
 })->name('cadastro.cadastro-5');
 
 Route::get('/cadastro/reiniciar', function () {
@@ -32,23 +40,41 @@ Route::get('/cadastro/reiniciar', function () {
     return redirect()->route('cadastro.cadastro-1');
 })->name('cadastro.reiniciar');
 
+// ==============================
+// LOGIN
+// ==============================
 
-Route::get("/", [PaginasController::class, 'index']);
+// Mostrar formulário de login (bloqueia se estiver logado)
+Route::get('/login', function () {
+    if (Auth::check()) {
+        return redirect('/equipe');
+    }
+    return app(LoginController::class)->showLoginForm();
+})->name('login');
 
-Route::get("/login", [PaginasController::class, 'login']);
+// Processar login
+Route::post('/login', [LoginController::class, 'login'])
+    ->name('login.attempt');
 
+// Logout
+Route::post('/logout', [LoginController::class, 'logout'])
+    ->name('logout');
+
+// ==============================
+// EQUIPE
+// ==============================
+Route::get('/equipe', [EquipeController::class, 'index'])
+    ->middleware('auth')
+    ->name('equipe');
+
+// ==============================
+// OUTRAS ROTAS
+// ==============================
 Route::get('/desativada', [PaginasController::class, 'desativada']);
-
 Route::get('/email', [PaginasController::class, 'email']);
-
 Route::get('/password', [PaginasController::class, 'password']);
-
 Route::get('/register', [PaginasController::class, 'register']);
-
 Route::get('/schedule', [PaginasController::class, 'schedule']);
-
-Route::post('/cadastro/salvar-etapa', [CadastroController::class, 'salvarEtapa'])
-    ->name('cadastro.salvarEtapa');
 
 Route::get('/jointeam', [PaginasController::class, 'jointeam']);
 

@@ -21,6 +21,7 @@
         
         <a href="{{ route('cadastro.reiniciar') }}" class="btn-back">Refazer Cadastro</a>
 
+        <button type="submit" class="btn-next">Concluir Cadastro</button>
     </form>
 @endsection
 

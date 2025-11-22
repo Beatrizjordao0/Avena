@@ -45,8 +45,6 @@
                     <!-- Botão Próximo / Concluir -->
                     @if ($etapa >= 1 && $etapa < 4)
                         <button type="submit" class="btn-next">Próximo <i class="fa-solid fa-arrow-right"></i></button>
-                    @elseif ($etapa == 4)
-                        <button type="submit" class="btn-next">Concluir Cadastro</button>
                     @endif
 
                 </form>

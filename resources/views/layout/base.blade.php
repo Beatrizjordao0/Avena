@@ -22,7 +22,7 @@
         </div>
 
         <nav class="menu">
-            <a href="/inicio" class="{{ request()->is('inicio') ? 'active' : '' }}">Início</a>
+            <a href="{{ route('home') }}">Início</a>
             <span class="divider"></span>
             <a href="/equipes" class="{{ ($activeMenu ?? '') === 'equipes' ? 'active' : '' }}">Equipes</a>
             <span class="divider"></span>

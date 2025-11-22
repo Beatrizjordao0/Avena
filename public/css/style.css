@@ -1079,7 +1079,7 @@ body {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
-    border: 1px solid #ccc; /* borda visível */
+    border: 1px solid #3b4c63; /* borda visível */
     font-size: 16px;
     background-color: rgba(255, 255, 255, 0.5); /* branco 50% transparente */
     color: #102542; /* cor do texto digitado */
@@ -1116,7 +1116,8 @@ body {
 .btn-criar2 {
     background-color: #2d3e56;
     color: #fff;
-    margin-left: 150px;  /* aumenta a distância da borda esquerda do retângulo */
+    margin-left: 180px;  /* aumenta a distância da borda esquerda do retângulo */
+    margin-right: 85px;
     margin-top: 100px;   /* distância do conteúdo acima */
 }
 
@@ -1155,13 +1156,17 @@ body {
     width: 1000px;
     height: 600px;
     margin: 120px auto 0 auto; /* centraliza o retângulo na página */
+    z-index: 2;
+
     position: relative;
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57);
     border-radius: 13px;
     padding-top: 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
 }
+
 .logo-texto-container {
     display: flex;
     align-items: center;
@@ -1236,6 +1241,16 @@ body {
     font-size: 16px;
     cursor: pointer;
     margin-top: 55px; /* distância do input / retângulo */
+}
+
+.logo-avenaequipe {
+    position: absolute;
+    top: 53%;          
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 790px;     /* ajusta o tamanho */
+    opacity: 0.20;    /* transparência */
+    z-index: 1;       /* atrás */
 }
 
 /*PÁGINA EQUIPE PROFISSIONAL*/

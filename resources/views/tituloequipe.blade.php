@@ -1,7 +1,7 @@
 @extends('layout.base')
 
 @section('content')
-    <img src="/img/logo-avena-removebg-preview-dark.png" class="logo-avena2">
+    <img src="/img/logo-avena-removebg-preview-dark.png" class="logo-avenajoin">
 
     <div class="retangulo2">
         <!-- LOGO + NOME -->
@@ -20,8 +20,8 @@
 
         <!-- Botões inferior -->
         <div class="botoes-retangulo2">
-            <button class="btn-cancelar2">Voltar</button>
-            <button class="btn-criar2">Criar</button>
+            <a href="/criarequipe" class="btn-cancelar2">Voltar</a>
+            <a href="/equipecriada" class="btn-criar2">Criar</a>
         </div>
 
     </div>

@@ -322,6 +322,9 @@ button[type="submit"] {
     margin-left: 90px !important; /* ajuste o valor */
 }
 
+.text-name {
+    text-transform: uppercase !important;
+}
 
 
 

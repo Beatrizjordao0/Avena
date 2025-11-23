@@ -2,25 +2,22 @@
 
 @section('content')
 <div class="sala-container">
-    <a href="{{ route('equipe') }}">Voltar</a>
-
-    <img src="/img/seta.png" class="seta-icon">
+    <a href="{{ route('equipe') }}" class="btn-voltar">
+        <img src="/img/seta.png" alt="Voltar" class="seta-icon2">
+    </a>
 
     <div class="lista-usuarios">
 
         <h2>{{ $grupo->nome_gp }}</h2>
-        Código do grupo: <strong>{{ $grupo->cod_gp }}</strong>
+        <div class="cod-grupo">
+            Código do grupo: <strong>{{ $grupo->cod_gp }}</strong>
+        </div>
 
         <div class="usuarios-scroll">
             @foreach($grupo->membros as $membro)
             <a href="{{ route('agenda.terapeuta', $membro->paciente->id) }}" class="usuario-item" style="text-decoration: none; color: inherit;">
-                <img 
-                    src="{{ $membro->paciente->file_foto_perfil 
-                        ? asset('storage/' . $membro->paciente->file_foto_perfil) 
-                        : '/img/user.png' }}" 
-                    class="avatar"
-                >
-                <span>{{ $membro->paciente->name }}</span></div>
+               
+                <span>{{ $membro->paciente->name }}</span>
             </a>
             @endforeach
         </div>

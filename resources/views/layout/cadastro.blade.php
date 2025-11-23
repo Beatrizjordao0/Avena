@@ -14,53 +14,60 @@
     </style>
 </head>
 <body>
-            <!-- Logo do cabeçalho -->
+    <main>   <!-- Logo do cabeçalho -->
         <div class="logo nunita-normal">
             <img src='/img/logo-avena-removebg-preview-dark.png' alt="Imagem da logo da Avena">
             <span class="poppins-bold text-name">AVENA</span>
         </div>
-            <!-- Parte superior do cadastro -->
-        <div class="left-side-container">
-                    @php
-                        $etapa = intVal($__env->yieldContent('etapa'));
-                    @endphp
-            <div class="top-form-help-and-back">
-                    @if ($etapa > 1 && $etapa < 5)
-                        <a href="{{ route('cadastro.cadastro-' . ($etapa - 1)) }}"><i class="fa-solid fa-arrow-left"></i></a>
-                    @elseif ($etapa == 1)
-                        <a href="/login"><i class="fa-solid fa-arrow-left"></i></a>
-                    @endif
-                <a href="#" class="help-link">Ajuda?</a>
-            </div>
 
-            <div class="nunita-normal form-container ">
-                <div class="formform-heading">
-                    <h1 class="nunita-normal">Cadastre-se</h1>
-                    <p>Preencha os espaços com suas Informações.</p>
-                    
-                    @yield("form-heading")
+        <div class="lado-esquerdo">
+            <div class="left-side-container">
+                        @php
+                            $etapa = intVal($__env->yieldContent('etapa'));
+                        @endphp
+                <div class="top-form-help-and-back">
+                        @if ($etapa > 1 && $etapa < 5)
+                            <a href="{{ route('cadastro.cadastro-' . ($etapa - 1)) }}"><i class="fa-solid fa-arrow-left"></i></a>
+                        @elseif ($etapa == 1)
+                            <a href="/login"><i class="fa-solid fa-circle-left"></i></a>
+                        @endif
+                    <a href="#" class="help-link">Ajuda?</a>
                 </div>
-                <form class="form-row" action="{{ route('cadastro.salvarEtapa') }}" method="POST">
-                    @csrf
-                    @yield("form-content")
 
-                    <input type="hidden" name="etapa" value="@yield('etapa')">
+                <div class="nunita-normal form-container ">
+                    <div class="formform-heading">
+                        <h1 class="nunita-normal">Cadastre-se</h1>
+                        <p>Preencha os espaços com suas Informações.</p>
+                        
+                        @yield("form-heading")
+                    </div>
+                    <form class="form-row form-column" action="{{ route('cadastro.salvarEtapa') }}" method="POST">
+                        @csrf
+                        @yield("form-content")
 
-                    @if ($etapa >= 1 && $etapa < 4)
-                    <button type="submit" class="btn-next btn-perfil">Próximo<i class="fa-solid fa-arrow-right"></i></button>
-                    @endif
-                </form>
-            </div>
-            <div class="etapa-atual">
-                @yield('etapa')/4
+                        <input type="hidden" name="etapa" value="@yield('etapa')">
+
+                        @if ($etapa >= 1 && $etapa < 4)
+                        <button type="submit" class="btn-next btn-perfil">Próximo<i class="fa-solid fa-arrow-right"></i></button>
+                        @endif
+                    </form>
+                </div>
+                
+                <div class="etapa-atual">
+                    @yield('etapa')/4
+                </div>
             </div>
         </div>
 
-        <div class="right-side-container login-image-container">
-            <div class="background-content">
-                <h1 class="nunita-normal">Faça parte da Avena!</h1>
-                <p class="nunita-normal">Matenha o progresso sempre visível <br> Dentro e fora do consultório</p>
+
+        <div class="lado-direito">
+            <div class="right-side-container login-image-container">
+                <div class="background-content">
+                    <h1 class="nunita-normal">Faça parte da Avena!</h1>
+                    <p class="nunita-normal">Matenha o progresso sempre visível <br> Dentro e fora do consultório</p>
+                </div>
             </div>
         </div>
+    </main>
 </body>
 </html>

@@ -13,7 +13,7 @@ class AlterarSenha extends Controller
     {
         $user = Auth::user();
 
-        return view('alterarSenha', [
+        return view('config.alterarSenha', [
             'user' => $user
         ]); 
     }

@@ -18,10 +18,6 @@ class PaginasController extends Controller
         return view('jointeam');
     }
 
-    public function equipes() {
-        return view('equipes');
-    }
-
     public function planopaciente() {
         return view('planopaciente');
     }
@@ -47,24 +43,36 @@ class PaginasController extends Controller
     }
 
     public function contas() {
-        return view('contas');
+        $user = Auth::user();
+
+        return view('config.contas', [
+            'user' => $user
+        ]);
     }
 
     public function informacoesconta() {
 
         $user = Auth::user();
 
-        return view('informacoesconta', [
+        return view('config.informacoesconta', [
             'user' => $user
         ]);
     }
 
     public function privacidade() {
-        return view('privacidade');
+        $user = Auth::user();
+
+        return view('config.privacidade', [
+            'user' => $user
+        ]);
     }
 
     public function acessibilidade() {
-        return view('acessibilidade');
+        $user = Auth::user();
+
+        return view('config.acessibilidade', [
+            'user' => $user
+        ]);
     }
 
 }

@@ -138,8 +138,17 @@ Route::get('/config', function () {
     return view('contas');
 })->name('config');
 
-Route::get('/informacoes-conta', [PaginasController::class, 'informacoesConta'])->name('informacoes.conta');
-
+Route::get('/Conta', [PaginasController::class, 'informacoesconta'])
+    ->name('informacoes.conta');
+    
 Route::get('/privacidade', [PaginasController::class, 'privacidade'])->name('privacidade');
 
 Route::get('/acessibilidade', [PaginasController::class, 'acessibilidade'])->name('acessibilidade');
+
+Route::get('/alterar-senha', [App\Http\Controllers\Auth\AlterarSenha::class, 'showAlterarSenhaForm'])
+    ->name('alterar.senha')
+    ->middleware('auth');
+
+Route::post('/alterar-senha', [App\Http\Controllers\Auth\AlterarSenha::class, 'alterarSenha'])
+    ->name('alterar.senha.atualizar')
+    ->middleware('auth');

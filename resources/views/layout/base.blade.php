@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Avena')</title>
-
     <link rel="stylesheet" href="/css/style.css">
-
     @stack('styles')
 </head>
 
@@ -24,15 +22,15 @@
         <nav class="menu">
             <a href="{{ route('home') }}">Início</a>
             <span class="divider"></span>
-            <a href="/equipes" class="{{ ($activeMenu ?? '') === 'equipes' ? 'active' : '' }}">Equipes</a>
+            <a href="/equipe" class="{{ ($activeMenu ?? '') === 'equipe    ' ? 'active' : '' }}">Equipes</a>
             <span class="divider"></span>
-            <a href="{{ url('/contas') }}" class="{{ request()->is('contas') ? 'active' : '' }}">Configurações</a>
+            <a href="{{ route('informacoes.conta') }}" class="{{ request()->is('contas') ? 'active' : '' }}">Configurações</a>
         </nav>
 
 
 
         <div class="perfil">
-            <span>Dra. Júlia Evelyn</span>
+            <span>{{ Auth::user()->name }} {{ Auth::user()->sobrenome }}</span>
             <img src="/img/julia-profissional.png" alt="Foto" style="height:50px;">
         </div>
     </header>

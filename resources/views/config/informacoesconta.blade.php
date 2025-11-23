@@ -1,0 +1,20 @@
+@extends('layout.config')
+
+@section('config-content')
+        <h2 class="titulo-contasinfo">Informações da conta</h2>
+        <span class="line"></span>
+
+        <!-- OPÇÕES DE CONTAS -->
+        <div class="contas-opcoesinfo">
+            <p class="info-bold">Nome de usuário</p>
+            <p class="info">{{ $user->name }} {{ $user->sobrenome }}</p>
+
+            <p class="info-bold">E-mail</p>
+            <p class="info">{{ $user->email }}</p>
+
+            <p class="info-bold">Data de nascimento</p>
+            <p class="info">{{ $user->data_nascimento }}</p>
+
+            <a href="{{ route('alterar.senha') }}" class="info-bold info-link">Alterar a sua senha?</a>
+        </div>
+@endsection

@@ -133,9 +133,9 @@ body {
     color: rgb(207, 207, 207);
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 5rem;
     box-sizing: content-box;
-    height: 50px;
+    height: 6rem;
     display: flex;
     align-items: center; /* Alinha verticalmente */
     border-radius: 8px;

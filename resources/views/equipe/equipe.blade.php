@@ -63,12 +63,4 @@
     </div>
 </div>
 @endforeach
-
-    <div class="logout-container" style="margin-top: 30px;">
-        <form action="{{ route('logout') }}" method="POST">
-            @csrf
-            <button class="btn-criar2">Logout</button>
-        </form>
-    </div>
-
 @endsection

@@ -13,7 +13,7 @@ body {
     font-size: 16px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
 }
 
@@ -41,7 +41,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     transition: 0.2s;
 }
 
@@ -49,7 +49,6 @@ body {
     background-color: #417c71;
     transform: scale(1.1);
 }
-
 
 .background-primary {
     background-image: linear-gradient(to right, #7fa5b2, #a1d1c1);
@@ -311,11 +310,11 @@ body {
 button[type="submit"] {
     width: 250px !important;
     padding: -10px 0 !important;
-    border-radius: 60px!important;
+    border-radius: 60px !important;
     display: block !important;
-    margin: 0 auto !important;  /* CENTRALIZA */
-    display: block !important;  /* garante centralização */
-    margin-top: 40px!important;
+    margin: 0 auto !important; /* CENTRALIZA */
+    display: block !important; /* garante centralização */
+    margin-top: 40px !important;
 }
 
 .login-image-container .p-4.p-sm-5.mt-sm-5.text-center {
@@ -334,8 +333,6 @@ button[type="submit"] {
 .text-name {
     margin-left: -10px !important; /* puxa o texto de volta */
 }
-
-
 
 /* TELABASE */
 * {
@@ -425,8 +422,6 @@ body {
     width: 100%;
 }
 
-
-
 .divider {
     width: 2px;
     height: 25px;
@@ -453,7 +448,7 @@ body {
 .retangulo {
     position: relative;
     z-index: 2;
-    top: 120px;       /* posição do retângulo na página */
+    top: 120px; /* posição do retângulo na página */
     left: 50%;
     transform: translateX(-50%);
     width: 1000px;
@@ -461,14 +456,13 @@ body {
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-
-    padding-top: 30px;          /* distância do topo do retângulo */
-    text-align: center;          /* centraliza horizontal */
+    padding-top: 30px; /* distância do topo do retângulo */
+    text-align: center; /* centraliza horizontal */
     display: flex;
-    flex-direction: column;      
-    align-items: center;         /* centraliza horizontal */
+    flex-direction: column;
+    align-items: center; /* centraliza horizontal */
 }
 
 .retangulo h1 {
@@ -521,42 +515,39 @@ body {
 
 .logo-avena {
     position: absolute;
-    top: 183%;          
+    top: 183%;
     left: 80%;
     transform: translate(-50%, -50%);
-    width: 790px;     /* ajusta o tamanho */
-    opacity: 0.20;    /* transparência */
-    z-index: 1;       /* atrás */
+    width: 790px; /* ajusta o tamanho */
+    opacity: 0.2; /* transparência */
 }
 
 .logo-avenajoin {
     position: absolute;
-    top: 73%;          
+    top: 73%;
     left: 80%;
     transform: translate(-50%, -50%);
-    width: 790px;     /* ajusta o tamanho */
-    opacity: 0.20;    /* transparência */
-    z-index: 1;       /* atrás */
+    width: 790px; /* ajusta o tamanho */
+    opacity: 0.2; /* transparência */
+    z-index: 1; /* atrás */
 }
-
-
 
 .titulo-equipes {
     color: #102542;
     font-size: 30px;
     font-family: Verdana, sans-serif;
-
-    position: relative;   /* permite mover sem afetar outros */
-    top: 20px;            /* desce apenas o h1 */
-    margin-left: 40px;    /* mantém o deslocamento da esquerda */
+    width: fit-content;
+    position: relative; /* permite mover sem afetar outros */
+    top: 20px; /* desce apenas o h1 */
+    margin-left: 40px; /* mantém o deslocamento da esquerda */
 }
 
 .pesquisa-equipes {
-    display: block;        /* vira bloco pra permitir margin auto */
-    margin: 0 auto;        /* centraliza SOZINHA */
+    display: block; /* vira bloco pra permitir margin auto */
+    margin: 0 auto; /* centraliza SOZINHA */
     position: relative;
-    top: -15px;      /* distância do h1 */
-    
+    top: -15px; /* distância do h1 */
+
     width: 500px;
     height: 40px;
     padding: 5px 15px;
@@ -570,15 +561,15 @@ body {
 /*botão de ingressar em nova equipe*/
 
 .btn-ingressar {
-    position: absolute;      /* fixa no canto da tela */
-    top: 15px;               /* distância do topo */
-    right: 20px;             /* distância da direita */
-    
+    position: absolute; /* fixa no canto da tela */
+    top: 15px; /* distância do topo */
+    right: 20px; /* distância da direita */
+
     background-color: #4c9386;
     color: #ffffff;
     border: none;
-    border-radius: 51px;     /* arredondamento dos cantos */
-    padding: 6px 2px;      /* tamanho do botão */
+    border-radius: 51px; /* arredondamento dos cantos */
+    padding: 6px 2px; /* tamanho do botão */
     width: 220px;
     font-size: 16px;
     cursor: pointer;
@@ -590,51 +581,53 @@ body {
 }
 
 .linha-separadora {
-    width: 100%;               /* largura da linha */
-    height: 3px;              /* espessura */
+    width: 100%; /* largura da linha */
+    height: 3px; /* espessura */
     background-color: #2f415a; /* cor da linha */
     margin: 0.5px auto 0 auto; /* espaço acima e centraliza horizontalmente */
-    border: none;             /* remove bordas padrão do <hr> */
+    border: none; /* remove bordas padrão do <hr> */
 }
 
 .nova-caixa {
     position: relative;
-    top: 40px;  /* distância da linha separadora */
-    left: 0;    /* posicionada à esquerda da tela */
+    top: 40px; /* distância da linha separadora */
+    left: 0; /* posicionada à esquerda da tela */
     margin-left: 40px;
 
-    width: 300px;   /* largura da caixa */
-    height: 160px;  /* altura da caixa */
-    
+    width: 300px; /* largura da caixa */
+    height: 160px; /* altura da caixa */
+
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* conteúdo começa do topo */
-    align-items: flex-start;     /* conteúdo alinhado à esquerda */
+    align-items: flex-start; /* conteúdo alinhado à esquerda */
 }
 
 .nova-caixa p {
-    color: #102542;               /* cor do texto */
+    color: #102542; /* cor do texto */
     font-family: Verdana, sans-serif;
-    font-size: 18px;              /* ajusta o tamanho que quiser */
-    
-    position: relative;           /* permite mover sem afetar outros elementos */
-    top: 30px;                   /* distância do topo da caixa, ajusta para baixo */
-    left: 60px;                   /* distância da esquerda da caixa, ajusta pro lado */
-    
-    text-align: center;           /* centraliza o conteúdo do texto dentro da largura dele */
-    width: calc(100% - 40px);     /* opcional: deixa o texto ocupar quase toda a largura da caixa */
+    font-size: 18px; /* ajusta o tamanho que quiser */
+
+    position: relative; /* permite mover sem afetar outros elementos */
+    top: 30px; /* distância do topo da caixa, ajusta para baixo */
+    left: 60px; /* distância da esquerda da caixa, ajusta pro lado */
+
+    text-align: center; /* centraliza o conteúdo do texto dentro da largura dele */
+    width: calc(
+        100% - 40px
+    ); /* opcional: deixa o texto ocupar quase toda a largura da caixa */
 }
 
 .nova-caixa .linha-conteudo {
-    display: flex;          /* alinha os filhos em linha */
-    align-items: center;    /* alinha verticalmente quadrado e texto */
-    gap: 15px;              /* espaço entre quadrado e texto */
+    display: flex; /* alinha os filhos em linha */
+    align-items: center; /* alinha verticalmente quadrado e texto */
+    gap: 15px; /* espaço entre quadrado e texto */
 }
 
 .container-quadrado {
@@ -643,9 +636,9 @@ body {
 
 /* agora você pode mover só o quadrado dentro do container */
 .mini-quadrado {
-    position: absolute;  /* dentro do container */
-    top: 1px;            /* ajusta pra baixo */
-    left: 0px;           /* ajusta pra direita */
+    position: absolute; /* dentro do container */
+    top: 1px; /* ajusta pra baixo */
+    left: 0px; /* ajusta pra direita */
     /* resto do CSS permanece igual */
     width: 80px;
     height: 65px;
@@ -671,8 +664,12 @@ body {
     margin-left: 120px;
 }
 
-.titulo-plano span.preto { color: black; }
-.titulo-plano span.verde { color: #2c7265; }
+.titulo-plano span.preto {
+    color: black;
+}
+.titulo-plano span.verde {
+    color: #2c7265;
+}
 
 /* container dos dias */
 .container-semana {
@@ -683,7 +680,7 @@ body {
 
 /* retângulos de cada dia */
 .dia-semana {
-    background-color: rgba(255,255,255,0.57);
+    background-color: rgba(255, 255, 255, 0.57);
     border-radius: 13px;
     width: 280px;
     height: 700px;
@@ -691,7 +688,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Verdana, sans-serif;
     text-align: center;
 }
@@ -733,7 +730,7 @@ body {
 /* retângulo de notificações */
 
 .notificações {
-    background-color: rgba(255,255,255,0.57);
+    background-color: rgba(255, 255, 255, 0.57);
     border-radius: 50px;
     width: 400px;
     height: 700px;
@@ -741,7 +738,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Verdana, sans-serif;
     margin-left: 20px;
 }
@@ -854,7 +851,7 @@ body {
 /* retângulo de notificações */
 
 .notificacao2 {
-    background-color: rgba(255,255,255,0.57);
+    background-color: rgba(255, 255, 255, 0.57);
     border-radius: 50px;
     width: 400px;
     height: 700px;
@@ -862,7 +859,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Verdana, sans-serif;
     margin-left: 900px;
 }
@@ -872,18 +869,18 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 1350px; 
+    gap: 1350px;
     align-items: center;
     margin-bottom: 10px;
     margin-top: 20px;
     padding: 0 20px;
     margin-left: -370px;
 
-    position: absolute;   /* permite sobrepor */
-    top: 60px;           /* ↓ abaixar */
-    left: 150px;          /* → mover para a esquerda */
+    position: absolute; /* permite sobrepor */
+    top: 60px; /* ↓ abaixar */
+    left: 150px; /* → mover para a esquerda */
 
-    z-index: 999;  
+    z-index: 999;
 }
 
 /* Contêiner clicável das setas */
@@ -895,8 +892,8 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    border-radius: 50%; 
-    background-color: #4c9386;   /* bolinha verde igual ao layout */
+    border-radius: 50%;
+    background-color: #4c9386; /* bolinha verde igual ao layout */
     transition: 0.25s;
 }
 
@@ -913,7 +910,6 @@ body {
     filter: invert(1); /* deixa branca */
     transition: 0.25s;
 }
-
 
 /* notificações internas */
 .notifsemana2-1,
@@ -958,11 +954,10 @@ body {
     font-size: 14px;
 }
 
-
 .retangulo1 {
     position: relative;
     z-index: 2;
-    top: 120px;       /* posição do retângulo na página */
+    top: 120px; /* posição do retângulo na página */
     left: 50%;
     transform: translateX(-50%);
     width: 1000px;
@@ -970,14 +965,13 @@ body {
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-
-    padding-top: 30px;          /* distância do topo do retângulo */
-    text-align: center;          /* centraliza horizontal */
+    padding-top: 30px; /* distância do topo do retângulo */
+    text-align: center; /* centraliza horizontal */
     display: flex;
-    flex-direction: column;      
-    align-items: center;         /* centraliza horizontal */
+    flex-direction: column;
+    align-items: center; /* centraliza horizontal */
 }
 
 .retangulo1 h1 {
@@ -1009,11 +1003,11 @@ body {
 
 /* Container da logo + texto */
 .logo-texto-container {
-    display: flex;              /* deixa horizontal */
-    align-items: center;        /* centraliza verticalmente */
-    justify-content: center;    /* centraliza horizontalmente */
-    gap: -5px;                  /* espaço entre logo e texto */
-    margin-bottom: 20px;        /* distancia do H1 */
+    display: flex; /* deixa horizontal */
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    gap: -5px; /* espaço entre logo e texto */
+    margin-bottom: 20px; /* distancia do H1 */
 }
 
 /* Logo */
@@ -1036,7 +1030,7 @@ body {
 .retangulo2 {
     position: relative;
     z-index: 2;
-    top: 120px;       /* posição do retângulo na página */
+    top: 120px; /* posição do retângulo na página */
     left: 50%;
     transform: translateX(-50%);
     width: 1000px;
@@ -1044,14 +1038,13 @@ body {
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-
-    padding-top: 30px;          /* distância do topo do retângulo */
-    text-align: center;          /* centraliza horizontal */
+    padding-top: 30px; /* distância do topo do retângulo */
+    text-align: center; /* centraliza horizontal */
     display: flex;
-    flex-direction: column;      
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-texto-container2 {
@@ -1096,37 +1089,37 @@ body {
     gap: 20px;
 }
 
-.btn-cancelar2, .btn-criar2 {
+.btn-cancelar2,
+.btn-criar2 {
     padding: 20px 125px;
     border-radius: 100px;
     border: none;
     font-size: 16px;
     cursor: pointer;
     width: 80%;
-    
 }
 
 .btn-cancelar2 {
     background-color: #ccc;
     color: #333;
-    margin-left: 40px;  /* aumenta a distância da borda esquerda do retângulo */
-    margin-top: 100px;   /* distância do conteúdo acima */
+    margin-left: 40px; /* aumenta a distância da borda esquerda do retângulo */
+    margin-top: 100px; /* distância do conteúdo acima */
 }
 
 .btn-criar2 {
     background-color: #2d3e56;
     color: #fff;
-    margin-left: 180px;  /* aumenta a distância da borda esquerda do retângulo */
+    margin-left: 180px; /* aumenta a distância da borda esquerda do retângulo */
     margin-right: 85px;
-    margin-top: 100px;   /* distância do conteúdo acima */
+    margin-top: 100px; /* distância do conteúdo acima */
 }
 
 .retangulo2 p {
     font-family: Verdana, sans-serif; /* muda a fonte */
-    font-size: 20px;                  /* ajusta o tamanho */
-    color: #102542;                   /* cor do texto */
-    margin: 15px 0 5px 0;             /* distância em cima e embaixo */
-    text-align: left;                 /* alinhamento do texto dentro do retângulo */
+    font-size: 20px; /* ajusta o tamanho */
+    color: #102542; /* cor do texto */
+    margin: 15px 0 5px 0; /* distância em cima e embaixo */
+    text-align: left; /* alinhamento do texto dentro do retângulo */
 }
 
 /*copiar codigo*/
@@ -1163,8 +1156,7 @@ body {
     background-color: rgba(255, 255, 255, 0.57);
     border-radius: 13px;
     padding-top: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo-texto-container {
@@ -1245,26 +1237,26 @@ body {
 
 .logo-avenaequipe {
     position: absolute;
-    top: 53%;          
+    top: 53%;
     left: 80%;
     transform: translate(-50%, -50%);
-    width: 790px;     /* ajusta o tamanho */
-    opacity: 0.20;    /* transparência */
-    z-index: 1;       /* atrás */
+    width: 790px; /* ajusta o tamanho */
+    opacity: 0.2; /* transparência */
+    z-index: 1; /* atrás */
 }
 
 /*PÁGINA EQUIPE PROFISSIONAL*/
 
 .btn-criarequipe {
-    position: absolute;      /* fixa no canto da tela */
-    top: 80px;               /* distância do topo */
-    right: 20px;             /* distância da direita */
-    
+    position: absolute; /* fixa no canto da tela */
+    top: 80px; /* distância do topo */
+    right: 20px; /* distância da direita */
+
     background-color: #4c9386;
     color: #ffffff;
     border: none;
-    border-radius: 51px;     /* arredondamento dos cantos */
-    padding: 6px 2px;      /* tamanho do botão */
+    border-radius: 51px; /* arredondamento dos cantos */
+    padding: 6px 2px; /* tamanho do botão */
     width: 220px;
     font-size: 16px;
     cursor: pointer;
@@ -1276,51 +1268,53 @@ body {
 }
 
 .linha-separadora {
-    width: 100%;               /* largura da linha */
-    height: 3px;              /* espessura */
+    width: 100%; /* largura da linha */
+    height: 3px; /* espessura */
     background-color: #2f415a; /* cor da linha */
     margin: 0.5px auto 0 auto; /* espaço acima e centraliza horizontalmente */
-    border: none;             /* remove bordas padrão do <hr> */
+    border: none; /* remove bordas padrão do <hr> */
 }
 
 .nova-caixa {
     position: relative;
-    top: 40px;  /* distância da linha separadora */
-    left: 0;    /* posicionada à esquerda da tela */
+    top: 40px; /* distância da linha separadora */
+    left: 0; /* posicionada à esquerda da tela */
     margin-left: 40px;
 
-    width: 300px;   /* largura da caixa */
-    height: 160px;  /* altura da caixa */
-    
+    width: 300px; /* largura da caixa */
+    height: 160px; /* altura da caixa */
+
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* conteúdo começa do topo */
-    align-items: flex-start;     /* conteúdo alinhado à esquerda */
+    align-items: flex-start; /* conteúdo alinhado à esquerda */
 }
 
 .nova-caixa p {
-    color: #102542;               /* cor do texto */
+    color: #102542; /* cor do texto */
     font-family: Verdana, sans-serif;
-    font-size: 18px;              /* ajusta o tamanho que quiser */
-    
-    position: relative;           /* permite mover sem afetar outros elementos */
-    top: 30px;                   /* distância do topo da caixa, ajusta para baixo */
-    left: 60px;                   /* distância da esquerda da caixa, ajusta pro lado */
-    
-    text-align: center;           /* centraliza o conteúdo do texto dentro da largura dele */
-    width: calc(100% - 40px);     /* opcional: deixa o texto ocupar quase toda a largura da caixa */
+    font-size: 18px; /* ajusta o tamanho que quiser */
+
+    position: relative; /* permite mover sem afetar outros elementos */
+    top: 30px; /* distância do topo da caixa, ajusta para baixo */
+    left: 60px; /* distância da esquerda da caixa, ajusta pro lado */
+
+    text-align: center; /* centraliza o conteúdo do texto dentro da largura dele */
+    width: calc(
+        100% - 40px
+    ); /* opcional: deixa o texto ocupar quase toda a largura da caixa */
 }
 
 .nova-caixa .linha-conteudo {
-    display: flex;          /* alinha os filhos em linha */
-    align-items: center;    /* alinha verticalmente quadrado e texto */
-    gap: 15px;              /* espaço entre quadrado e texto */
+    display: flex; /* alinha os filhos em linha */
+    align-items: center; /* alinha verticalmente quadrado e texto */
+    gap: 15px; /* espaço entre quadrado e texto */
 }
 
 .container-quadrado {
@@ -1329,9 +1323,9 @@ body {
 
 /* agora você pode mover só o quadrado dentro do container */
 .mini-quadrado {
-    position: absolute;  /* dentro do container */
-    top: 1px;            /* ajusta pra baixo */
-    left: 0px;           /* ajusta pra direita */
+    position: absolute; /* dentro do container */
+    top: 1px; /* ajusta pra baixo */
+    left: 0px; /* ajusta pra direita */
     /* resto do CSS permanece igual */
     width: 80px;
     height: 65px;
@@ -1374,7 +1368,7 @@ body {
     align-items: center;
     gap: 10px;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 
     font-family: Verdana, sans-serif;
     color: #102542;
@@ -1397,7 +1391,7 @@ body {
     gap: 40px;
 
     justify-content: center;
-    grid-auto-rows: min-content; 
+    grid-auto-rows: min-content;
 }
 
 .avatar {
@@ -1414,7 +1408,7 @@ body {
     background: #f4f8f8;
     border-radius: 20px;
     padding: 50px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 70px;
 
@@ -1447,10 +1441,10 @@ body {
 /* CARTÕES */
 .notif-card {
     background: linear-gradient(to right, #b1d5e0, #b0d8ca);
-    padding: 18px 30px;     /* Aumentei para não ficar apertado */
+    padding: 18px 30px; /* Aumentei para não ficar apertado */
     border-radius: 15px;
-    width: 400px; 
-    margin: 0 auto 30px;    /* <-- ISSO CENTRALIZA */
+    width: 400px;
+    margin: 0 auto 30px; /* <-- ISSO CENTRALIZA */
     font-family: Verdana, sans-serif;
 
     display: flex;
@@ -1494,7 +1488,7 @@ body.layout-config {
 .config-header {
     display: flex;
     align-items: center;
-    gap: 350px;     /* ----- DISTÂNCIA ENTRE CONFIGURAÇÕES E CONTAS ----- */
+    gap: 350px; /* ----- DISTÂNCIA ENTRE CONFIGURAÇÕES E CONTAS ----- */
     padding: 30px 40px;
     color: #102542;
 }
@@ -1536,8 +1530,8 @@ body.base-config main {
     border-radius: 8px;
     outline: none;
 
-    margin-top: 20px;      /* distância abaixo da linha */
-    margin-left: 30px;     /* afastado da esquerda */
+    margin-top: 20px; /* distância abaixo da linha */
+    margin-left: 30px; /* afastado da esquerda */
 }
 
 .config-topicos {
@@ -1552,8 +1546,8 @@ body.base-config main {
 
 .config-topicos {
     display: flex;
-    flex-direction: column;   /* um embaixo do outro */
-    align-items: flex-start;  /* impede esticar */
+    flex-direction: column; /* um embaixo do outro */
+    align-items: flex-start; /* impede esticar */
     gap: 15px;
 }
 
@@ -1575,15 +1569,17 @@ body.base-config main {
     border-bottom: 2px solid #102542 !important; /* linha fixa */
 }
 .titulo-contasinfo {
-    position: relative;   /* permite mover */
-    font-size: 30px;      /* ajuste como quiser */
-    color: #102542;       /* cor que você quiser */
-    margin-top: 5px; 
-    left: 40px;     
+    position: relative; /* permite mover */
+    font-size: 30px; /* ajuste como quiser */
+    color: #102542; /* cor que você quiser */
+    margin-top: 5px;
+    left: 40px;
 }
 
-
-.linha1, .linha2, .linha3, .linha4 {
+.linha1,
+.linha2,
+.linha3,
+.linha4 {
     position: absolute;
     left: 610px; /* controla o quanto vai pra direita */
     font-family: Verdana, sans-serif;
@@ -1604,59 +1600,23 @@ body.base-config main {
     border-bottom: 2px solid #102542; /* só aparece no hover */
 }
 /* ajusta verticalmente */
-.linha1 { top: 160px; }
-.linha2 { top: 230px; }
-.linha3 { top: 300px; }
-.linha4 { top: 460px; }
-
-.info1, .info2, .info3, .info4 {
-    position: absolute;
-    left: 610px;       /* mesmo alinhamento */
-    font-family: Verdana, sans-serif;
-    color: #334;
-    font-size: 16px;
+.linha1 {
+    top: 160px;
 }
-
-/* AGORA VOCÊ POSICIONA ENTRE ELAS */
-.info1 { top: 195px; }  /* entre linha1 e linha2 */
-.info2 { top: 295px; }  /* entre linha2 e linha3 */
-.info3 { top: 395px; }  /* entre linha3 e linha4 */
-.info4 { top: 495px; }  /* após linha4 */
-
-.linha1info, .linha2info, .linha3info, .linha4info {
-    position: absolute;
-    left: 610px; /* controla o quanto vai pra direita */
-    font-family: Verdana, sans-serif;
-    color: #102542;
-    font-size: 25px;
+.linha2 {
+    top: 230px;
 }
-
-/* ajusta verticalmente */
-.linha1info { top: 160px; }
-.linha2info { top: 240px; }
-.linha3info { top: 320px; }
-.linha4info { top: 400px; }
-
-
-/* TEXTOS ENTRE AS LINHAS */
-.info1-, .info2-, .info3-, .info4- {
-    position: absolute;
-    left: 610px;       /* mesmo alinhamento */
-    font-family: Verdana, sans-serif;
-    color: #334;
-    font-size: 16px;
+.linha3 {
+    top: 300px;
 }
-
-/* AGORA VOCÊ POSICIONA ENTRE ELAS */
-.info1- { top: 195px; }  /* entre linha1 e linha2 */
-.info2- { top: 275px; }  /* entre linha2 e linha3 */
-.info3- { top: 355px; }  /* entre linha3 e linha4 */
-.info4- { top: 435px; }  /* após linha4 */
+.linha4 {
+    top: 460px;
+}
 
 .btn-voltarplano-conta {
     position: absolute; /* Permite movimentar livremente */
-    top: 30px;          /* Ajuste para subir/descer */
-    left: 600px;         /* Ajuste para esquerda/direita */
+    top: 30px; /* Ajuste para subir/descer */
+    left: 600px; /* Ajuste para esquerda/direita */
 
     width: 40px;
     height: 40px;
@@ -1664,10 +1624,10 @@ body.base-config main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 50%; /* deixa redondo */
     padding: 5px;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     z-index: 99; /* garante que fique por cima */
 }
@@ -1678,7 +1638,6 @@ body.base-config main {
     height: 24px;
 }
 
-
 .linha1-priv {
     position: absolute;
     left: 610px; /* controla o quanto vai pra direita */
@@ -1688,13 +1647,16 @@ body.base-config main {
 }
 
 /* ajusta verticalmente */
-.linha1-priv { top: 150px; }
-
+.linha1-priv {
+    top: 150px;
+}
 
 /* TEXTOS ENTRE AS LINHAS */
-.info1-priv, .info2-priv, .info3-priv {
+.info1-priv,
+.info2-priv,
+.info3-priv {
     position: absolute;
-    left: 610px;       /* mesmo alinhamento */
+    left: 610px; /* mesmo alinhamento */
     font-family: Verdana, sans-serif;
     color: #334;
     font-size: 16px;
@@ -1702,18 +1664,15 @@ body.base-config main {
 }
 
 /* AGORA VOCÊ POSICIONA ENTRE ELAS */
-.info1-priv { top: 215px; }  /* entre linha1 e linha2 */
-.info2-priv { top: 265px; }  /* entre linha2 e linha3 */
-.info3-priv { top: 315px; }  /* entre linha3 e linha4 */
-
-.info3-acess {
-    position: absolute;
-    left: 650px;       /* mesmo alinhamento */
-    font-family: Verdana, sans-serif;
-    color: #334;
-    font-size: 16px;
-}
-.info3-acess { top: 160px; }  /* entre linha3 e linha4 */
+.info1-priv {
+    top: 215px;
+} /* entre linha1 e linha2 */
+.info2-priv {
+    top: 265px;
+} /* entre linha2 e linha3 */
+.info3-priv {
+    top: 315px;
+} /* entre linha3 e linha4 */
 
 /* Garante que tudo dentro do main possa usar posicionamento absoluto */
 main {
@@ -1723,12 +1682,12 @@ main {
 /* Container dos retângulos — move para a DIREITA e para CIMA */
 .caixas-direita {
     position: absolute;
-    right: 60px;     /* ⬅️ afasta da borda direita */
-    top: 230px;       /* ⬅️ sobe os elementos na tela */
-    
+    right: 60px; /* ⬅️ afasta da borda direita */
+    top: 230px; /* ⬅️ sobe os elementos na tela */
+
     display: flex;
     flex-direction: column;
-    gap: 40px;        /* distância entre os dois retângulos */
+    gap: 40px; /* distância entre os dois retângulos */
 }
 
 /* Cada retângulo */
@@ -1737,7 +1696,7 @@ main {
     height: 85px;
 
     background: #b7cfd080;
-    border: 2px solid #2f415a;
+    border: 2px solid #06090e;
     border-radius: 12px;
 
     display: flex;
@@ -1756,16 +1715,6 @@ main {
 }
 /*botão ligar e desligar modo escur9o*/
 
-.toggle-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    position: absolute;
-    top: 30px;     /* diminua para subir */
-    left: 1150px;    /* aumente para ir mais à direita */
-}
-
 .toggle {
     position: relative;
     width: 55px;
@@ -1782,10 +1731,13 @@ main {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #78acbf;
     border-radius: 30px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .slider:before {
@@ -1797,7 +1749,7 @@ main {
     bottom: 3px;
     background-color: white;
     border-radius: 50%;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 /* Quando LIGADO */
@@ -1815,13 +1767,11 @@ main {
     font-size: 18px;
 }
 
-
 /*scrull p aumenmtar fonte*/
 
 .slider-wrapper {
-    position: absolute;
-    top: 165px;    /* diminua para subir */
-    left: 1050px;   /* aumente para ir mais para a direita */
+    top: 165px; /* diminua para subir */
+    left: 1050px; /* aumente para ir mais para a direita */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1836,9 +1786,9 @@ main {
 /* Slider estilizado */
 .font-slider {
     -webkit-appearance: none;
-    width: 150px;     /* largura do slider */
+    width: 150px; /* largura do slider */
     height: 6px;
-    background: #d0d0d0;
+    background: #78acbf;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
@@ -1847,7 +1797,7 @@ main {
 /* Linha do slider */
 .font-slider::-webkit-slider-runnable-track {
     height: 8px;
-    background: #999999;
+    background: #78acbf;
     border-radius: 2px;
 }
 
@@ -1873,7 +1823,7 @@ main {
 .btn-voltar {
     display: inline-flex;
     align-items: center;
-    gap: 6px;            /* espaço entre a seta e o texto */
+    gap: 6px; /* espaço entre a seta e o texto */
 
     background: #ffffff;
     padding: 17px 17px;
@@ -1884,23 +1834,23 @@ main {
     font-weight: bold;
 
     position: absolute;
-    top:  60px;           /* mexe pra cima */
-    left: 180px;          /* mexe pra direita */
+    top: 60px; /* mexe pra cima */
+    left: 180px; /* mexe pra direita */
 
-    cursor: pointer;     /* deixa com cara de botão */
+    cursor: pointer; /* deixa com cara de botão */
 }
 
 .seta-icon {
-    width: 18px;         /* diminui tamanho da seta */
+    width: 18px; /* diminui tamanho da seta */
     height: auto;
-    pointer-events: none;  
+    pointer-events: none;
     /* garante que o clique sempre pegue no botão, não na imagem */
 }
 
 .btn-voltarplano {
     display: inline-flex;
     align-items: center;
-    gap: 6px;            /* espaço entre a seta e o texto */
+    gap: 6px; /* espaço entre a seta e o texto */
 
     background: #ffffff77;
     padding: 17px 17px;
@@ -1911,15 +1861,15 @@ main {
     font-weight: bold;
 
     position: absolute;
-    top:  4px;           /* mexe pra cima */
-    left: 40px;          /* mexe pra direita */
+    top: 4px; /* mexe pra cima */
+    left: 40px; /* mexe pra direita */
 
-    cursor: pointer;     /* deixa com cara de botão */
+    cursor: pointer; /* deixa com cara de botão */
 }
 
 .seta-icon2 {
-    width: 18px;         /* diminui tamanho da seta */
+    width: 18px; /* diminui tamanho da seta */
     height: auto;
-    pointer-events: none;  
+    pointer-events: none;
     /* garante que o clique sempre pegue no botão, não na imagem */
 }

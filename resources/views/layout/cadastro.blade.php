@@ -31,14 +31,28 @@
                         @elseif ($etapa == 1)
                             <a href="/login"><i class="fa-solid fa-circle-left"></i></a>
                         @endif
+
+                       
                     <a href="#" class="help-link">Ajuda?</a>
                 </div>
 
                 <div class="nunita-normal form-container ">
                     <div class="formform-heading">
-                        <h1 class="nunita-normal">Cadastre-se</h1>
-                        <p>Preencha os espaços com suas Informações.</p>
-                        
+                        <h1 class="nunita-normal">
+                            @if ($etapa == 4)
+                                Cadastro Concluído! 
+                            @else  
+                                Cadastre-se
+                            @endif
+                        </h1>
+                        <p>
+                            @if ($etapa == 4)
+                                Parabéns! Seu perfil foi criado com sucesso.
+                            @else 
+                                Preencha os espaços com suas Informações.
+                            @endif
+                        </p>
+
                         @yield("form-heading")
                     </div>
                     <form class="form-row form-column form-check" action="{{ route('cadastro.salvarEtapa') }}" method="POST">

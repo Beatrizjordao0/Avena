@@ -6,7 +6,7 @@ use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\AgendaController;
-
+use App\Http\Controllers\Auth\AlterarSenha;
 // index
 Route::get('/', [PaginasController::class, 'index'])->name('home');
 
@@ -112,33 +112,17 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-// AGENDA
+// Agenda
 
-Route::middleware(['auth'])->group(function () {
-    // Views
-    Route::get('/agenda/grupo/{id}', [AgendaController::class, 'pacienteView'])
-        ->name('agenda.paciente'); // usado por pacientes para ver agenda do grupo
+Route::middleware('auth')->group(function () {
+    
+    // Paciente acessa sua agenda
+    Route::get('/agenda', [AgendaController::class, 'pacienteView'])->name('agenda.paciente');
 
-    Route::get('/agenda/grupo/{id}/terapeuta', [AgendaController::class, 'terapeutaView'])
-        ->name('agenda.terapeuta'); // usado por terapeutas para editar agenda (selecionar paciente)
+    // Terapeuta acessa a agenda de um paciente específico
+    Route::get('/agenda/terapeuta', [AgendaController::class, 'terapeutaView'])->name('agenda.terapeuta');
 
-    // API-like endpoints (POST/DELETE/PATCH) para ações (JSON responses)
-    Route::post('/agenda/libatividade', [AgendaController::class, 'storeLibAtividade'])
-        ->name('agenda.libatividade.store');
-
-    Route::post('/agenda/{grupoId}/adicionar', [AgendaController::class, 'adicionarAgenda'])
-        ->name('agenda.adicionar');
-
-    Route::delete('/agenda/item/{id}', [AgendaController::class, 'removerAgenda'])
-        ->name('agenda.remover');
-
-    Route::patch('/agenda/item/{id}/toggle-concluida', [AgendaController::class, 'toggleConcluida'])
-        ->name('agenda.toggleConcluida');
-
-    Route::get('/agenda/grupo/{id}/json', [AgendaController::class, 'agendaJson'])
-        ->name('agenda.json'); // retorna agenda em JSON (útil para front)
 });
-
 
 
 // ==============================
@@ -166,22 +150,24 @@ Route::get('/contas', [PaginasController::class, 'contas'])->name('contas');
 
 // Configurações
 
+Route::middleware('auth')->group(function () {
 
-Route::get('/config', function () {
-    return view('contas');
-})->name('config');
+    Route::get('/config', function () {
+        return view('contas');
+    })->name('config');
 
-Route::get('/Conta', [PaginasController::class, 'informacoesconta'])
-    ->name('informacoes.conta');
-    
-Route::get('/privacidade', [PaginasController::class, 'privacidade'])->name('privacidade');
+    Route::get('/Conta', [PaginasController::class, 'informacoesconta'])
+        ->name('informacoes.conta');
 
-Route::get('/acessibilidade', [PaginasController::class, 'acessibilidade'])->name('acessibilidade');
+    Route::get('/privacidade', [PaginasController::class, 'privacidade'])
+        ->name('privacidade');
 
-Route::get('/alterar-senha', [App\Http\Controllers\Auth\AlterarSenha::class, 'showAlterarSenhaForm'])
-    ->name('alterar.senha')
-    ->middleware('auth');
+    Route::get('/acessibilidade', [PaginasController::class, 'acessibilidade'])
+        ->name('acessibilidade');
 
-Route::post('/alterar-senha', [App\Http\Controllers\Auth\AlterarSenha::class, 'alterarSenha'])
-    ->name('alterar.senha.atualizar')
-    ->middleware('auth');
+    Route::get('/alterar-senha', [AlterarSenha::class, 'showAlterarSenhaForm'])
+        ->name('alterar.senha');
+
+    Route::post('/alterar-senha', [AlterarSenha::class, 'alterarSenha'])
+        ->name('alterar.senha.atualizar');
+});

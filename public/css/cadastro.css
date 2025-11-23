@@ -438,3 +438,17 @@ form input[type="email"]:focus {
     color: #102542;
     cursor: pointer;
 }
+
+.users-info{
+    color: #102542;
+    background: #bfeaff70;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0rem;
+    flex-wrap: wrap;
+    font-size: 2.3rem;
+    border: 2px solid;
+    border-radius: 2rem;
+    height: 54rem;
+}

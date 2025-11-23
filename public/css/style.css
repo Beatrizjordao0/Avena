@@ -512,12 +512,6 @@ body {
 /*logo*/
 
 .logo-avena {
-    position: absolute;
-    top: 183%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    width: 790px; /* ajusta o tamanho */
-    opacity: 0.2; /* transparência */
 }
 
 .logo-avenajoin {

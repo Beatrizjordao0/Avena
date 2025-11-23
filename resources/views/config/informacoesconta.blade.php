@@ -26,6 +26,6 @@
                 <button type="submit">Salvar nova foto</button>
             </form>
 
-
+            <a href="{{ route('equipe.upgrade') }}" class="btn-terapeuta" style="display: inline-flex; width: auto; margin: 0;">Tornar-se Terapeuta</a>
         </div>
 @endsection

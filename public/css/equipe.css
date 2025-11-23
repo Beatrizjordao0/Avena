@@ -1,0 +1,14 @@
+main {
+    height: 100vh;
+}
+
+.modal-overlay {
+    margin: 0;
+    width: 100vw;
+    height: 80vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -3,7 +3,7 @@
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* MODAL ESTYLUS */
@@ -11,7 +11,7 @@ main {
 .modal-overlay {
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: rgba(0, 0, 0, 0.65);
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ main {
     border: 0.2rem solid #102542;
     background-color: #e8e8e8;
     width: 50%;
-    height: 70%;
+    height: 30rem;
     border-radius: 1rem;
     word-wrap: break-word;
     display: flex;

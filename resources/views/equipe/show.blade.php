@@ -13,7 +13,7 @@
 
         <div class="usuarios-scroll">
             @foreach($grupo->membros as $membro)
-            <a href="{{ route('agenda.show', $membro->paciente->id) }}" class="usuario-item" style="text-decoration: none; color: inherit;">
+            <a href="{{ route('agenda.terapeuta', $membro->paciente->id) }}" class="usuario-item" style="text-decoration: none; color: inherit;">
                 <img src="/img/user.png" class="avatar">
                 <span>{{ $membro->paciente->name }}</span>
             </a>

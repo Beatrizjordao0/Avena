@@ -159,6 +159,9 @@ Route::get('/salaatividades', [PaginasController::class, 'salaatividades']);
 Route::get('/contas', [PaginasController::class, 'contas'])->name('contas');
 
 
+// Configurações
+
+
 Route::get('/config', function () {
     return view('contas');
 })->name('config');

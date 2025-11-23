@@ -13,11 +13,11 @@
     <style>
     </style>
 </head>
-<body class="nunita-bold">
+<body>
             <!-- Logo do cabeçalho -->
-        <div class="logo nunita-bold">
+        <div class="logo nunita-normal">
             <img src='/img/logo-avena-removebg-preview-dark.png' alt="Imagem da logo da Avena">
-            <span class="poppins-bold text-name">Avena</span>
+            <span class="poppins-bold text-name">AVENA</span>
         </div>
             <!-- Parte superior do cadastro -->
         <div class="left-side-container">
@@ -26,8 +26,11 @@
                 <a href="#" class="help-link">Ajuda?</a>
             </div>
 
-            <div class=" form-container ">
+            <div class="nunita-normal form-container ">
                 <div class="formform-heading">
+                    <h1 class="nunita-normal">Cadastre-se</h1>
+                    <p>Preencha os espaços com suas Informações.</p>
+                    
                     @yield("form-heading")
                 </div>
                 <form class="form-row" action="{{ route('cadastro.salvarEtapa') }}" method="POST">
@@ -42,11 +45,11 @@
             </div>
         </div>
 
-        <div class="right-side-container">
+        <div class="right-side-container login-image-container">
             <div class="background-content">
-                <h1>Faça parte da Avena!</h1>
-                <p>Matenha o progresso sempre visível <br> Dentro e fora do consultório</p>
+                <h1 class="nunita-normal">Faça parte da Avena!</h1>
+                <p class="nunita-normal">Matenha o progresso sempre visível <br> Dentro e fora do consultório</p>
             </div>
         </div>
 </body>
-</html> 
+</html>

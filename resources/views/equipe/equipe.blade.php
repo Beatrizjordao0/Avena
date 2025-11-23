@@ -52,11 +52,11 @@
         </div>
         
         @if($user->tipo_conta === 'T')
-            <a href="{{ route('terapeutaView', $grupo->id_gp_terapia) }}" class="nome-grupo-link">
+            <a href="{{ route('equipe.show', $grupo->id_gp_terapia) }}" class="nome-grupo-link">
                 <p>{{ $grupo->nome_gp }}</p>
             </a>
         @else
-            <a href="{{ route('pacienteView', $grupo->id_gp) }}" class="nome-grupo-link">
+            <a href="{{ route('agenda.paciente', $grupo->id_gp) }}" class="nome-grupo-link">
                 <p>{{ $grupo->grupo->nome_gp }}</p>
             </a>
         @endif

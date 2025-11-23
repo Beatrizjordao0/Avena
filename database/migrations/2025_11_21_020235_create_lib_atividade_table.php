@@ -10,10 +10,12 @@ class CreateLibAtividadeTable extends Migration
     {
         Schema::create('lib_atividade', function (Blueprint $table) {
             $table->id('id_atividade');
-            $table->foreignId('id_terapeuta')->constrained('terapeuta','id_terapeuta')->onDelete('cascade');
+            $table->foreignId('id_terapeuta')
+                  ->constrained('terapeuta', 'id_terapeuta')
+                  ->onDelete('cascade');
             $table->string('nome_atv', 50);
             $table->string('desc_atv')->nullable();
-            $table->string('lib_atividadecol')->nullable();
+            $table->time('horario')->nullable(); // <<-- corrigido: horário da atividade
             $table->timestamps();
         });
     }

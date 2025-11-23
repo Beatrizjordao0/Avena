@@ -9,7 +9,12 @@ class LibAtividade extends Model
 {
     protected $table = 'lib_atividade';
     protected $primaryKey = 'id_atividade';
-    protected $fillable = ['id_terapeuta','nome_atv','desc_atv','lib_atividadecol'];
+    protected $fillable = [
+        'id_terapeuta',
+        'nome_atv',
+        'desc_atv',
+        'horario',
+    ];
 
     public function terapeuta(): BelongsTo
     {

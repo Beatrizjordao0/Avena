@@ -44,6 +44,12 @@ body::after{
     font-style: normal;
 }
 
+.nunita-normal{
+    font-family: 'nunito', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 .nunita-bold {
     font-family: "nunito", sans-serif;
     font-weight: 700;
@@ -58,10 +64,14 @@ body::after{
     color: #377292;
 }
 
+.text-secondary{
+    color: grey;
+}
+
 .formform-heading{
-    font-size: 14px;
-    margin-top: 54px;
-    margin-bottom: 39px;
+    font-size: 2.5rem;
+    margin-top: 0rem;
+    margin-bottom: 4.4rem;
 }
 
 .formform-heading h1{
@@ -70,32 +80,32 @@ body::after{
 
 .formform-heading p{
     color: #848484;
-    font-size: 10px;
+    font-size: 1.2rem;
     text-align: start;
-    margin-left: 7px;
+    margin-left: 0.4rem; 
 }
 
 .form-container{
-    margin-top: -34px;
+    margin-top: -2.1rem;
 }
 
 .left-side-container {
     background-color: #e0e8ee;
-    padding: 42px;
-    border-radius: 80px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    max-width: 450px;
+    padding: 6.6rem;
+    border-radius: 10rem;
+    box-shadow: 0 0.6rem 1.8rem rgba(0, 0, 0, 0.05);
+    max-width: 46.1rem;
     width: 80%;
-    margin-top: 80px;
-    margin-left: 120px;
+    margin-top: 8rem;
+    margin-left: 28.5rem;
     position: relative;
-    height: 520px;
+    height: 55.5rem;
 }
 
 .logo {
     position: fixed;
-    top: 30px;
-    right: 40px;
+    top: 1.8rem;
+    right: 2.5rem;
     display: flex;
     align-items: center;
     color: white;
@@ -105,18 +115,19 @@ body::after{
 }
 
 .logo img{
-    height: 30px;
-    margin-right: 5px;
+    height: 4.8rem;
+    margin-right: 0.3rem;
+    margin-top: -1rem;
 }
 
 .top-form-help-and-back{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 450px;
+    width: 32rem;
     max-width: 80%;
     position: absolute;
-    top: 20px;
+    top: 1.25rem;
 }
 
 .top-form-help-and-back a {
@@ -129,8 +140,8 @@ body::after{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     color: #555;
     font-size: 1rem;
@@ -140,7 +151,7 @@ body::after{
     font-size: 2.2rem;
     font-weight: 700;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 0.3rem;
     margin-top: 0;
 }
 
@@ -149,24 +160,24 @@ body::after{
 .form-heading p { /* Para o "Segundo passo! Preencha dados para contato" */
     color: #666;
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.8rem;
 }
 
 .form-group label {
     display: block;
     color: #555;
     font-size: 0.9rem;
-    margin-bottom: 5px;
-    margin-top: 15px;
+    margin-bottom: 0.3rem;
+    margin-top: 0.9rem;
 }
 
 
 
 form input[type="email"] {
     width: 100%;
-    padding: 10px 15px;
+    padding: 0.6rem 0.9rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     font-size: 1rem;
     box-sizing: border-box;
     transition: border-color 0.3s;
@@ -179,22 +190,20 @@ form input[type="email"]:focus {
 }
 
 .btn-next {
-    margin-top: 40px;
-    padding: 12px 25px;
-    width: 100%;
+    margin-top: 3.5rem;
+    padding: 0.7rem 1.5rem;
+    width: 66%;
     border: none;
-    border-radius: 50px;
+    border-radius: 3.1rem;
     font-size: 1.1rem;
-    font-weight: 600;
     color: white;
     cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
-
     background: linear-gradient(45deg, #7fa5b2, #88c8af);
-    box-shadow: 0 4px 10px rgba(137, 196, 220, 0.4);
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 5rem;
 }
 
 .btn-next:hover {
@@ -297,54 +306,59 @@ form input[type="email"]:focus {
 } 
 
 .right-side-container{
-    top: 34px;
-    left: 30px;
-    height: 85vh;
-    width: 79%;
+   top: 34px;
+    left: 44px;
+    height: 75vh;
+    width: 90%;
     position: relative;
-
-    background-image: url('../img/logo-avena-removebg-preview.png'); 
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat;
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-    position: relative;
-}
-
-.right-side-image::after {
-    content: ""; /* Essencial para pseudo-elementos */
-    position: absolute;
-    top: 34px;
-    left: 30px;
-    height: 85vh;
-    width: 79%;
-
-    background-color: #ffffff; /* Cor branca para "lavar" a imagem */
-
-    opacity: 1; /* Ajuste este valor (0.0 a 1.0). 0.3 significa 30% de opacidade */
-    z-index: 1; 
 }
 
 .background-content{
     text-align: center;
-    color: #102542;
-    padding: 30px;
-
+    padding: 21px;
     z-index: 2;
     border-radius: 10px;
     max-width: 80%;
+    margin-right: 14rem;
     
 }
 
 .background-content h1{
-    font-size: 29px;
+    color: #102542;
+    font-size: 4rem;
 }
 
 .background-content p{
-    font-size: 13px;
+    font-size: 1.5rem;
+    color: #102542;
+}
+
+
+
+.login-image-container {
+    position: relative;
+
+    z-index: 1;
+}
+
+.login-image-container::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    width: 70%;
+    height: 100%;
+
+    background-image: url(/img/logo-avena-removebg-preview-dark.png);
+
+    opacity: 0.1;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }

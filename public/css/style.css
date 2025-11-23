@@ -1816,3 +1816,93 @@ main {
     pointer-events: none;
     /* garante que o clique sempre pegue no botão, não na imagem */
 }
+
+
+.logo-avenaupgrade {
+    position: absolute;
+    top: 73%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 49rem;       
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.btn-criarprofissional {
+    padding: 1.25rem 7.8rem; 
+    border-radius: 6.25rem;  
+    border: none;
+    font-size: 1rem;        
+    cursor: pointer;
+    width: 80%;
+    background-color: #1b3558;
+    color: #fff;             
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 6.5rem;     
+}
+
+.inputrg,
+.inputdoc,
+.inputcpf {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 30rem;
+    display: block;
+    padding-top: 3000px;
+    margin: 0 auto 1.2rem auto;
+    padding: 1rem 1.2rem;
+    border-radius: 0.6rem;
+    border: 0.15rem solid #3b4c63;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    font-size: 1rem;
+    color: #102542;
+}
+
+.inputrg, .inputdoc, .inputcpf {
+    color: #555;
+    opacity: 1;
+    padding-left: 1.2rem;
+}
+
+
+.contaprofisssional label {
+    display: block;
+    margin-top: -1rem;    
+    font-size: 1rem;
+    color: #102542;
+}
+
+
+.contaprofisssional {
+    position: relative;
+    z-index: 2;
+
+    top: 7.5rem;                 
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 62.5rem;              
+    height: 37.5rem;             
+
+    border: 0.15rem solid #1b3558;
+    background-color: rgba(255, 255, 255, 0.57);
+    border-radius: 0.8rem;     
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1); 
+
+    padding-top: 2rem;           
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contaprofisssional h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 1.6rem;           
+    color: #2f415a;
+    margin: 0;
+}

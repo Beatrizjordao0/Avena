@@ -179,9 +179,11 @@ input {
 .inputLabel label {
     color: #6c6c6c;
     padding-bottom: 0.5rem;
+
 }
 
 .checkbox-inputLabel {
+    accent-color: #007bff;
     gap: 0.3rem;
     display: flex;
     height: fit-content;

@@ -21,8 +21,15 @@
         </div>
             <!-- Parte superior do cadastro -->
         <div class="left-side-container">
+                    @php
+                        $etapa = intVal($__env->yieldContent('etapa'));
+                    @endphp
             <div class="top-form-help-and-back">
-                <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+                    @if ($etapa > 1 && $etapa < 5)
+                        <a href="{{ route('cadastro.cadastro-' . ($etapa - 1)) }}"><i class="fa-solid fa-arrow-left"></i></a>
+                    @elseif ($etapa == 1)
+                        <a href="/login"><i class="fa-solid fa-arrow-left"></i></a>
+                    @endif
                 <a href="#" class="help-link">Ajuda?</a>
             </div>
 
@@ -36,8 +43,12 @@
                 <form class="form-row" action="{{ route('cadastro.salvarEtapa') }}" method="POST">
                     @csrf
                     @yield("form-content")
+
                     <input type="hidden" name="etapa" value="@yield('etapa')">
+
+                    @if ($etapa >= 1 && $etapa < 4)
                     <button type="submit" class="btn-next btn-perfil">Próximo<i class="fa-solid fa-arrow-right"></i></button>
+                    @endif
                 </form>
             </div>
             <div class="etapa-atual">

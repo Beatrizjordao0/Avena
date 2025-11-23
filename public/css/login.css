@@ -7,20 +7,12 @@
 }
 
 body {
+    height: 100vh;
     background: linear-gradient(45deg, #7fa5b2, #a1d1c1);
 }
 
 main {
     display: flex;
-}
-
-.lado-esquerdo {
-    width: 50%;
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
 }
 
 /* LOGO DO CABEÇALHO*/
@@ -44,6 +36,15 @@ main {
 /* FIM DA LOGO */
 
 /* LADO ESQUERDO */
+
+.lado-esquerdo {
+    width: 50%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
 
 .conteudo-esquerdo {
     position: relative;
@@ -134,6 +135,8 @@ form {
     display: flex;
     height: 70%;
     flex-direction: column;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .inputLabel {
@@ -161,6 +164,11 @@ form {
     padding: 1rem;
 }
 
+.inputLabel input:focus {
+    border: 0.15rem solid #60d0d3;
+    outline: none;
+}
+
 input {
     background-color: #f4f4f4;
     border: 0.15rem solid #7fa5b2;
@@ -169,6 +177,7 @@ input {
 }
 
 .inputLabel label {
+    color: #6c6c6c;
     padding-bottom: 0.5rem;
 }
 
@@ -177,6 +186,35 @@ input {
     display: flex;
     height: fit-content;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.btn-login {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 3rem;
+    padding: 0.8rem 6rem;
+    border: none;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #99d1e4, #b9e8d8);
+    transition: all 0.5s ease;
+}
+
+.btn-login:hover {
+    transform: scale(1.05);
+    border: 0.1rem solid #102542;
+}
+
+.btn-login:active {
+    border: 0.1rem solid #102542;
+    background: linear-gradient(45deg, #7db7ab, #1e5f6f);
+}
+
+.cadastro-link {
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 /* FOOTER */
@@ -187,6 +225,7 @@ footer {
 
 .footer {
     width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;

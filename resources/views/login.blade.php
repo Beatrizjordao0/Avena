@@ -63,7 +63,7 @@
                         <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
-
+                {{-- SCRIPT OLHINHO FUNCIONAL --}}
                 <script>
                 function togglePassword() {
                     const input = document.getElementById("password");
@@ -80,8 +80,6 @@
                     }
                 }
                 </script>
-
-
                 {{-- LEMBRAR --}}
                 <div class="checkbox-inputLabel">
                     <input type="checkbox" name="remember" id="remember">
@@ -91,7 +89,7 @@
                 {{-- BOTÃO --}}
                 <button type="submit" class="btn-login">Entrar</button>
                 
-                <p class="nunita-bold">Não possui conta? <a href="{{ route('cadastro.cadastro-1') }}">Clique aqui</a></p>
+                <p class="cadastro-link">Não possui conta? <a href="{{ route('cadastro.cadastro-1') }}">Clique aqui</a></p>
                 {{-- ERRO GERAL DE LOGIN --}}
                 @if ($errors->has('email'))
                     <div class="error geral">

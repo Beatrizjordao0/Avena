@@ -20,12 +20,13 @@
             <form action="{{ route('config.foto') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-                <label>Mudar foto de perfil</label>
+                <label class="label-foto">Mudar foto de perfil?</label>
                 <input type="file" name="file_foto_perfil">
 
-                <button type="submit">Salvar nova foto</button>
+                <button  class="btn-salvar-foto">Salvar nova foto</button>
             </form>
 
-            <a href="{{ route('equipe.upgrade') }}" class="btn-terapeuta" style="display: inline-flex; width: auto; margin: 0;">Tornar-se Terapeuta</a>
+            <a href="{{ route('equipe.upgrade') }}" class="btn-terapeuta">Mudar para conta profissional</a>
+
         </div>
 @endsection

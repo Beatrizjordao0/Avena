@@ -307,16 +307,6 @@ body {
     border: 1.8px solid #7fa5b2;
 }
 
-button[type="submit"] {
-    width: 250px !important;
-    padding: -10px 0 !important;
-    border-radius: 60px !important;
-    display: block !important;
-    margin: 0 auto !important; /* CENTRALIZA */
-    display: block !important; /* garante centralização */
-    margin-top: 40px !important;
-}
-
 .login-image-container .p-4.p-sm-5.mt-sm-5.text-center {
     margin-left: 90px !important; /* ajuste o valor */
 }
@@ -529,47 +519,8 @@ body {
     font-size: 30px;
     font-family: Verdana, sans-serif;
     width: fit-content;
-    position: relative; /* permite mover sem afetar outros */
     top: 20px; /* desce apenas o h1 */
     margin-left: 40px; /* mantém o deslocamento da esquerda */
-}
-
-.pesquisa-equipes {
-    display: block; /* vira bloco pra permitir margin auto */
-    margin: 0 auto; /* centraliza SOZINHA */
-    position: relative;
-    top: -15px; /* distância do h1 */
-
-    width: 500px;
-    height: 40px;
-    padding: 5px 15px;
-    font-size: 16px;
-    border: 1px solid #2f415a;
-    background-color: rgba(255, 255, 255, 0.57); /* transparente */
-    border-radius: 8px;
-    outline: none;
-}
-
-/*botão de ingressar em nova equipe*/
-
-.btn-ingressar {
-    position: absolute; /* fixa no canto da tela */
-    top: 15px; /* distância do topo */
-    right: 20px; /* distância da direita */
-
-    background-color: #4c9386;
-    color: #ffffff;
-    border: none;
-    border-radius: 51px; /* arredondamento dos cantos */
-    padding: 6px 2px; /* tamanho do botão */
-    width: 220px;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: Verdana, sans-serif;
-}
-
-.btn-ingressar:hover {
-    background-color: #3b6f6a; /* opcional: muda cor ao passar o mouse */
 }
 
 .linha-separadora {

@@ -14,7 +14,7 @@
     <header class="navbar">
         <div class="left-nav">
             <div class="logo">
-                <img src="/img/logo-avena-removebg-preview-dark.png" alt="Logo" style="height:50px;">  
+                <img src="/img/logo-avena-removebg-preview-dark.png" alt="Logo" style="height:2.5rem; width:2.5rem; border-radius:50%;">  
                 <span>AVENA</span>
             </div>
         </div>
@@ -31,7 +31,7 @@
 
         <div class="perfil">
             <span>{{ Auth::user()->name }} {{ Auth::user()->sobrenome }}</span>
-            <img src="/img/julia-profissional.png" alt="Foto" style="height:50px;">
+            <img src="/img/julia-profissional.png" alt="Foto" style="height:3.5rem; width:3.5rem; border-radius:50%;">
         </div>
     </header>
 

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Cookie;
 
 class LoginController extends Controller
 {
-    // Mostrar o formulário de login
+    // Tela de Login
     public function showLoginForm()
     {
         // Se já estiver logado, redireciona para /equipe
@@ -20,10 +20,10 @@ class LoginController extends Controller
         return view('login');
     }
 
-    // Processar o login
+    // Processa o login
     public function login(Request $request)
     {
-        // Validação dos campos
+        // 1. Valida os campos
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -31,35 +31,35 @@ class LoginController extends Controller
 
         $remember = $request->has('remember');
 
-        // Tenta logar
+        // 2. Tenta logar
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
             return redirect()->route('equipe');
         }
-
+        // 3. Caso der erro
         return back()->withErrors([
             'email' => 'Credenciais inválidas.',
         ])->withInput();
     }
 
-    // Logout com limpeza do remember_token
+    // Logout
     public function logout(Request $request)
     {
-        // Remove o remember_token do usuário
+        // 1. Remove o remember_token do usuário
         $user = Auth::user();
         if ($user) {
             $user->setRememberToken(null);
             $user->save();
         }
 
-        // Logout normal
+        // 2. Segue o logout normal
         Auth::logout();
 
-        // Invalida a sessão
+        // 3. Invalida a sessão
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        // Apaga o cookie remember_me do navegador
+        // 4. Apaga o cookie remember_me do navegador
         $cookie = Cookie::forget(Auth::getRecallerName());
 
         return redirect('/login')->withCookie($cookie);

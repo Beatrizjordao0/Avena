@@ -8,7 +8,7 @@
 
     <div class="card">
         <div class="card-header">
-            Grupo Criado com Sucesso!
+            Seu espaço de atendimento <br> foi criado com Sucesso!
         </div>
         <div class="card-body">
             <h5 class="card-title">Nome do Grupo: {{ $grupo->nome_gp }}</h5>

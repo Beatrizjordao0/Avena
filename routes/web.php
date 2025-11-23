@@ -5,6 +5,7 @@ use App\Http\Controllers\PaginasController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\EquipeController;
+use App\Http\Controllers\AgendaController;
 
 // index
 Route::get('/', [PaginasController::class, 'index'])->name('home');
@@ -108,7 +109,31 @@ Route::middleware(['auth'])->group(function () {
 
 // AGENDA
 
-// Route::get('/agenda/{id}', [AgendaController::class, 'show'])->name('agenda.show');
+Route::middleware(['auth'])->group(function () {
+    // Views
+    Route::get('/agenda/grupo/{id}', [AgendaController::class, 'pacienteView'])
+        ->name('agenda.paciente'); // usado por pacientes para ver agenda do grupo
+
+    Route::get('/agenda/grupo/{id}/terapeuta', [AgendaController::class, 'terapeutaView'])
+        ->name('agenda.terapeuta'); // usado por terapeutas para editar agenda (selecionar paciente)
+
+    // API-like endpoints (POST/DELETE/PATCH) para ações (JSON responses)
+    Route::post('/agenda/libatividade', [AgendaController::class, 'storeLibAtividade'])
+        ->name('agenda.libatividade.store');
+
+    Route::post('/agenda/{grupoId}/adicionar', [AgendaController::class, 'adicionarAgenda'])
+        ->name('agenda.adicionar');
+
+    Route::delete('/agenda/item/{id}', [AgendaController::class, 'removerAgenda'])
+        ->name('agenda.remover');
+
+    Route::patch('/agenda/item/{id}/toggle-concluida', [AgendaController::class, 'toggleConcluida'])
+        ->name('agenda.toggleConcluida');
+
+    Route::get('/agenda/grupo/{id}/json', [AgendaController::class, 'agendaJson'])
+        ->name('agenda.json'); // retorna agenda em JSON (útil para front)
+});
+
 
 
 // ==============================

@@ -14,8 +14,13 @@
         <div class="usuarios-scroll">
             @foreach($grupo->membros as $membro)
             <a href="{{ route('agenda.terapeuta', $membro->paciente->id) }}" class="usuario-item" style="text-decoration: none; color: inherit;">
-                <img src="/img/user.png" class="avatar">
-                <span>{{ $membro->paciente->name }}</span>
+                <img 
+                    src="{{ $membro->paciente->file_foto_perfil 
+                        ? asset('storage/' . $membro->paciente->file_foto_perfil) 
+                        : '/img/user.png' }}" 
+                    class="avatar"
+                >
+                <span>{{ $membro->paciente->name }}</span></div>
             </a>
             @endforeach
         </div>

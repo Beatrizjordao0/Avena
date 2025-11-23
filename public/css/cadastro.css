@@ -22,7 +22,6 @@ body {
 
 
     min-height: 100vh;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
 }
@@ -44,6 +43,10 @@ body::after{
     font-style: normal;
 }
 
+main{
+    display: flex;
+}
+
 .nunita-normal{
     font-family: 'nunito', sans-serif;
     font-weight: 500;
@@ -60,10 +63,6 @@ body::after{
     color: #102542;
 }
 
-.arrow-color {
-    color: #377292;
-}
-
 .text-secondary{
     color: grey;
 }
@@ -71,7 +70,7 @@ body::after{
 .formform-heading{
     font-size: 2.5rem;
     margin-top: 0rem;
-    margin-bottom: 4.4rem;
+    margin-bottom: 3.4rem;
 }
 
 .formform-heading h1{
@@ -80,7 +79,7 @@ body::after{
 
 .formform-heading p{
     color: #848484;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     text-align: start;
     margin-left: 0.4rem; 
 }
@@ -89,17 +88,36 @@ body::after{
     margin-top: -2.1rem;
 }
 
+.lado-esquerdo{
+    width: 50%;
+    height: 95vh;
+    gap: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lado-direito{
+    width: 50%;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .left-side-container {
     background-color: #e0e8ee;
     padding: 6.6rem;
-    border-radius: 10rem;
+    border-radius: 8rem;
     box-shadow: 0 0.6rem 1.8rem rgba(0, 0, 0, 0.05);
-    max-width: 46.1rem;
+    max-width: 100%;
     width: 80%;
-    margin-top: 8rem;
-    margin-left: 28.5rem;
     position: relative;
-    height: 55.5rem;
+    height: 90%;
 }
 
 .logo {
@@ -124,7 +142,7 @@ body::after{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 32rem;
+    width: 100%;
     max-width: 80%;
     position: absolute;
     top: 1.25rem;
@@ -191,11 +209,11 @@ form input[type="email"]:focus {
 
 .btn-next {
     margin-top: 3.5rem;
-    padding: 0.7rem 1.5rem;
-    width: 66%;
+    padding: 1.6rem 12.5rem;
+    width: 79%;
     border: none;
     border-radius: 3.1rem;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     color: white;
     cursor: pointer;
     display: flex;
@@ -230,7 +248,7 @@ form input[type="email"]:focus {
     position: absolute;
     bottom: 50px; /* Ajuste a posição para o rodapé */
     color: #aaa;
-    font-size: 0.9em;
+    font-size: 1.4rem;
     right: 22px;
 }
 
@@ -270,7 +288,9 @@ form input[type="email"]:focus {
 .form-column label{
     margin-bottom: 5px;
     margin-top: 15px;
-    font-size: 1.3rem;
+    margin-left: 0.2rem;
+    font-size: 1.5rem;
+    color: #848484; 
 }
 
 .form-row input[type="text"],
@@ -280,13 +300,13 @@ form input[type="email"]:focus {
     width: 100%; /* Ocupa toda a largura do contêiner */
     padding: 12px 15px; /* Aumenta o padding interno para um toque maior */
     margin-bottom: 20px; /* Espaçamento abaixo do campo */
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.5; /* Altura da linha para melhor leitura */
-    font-family: var(--font-primary); /* Garante que a fonte do corpo seja usada */
+    font-family: 'nunita', sans-serif; /* Garante que a fonte do corpo seja usada */
 
     color: var(--color-text-dark, #333); /* Cor do texto */
     background-color: #f9f9f9; /* Fundo levemente acinzentado */
-    border: 1px solid #cccccc; /* Borda cinza clara */
+    border: 2px solid #7fa5b2; /* Borda cinza clara */
     border-radius: 8px; /* Bordas arredondadas (suave) */
 
     box-sizing: border-box; /* Garante que o padding não estoure a largura */
@@ -294,7 +314,7 @@ form input[type="email"]:focus {
 }
 
 .form-row input:focus {
-    border-color: var(--color-primary, #5cb85c); /* Mudar a borda para a cor primária */
+    border-color: #63bee9; /* Mudar a borda para a cor primária */
     box-shadow: 0 0 0 3px rgba(92, 184, 92, 0.2); /* Adiciona um brilho suave (anel) */
     outline: none; /* Remove o outline padrão do navegador */
     background-color: #ffffff; /* Fundo branco no foco */
@@ -329,11 +349,11 @@ form input[type="email"]:focus {
 
 .background-content h1{
     color: #102542;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .background-content p{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #102542;
 }
 

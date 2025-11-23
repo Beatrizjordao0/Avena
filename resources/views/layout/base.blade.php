@@ -31,7 +31,11 @@
 
         <div class="perfil">
             <span>{{ Auth::user()->name }} {{ Auth::user()->sobrenome }}</span>
-            <img src="/img/julia-profissional.png" alt="Foto" style="height:3.5rem; width:3.5rem; border-radius:50%;">
+            <img src="{{ Auth::user()->file_foto_perfil 
+        ? asset('storage/' . Auth::user()->file_foto_perfil) 
+        : '/img/user.png' }}"
+     alt="Foto de perfil"
+     style="height:3.125rem; width: 3.125rem ; border-radius:50%;">
         </div>
     </header>
 

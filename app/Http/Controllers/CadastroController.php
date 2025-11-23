@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class CadastroController extends Controller
 {
@@ -100,4 +102,34 @@ class CadastroController extends Controller
                 return redirect()->route('cadastro.cadastro-5');
         }
     }
+
+
+
+public function atualizarFoto(Request $request)
+{
+    $request->validate([
+        'file_foto_perfil' => 'nullable|image|max:2048'
+    ]);
+
+    $user = Auth::user();
+
+    if ($request->hasFile('file_foto_perfil')) {
+
+        // Só apaga se o campo NÃO for null E o arquivo realmente existir
+        if (!empty($user->file_foto_perfil) && Storage::disk('public')->exists($user->file_foto_perfil)) {
+            Storage::disk('public')->delete($user->file_foto_perfil);
+        }
+
+        // Salva a nova foto
+        $path = $request->file('file_foto_perfil')->store('fotos_perfil', 'public');
+
+        // Atualiza o banco
+        $user->file_foto_perfil = $path;
+        $user->save();
+    }
+
+    return redirect()->back()->with('success', 'Foto de perfil atualizada com sucesso!');
+}
+
+
 }

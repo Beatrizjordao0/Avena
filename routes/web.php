@@ -42,6 +42,11 @@ Route::get('/cadastro/reiniciar', function () {
     return redirect()->route('cadastro.cadastro-1');
 })->name('cadastro.reiniciar');
 
+Route::post('/config/foto', [CadastroController::class, 'atualizarFoto'])
+    ->middleware('auth')
+    ->name('config.foto');
+
+
 // ==============================
 // LOGIN
 // ==============================

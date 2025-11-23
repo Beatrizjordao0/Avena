@@ -16,5 +16,16 @@
             <p class="info">{{ $user->data_nascimento }}</p>
 
             <a href="{{ route('alterar.senha') }}" class="info-bold info-link">Alterar a sua senha?</a>
+
+            <form action="{{ route('config.foto') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+
+                <label>Mudar foto de perfil</label>
+                <input type="file" name="file_foto_perfil">
+
+                <button type="submit">Salvar nova foto</button>
+            </form>
+
+
         </div>
 @endsection

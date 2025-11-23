@@ -27,7 +27,7 @@
                         @endphp
                 <div class="top-form-help-and-back">
                         @if ($etapa > 1 && $etapa < 5)
-                            <a href="{{ route('cadastro.cadastro-' . ($etapa - 1)) }}"><i class="fa-solid fa-arrow-left"></i></a>
+                            <a href="{{ route('cadastro.cadastro-' . ($etapa - 1)) }}"><i class="fa-solid fa-circle-left"></i></a>
                         @elseif ($etapa == 1)
                             <a href="/login"><i class="fa-solid fa-circle-left"></i></a>
                         @endif
@@ -41,7 +41,7 @@
                         
                         @yield("form-heading")
                     </div>
-                    <form class="form-row form-column" action="{{ route('cadastro.salvarEtapa') }}" method="POST">
+                    <form class="form-row form-column form-check" action="{{ route('cadastro.salvarEtapa') }}" method="POST">
                         @csrf
                         @yield("form-content")
 
@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class="etapa-atual">
-                    @yield('etapa')/4
+                    @yield('etapa') /4 
                 </div>
             </div>
         </div>
@@ -69,5 +69,10 @@
             </div>
         </div>
     </main>
+
+    <div class="footer">
+        <a class="footer-link" href="#">Política de privacidade</a>
+        <a class="footer-link" href="#">Termos de uso</a>
+    </div>
 </body>
 </html>

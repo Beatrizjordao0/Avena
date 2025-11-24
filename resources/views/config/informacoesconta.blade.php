@@ -72,7 +72,7 @@
             @csrf
 
                 <label for="perfil" class="label-foto">Mudar foto de perfil?</label>
-                <input id="perfil" type="file" name="file_foto_perfil" accept="image/*">
+                <input id="perfil" type="file" name="file_foto_perfil"x>
 
                 <button  class="btn-salvar-foto">Salvar nova foto</button>
             </form>

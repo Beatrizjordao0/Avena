@@ -39,17 +39,19 @@
 <div id="modal-join" class="modal-overlay" style="display:none;">
     <div class="modal-box">
         <button class="modal-close" onclick="fecharModalPaciente()">x</button>
-        <span>Ingresse na sua Equipe de Acompanhamento</span>
-        <p>Insira o código que seu terapeuta te enviou para entrar no seu ambiente de atividades e orientações.</p>
+        <div class="geral-container">
+            <span>Ingresse na sua Equipe de Acompanhamento</span>
+            <p>Insira o código que seu terapeuta te enviou para entrar no seu ambiente de atividades e orientações.</p>
 
-        <form class="modal-form" action="{{ route('equipe.join') }}" method="POST">
-            @csrf
-            <input class="equipe-pesquisa" type="text" name="codigo" placeholder="Digite o código da equipe" required>
-            <button type="submit" class="btn-equipes">Entrar</button>
-        </form>
+            <form class="modal-form" action="{{ route('equipe.join') }}" method="POST">
+                @csrf
+                <input class="equipe-pesquisa" type="text" name="codigo" placeholder="Digite o código da equipe" required>
+                <button type="submit" class="btn-equipes">Entrar</button>
+            </form>
+        </div>
+        
     </div>
 </div>
-
 <script>
     function abrirModalPaciente() {
         document.getElementById('modal-join').style.display = 'flex';

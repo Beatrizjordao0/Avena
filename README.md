@@ -1,59 +1,235 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![Logo](https://private-user-images.githubusercontent.com/243010790/517956064-72c763a7-a0e1-4299-b4d3-4afba19ef784.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjM5NjEyMzMsIm5iZiI6MTc2Mzk2MDkzMywicGF0aCI6Ii8yNDMwMTA3OTAvNTE3OTU2MDY0LTcyYzc2M2E3LWEwZTEtNDI5OS1iNGQzLTRhZmJhMTllZjc4NC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTI0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEyNFQwNTA4NTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NTRiMGQwMjUwYWRlZjE0NThkZGM5OTNmMmJmYWIxZjAzNTRhMGRhZjk3NTU1MDMyZTM3NzExMjQxZjZiNzkzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.gWviW2nY-MQc0Cd-o0fSeaeicyY34NiQzT47nX9WWF4)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# AVENA
 
-## About Laravel
+O Avena é um sistema web voltado para profissionais e pacientes que desejam organizar, acompanhar e gerenciar atividades, equipes e planos de acompanhamento.
+Ele permite que profissionais criem e administrem equipes, visualizem notificações e monitorem atividades, enquanto pacientes conseguem ingressar em equipes, visualizar suas atividades semanais e receber orientações personalizadas.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O objetivo do projeto é oferecer uma ferramenta simples, intuitiva e centralizada para facilitar a comunicação e o acompanhamento entre profissionais de saúde e seus pacientes.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Stack utilizada
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Front-end:** HTML5, CSS3, JavaScript, PHP
 
-## Learning Laravel
+**Back-end:** PHP, Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**Banco de dados:** MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Ferramentas & Ambiente de desenvolvimento:** Git, GitHub, VS Code, GitHub Codespaces, Canva (somente para design)
 
-## Laravel Sponsors
+## Documentação de cores
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Cor          | Hexadecimal |
+| ------------ | ----------- |
+| Cor primária | #2f415a     |
+| Cor fundo    | #7fa5b2     |
+| Cor fundo    | #a1d1c1     |
 
-### Premium Partners
+## Funcionalidades
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+-   Cadastro de usuário — criação de conta com informações básicas.
+-   Login e autenticação — acesso seguro ao sistema.
+-   Gestão de equipes
+-   Criar nova equipe
+-   Ingressar em equipes existentes por código
+-   Visualizar integrantes
+-   Agenda semanal
+-   Registro de atividades por dia da semana
+-   Edição e exclusão de atividades
+-   Plano Profissional
+-   Definição de metas
+-   Acompanhamento de progresso
+-   Configurações
+-   Alterar dados pessoais
+-   Ajustar preferências de conta
+-   Acessibilidade
+-   Notificações — visualização das atualizações importantes.
+-   Interface responsiva — adaptada para desktop e mobile.
 
-## Contributing
+## Aprendizados
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Durante o desenvolvimento deste projeto, a equipe adquiriu experiência prática em diversas áreas, incluindo:
 
-## Code of Conduct
+-   Trabalho com Git e GitHub, envolvendo versionamento, resolução de conflitos e colaboração em equipe.
+-   Organização de código e estrutura de pastas, seguindo boas práticas para manter o projeto escalável.
+-   Construção de interfaces responsivas, garantindo boa usabilidade em diferentes dispositivos.
+-   Integração de front-end e back-end, entendendo a comunicação entre cliente e servidor.
+-   Implementação de autenticação e controle de acesso, reforçando conhecimentos em segurança.
+-   Uso de ferramentas de desenvolvimento, como VS Code e GitHub Codespaces, para colaboração eficiente.
+-   Criação e documentação de APIs, aplicando princípios REST.
+-   Gerenciamento de estados e fluxo de dados, aprofundando a lógica de funcionamento da aplicação.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Uso/Exemplos
 
-## Security Vulnerabilities
+```
+<?php
+namespace App\Http\Controllers;
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-## License
+class PaginasController extends Controller
+{
+    public function index()
+    {
+        return view('index');
+    }
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    public function jointeam()
+    {
+        return view('jointeam');
+    }
+
+    public function planopaciente()
+    {
+        return view('planopaciente');
+    }
+
+    public function criarequipe()
+    {
+        return view('criarequipe');
+    }
+
+    public function tituloequipe()
+    {
+        return view('tituloequipe');
+    }
+
+    public function equipecriada()
+    {
+        return view('equipecriada');
+    }
+
+    public function equipesneuro()
+    {
+        return view('equipesneuro');
+    }
+
+    public function salaatividades()
+    {
+        return view('salaatividades');
+    }
+
+    public function contas()
+    {
+        $user = Auth::user();
+
+        return view('config.contas', [
+            'user' => $user
+        ]);
+    }
+
+    public function informacoesconta()
+    {
+        $user = Auth::user();
+
+        return view('config.informacoesconta', [
+            'user' => $user
+        ]);
+    }
+
+    public function privacidade()
+    {
+        $user = Auth::user();
+
+        return view('config.privacidade', [
+            'user' => $user
+        ]);
+    }
+
+    public function acessibilidade()
+    {
+        $user = Auth::user();
+
+        return view('config.acessibilidade', [
+            'user' => $user
+        ]);
+    }
+}
+```
+
+## Rodando localmente
+
+Clone o repositório
+
+```bash
+  git clone https://github.com/Beatrizjordao0/Avena.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd avena
+```
+
+Instale as dependências
+
+```bash
+  composer install
+```
+
+Configure o arquivo de ambiente
+
+```bash
+  cp .env.example .env
+```
+
+Gere a chave da aplicação
+
+```bash
+  php artisan key:generate
+```
+
+Inicie o servidor local
+
+```bash
+  php artisan serve
+```
+
+## Documentação - Pré-projeto
+
+[Documentação](https://docs.google.com/document/d/1MAZcw-ZVHtn_hqzkCTLxhH-PN7wNwpt2Zu3t-jMoGN4/edit?usp=sharing)
+
+## Apêndice
+
+Este apêndice reúne informações complementares relacionadas ao projeto, que podem ser úteis para manutenção, referência futura ou entendimento técnico adicional.
+
+Estrutura do Projeto:
+
+A aplicação segue a estrutura padrão do Laravel, organizada em:
+
+-   app/ – Contém a lógica de negócio (Controllers, Models, Middleware).
+-   resources/views/ – Arquivos Blade responsáveis pela interface.
+-   routes/web.php – Declaração das rotas da aplicação.
+-   public/ – Arquivos públicos (imagens, CSS, JS).
+-   database/ – Migrações e seeders.
+
+Requisitos do Sistema -
+Para garantir o funcionamento adequado, recomenda-se:
+
+-   PHP 8.x ou superior
+-   Composer atualizado
+
+A aplicação pode ser iniciada em ambiente de desenvolvimento utilizando o comando php artisan serve.
+
+## Roadmap
+
+Esta seção apresenta funcionalidades e melhorias planejadas para futuras versões do projeto.
+
+-   Melhorar compatibilidade entre diferentes navegadores e dispositivos.
+-   Aprimorar acessibilidade seguindo melhores práticas (WCAG).
+-   Completar o back-end
+-   Finalizar o banco de dados
+-   Terminar as funcionalidades restantes
+-   Padronizar e organizar o código
+-   Implementar feedback visual de sucesso e erro
+-   Implementar notificações internas e por e-mail.
+-   Implementar melhorias de UI/UX nas principais telas
+
+## Autores
+
+-   Alyson Coutinho - 01812644
+-   Arthur Fernandes - 01848451
+-   Beatriz Jordão - 01812582
+-   Júlia Evelyn - 01803734
+-   Lívia Moreno - 01800123

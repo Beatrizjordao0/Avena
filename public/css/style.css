@@ -26,25 +26,24 @@ body {
 }
 
 .btn-add-atividade {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background-color: #4c9386; /* Verde */
     color: white;
     border: none;
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;
     cursor: pointer;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 20px auto 0 auto; /* CENTRALIZA e coloca abaixo */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     transition: 0.2s;
 }
-
 .btn-add-atividade:hover {
     background-color: #417c71;
     transform: scale(1.1);
@@ -630,6 +629,27 @@ body {
     text-align: center;
 }
 
+.container-semanat {
+    display: flex;
+    gap: 20px;
+    margin: 20px 200px;
+}
+
+/* retângulos de cada dia */
+.dia-semanat {
+    background-color: rgba(255, 255, 255, 0.57);
+    border-radius: 13px;
+    width: 300px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
 /* mini-retângulos container */
 .mini-retangulos {
     display: flex;
@@ -847,6 +867,47 @@ body {
     filter: invert(1); /* deixa branca */
     transition: 0.25s;
 }
+
+/* Área onde ficam as setas */
+.navegacao-semanat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1420px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 0 20px;
+    margin-left: -370px;
+
+    position: absolute; /* permite sobrepor */
+    top: 60px; /* ↓ abaixar */
+    left: 370px; /* → mover para a esquerda */
+
+    z-index: 999;
+}
+
+/* Contêiner clicável das setas */
+.seta-esquerdat,
+.seta-direitat {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4c9386; /* bolinha verde igual ao layout */
+    transition: 0.25s;
+}
+
+/* Efeito ao passar o mouse */
+.seta-esquerdat:hover,
+.seta-direitat:hover {
+    background-color: #3c7f75;
+    transform: scale(1.1);
+}
+
 
 /* notificações internas */
 .notifsemana2-1,

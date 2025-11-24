@@ -17,7 +17,7 @@ class LoginController extends Controller
             return redirect()->route('equipe');
         }
 
-        return view('login');
+        return view('auth.login');
     }
 
     // Processa o login

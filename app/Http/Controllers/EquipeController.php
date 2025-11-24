@@ -164,4 +164,35 @@ public function storeUpgrade(Request $request)
         $grupo = GruposTerapia::where('cod_gp', $codigo)->firstOrFail();
         return view('equipe.codigo', compact('grupo'));
     }
+
+    public function destroy(GruposTerapia $grupo)
+    {
+        $user = Auth::user();
+
+        if ($grupo->id_terapeuta !== $user->terapeuta->id_terapeuta) {
+            return redirect()->route('equipe')->with('error', 'Acesso negado.');
+        }
+
+        MembrosGp::where('id_gp', $grupo->id_gp_terapia)->delete();
+        $grupo->delete();
+
+        return redirect()->route('equipe')->with('success', 'Equipe excluída com sucesso!');
+    }
+
+    public function leave($id_gp)
+    {
+        $user = auth()->user();
+
+        if ($user->tipo_conta !== 'P') {
+            abort(403, 'Apenas pacientes podem sair de equipes.');
+        }
+
+        // Apaga a ligação paciente ↔ grupo
+        MembrosGp::where('id_paciente', $user->id)
+                ->where('id_gp', $id_gp)
+                ->delete();
+
+        return redirect()->back()->with('success', 'Você saiu da equipe.');
+    }
+
 }

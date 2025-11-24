@@ -5,7 +5,6 @@
     <a href="{{ route('equipe') }}" class="btn-voltar">
         <img src="/img/seta.png" alt="Voltar" class="seta-icon2">
     </a>
-
     <div class="lista-usuarios">
 
         <h2>{{ $grupo->nome_gp }}</h2>
@@ -50,4 +49,19 @@
         </div>
     </div>
 </div>
+@if ($user->tipo_conta === 'T')
+    <form class="destroy-leave" action="{{ route('equipe.destroy', $grupo->id_gp_terapia) }}" method="POST" 
+        onsubmit="return confirm('Tem certeza que deseja excluir este grupo? Isso não pode ser desfeito.');">
+        @csrf
+        @method('DELETE')
+        <button class="btn-excluir btn-grupo">Excluir equipe</button>
+    </form>  
+@endif
+
+@if($user->tipo_conta === 'P')
+    <form class="destroy-leave" action="{{ route('equipe.leave', $grupo->id) }}" method="POST">
+        @csrf
+        <button class="btn-sair-equipe btn-grupo">Sair da equipe</button>
+    </form>
+@endif
 @endsection

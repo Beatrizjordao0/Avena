@@ -147,14 +147,13 @@ Route::get('/salaatividades', [PaginasController::class, 'salaatividades']);
 
 Route::get('/contas', [PaginasController::class, 'contas'])->name('contas');
 
+Route::delete('/equipe/{grupo}', [EquipeController::class, 'destroy'])
+    ->name('equipe.destroy');
+Route::post('/equipe/{id}/leave', [EquipeController::class, 'leave'])->name('equipe.leave');
 
 // Configurações
 
 Route::middleware('auth')->group(function () {
-
-    Route::get('/config', function () {
-        return view('contas');
-    })->name('config');
 
     Route::get('/Conta', [PaginasController::class, 'informacoesconta'])
         ->name('informacoes.conta');
@@ -171,3 +170,4 @@ Route::middleware('auth')->group(function () {
     Route::post('/alterar-senha', [AlterarSenha::class, 'alterarSenha'])
         ->name('alterar.senha.atualizar');
 });
+

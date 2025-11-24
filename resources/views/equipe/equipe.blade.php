@@ -15,12 +15,10 @@
                 </div>
                 
                 @if($user->tipo_conta === 'T')
-                    <a href="{{ route('equipe.show', $grupo->id_gp_terapia) }}" class="nome-grupo-link">
-                        <p>{{ $grupo->nome_gp }}</p>
-                    </a>
+                    <a href="{{ route('equipe.show', $grupo->id_gp_terapia) }}" class="nome-grupo-link">{{ $grupo->nome_gp }}</a>
                 @else
                     <a href="{{ route('agenda.paciente', $grupo->id_gp) }}" class="nome-grupo-link">
-                        <p>{{ $grupo->grupo->nome_gp }}</p>
+                    {{ $grupo->grupo->nome_gp }}
                     </a>
                 @endif
             </div>

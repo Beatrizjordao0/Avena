@@ -1,5 +1,5 @@
 body {
-    --altura-painel-scroll: calc(100vh - 200px);
+    min-height: 100vh;
 }
 
 .btn-salvar-plano {
@@ -35,7 +35,7 @@ body {
     font-size: 26px;
     font-weight: bold;
     cursor: pointer;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -525,45 +525,48 @@ body {
 }
 
 .nova-caixa {
-    position: relative;
-    top: 40px; /* distância da linha separadora */
-    left: 0; /* posicionada à esquerda da tela */
-    margin-left: 40px;
-
-    width: 300px; /* largura da caixa */
-    height: 160px; /* altura da caixa */
-
+    width: 16rem; /* largura da caixa */
+    height: 8rem; /* altura da caixa */
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    padding: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* conteúdo começa do topo */
-    align-items: flex-start; /* conteúdo alinhado à esquerda */
+    align-items: center; /* conteúdo alinhado à esquerda */
+    transition: all 0.3s ease;
 }
 
-.nova-caixa p {
-    color: #102542; /* cor do texto */
+.nova-caixa:hover {
+    transform: scale(1.1);
+}
+
+.nome-grupo-link {
+    padding: 0.5rem 1rem;
+    color: #e8e8e8; /* cor do texto */
     font-family: Verdana, sans-serif;
-    font-size: 18px; /* ajusta o tamanho que quiser */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: fit-content;
+    background-color: #2d3e56;
+    transition: all 0.3s ease;
+}
 
-    position: relative; /* permite mover sem afetar outros elementos */
-    top: 30px; /* distância do topo da caixa, ajusta para baixo */
-    left: 60px; /* distância da esquerda da caixa, ajusta pro lado */
-
-    text-align: center; /* centraliza o conteúdo do texto dentro da largura dele */
-    width: calc(
-        100% - 40px
-    ); /* opcional: deixa o texto ocupar quase toda a largura da caixa */
+.nome-grupo-link:hover {
+    background-color: #aaaaaa;
+    color: #2d3e56;
 }
 
 .nova-caixa .linha-conteudo {
     display: flex; /* alinha os filhos em linha */
     align-items: center; /* alinha verticalmente quadrado e texto */
-    gap: 15px; /* espaço entre quadrado e texto */
+}
+
+.linha-conteudo {
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
 }
 
 .container-quadrado {
@@ -572,10 +575,6 @@ body {
 
 /* agora você pode mover só o quadrado dentro do container */
 .mini-quadrado {
-    position: absolute; /* dentro do container */
-    top: 1px; /* ajusta pra baixo */
-    left: 0px; /* ajusta pra direita */
-    /* resto do CSS permanece igual */
     width: 80px;
     height: 65px;
     background-color: #377292;
@@ -907,7 +906,6 @@ body {
     background-color: #3c7f75;
     transform: scale(1.1);
 }
-
 
 /* notificações internas */
 .notifsemana2-1,
@@ -1290,79 +1288,12 @@ body {
     border: none; /* remove bordas padrão do <hr> */
 }
 
-.nova-caixa {
-    position: relative;
-    top: 40px; /* distância da linha separadora */
-    left: 0; /* posicionada à esquerda da tela */
-    margin-left: 40px;
-
-    width: 300px; /* largura da caixa */
-    height: 160px; /* altura da caixa */
-
-    border: 2px solid #1b3558;
-    background-color: rgba(255, 255, 255, 0.57); /* transparente */
-    border-radius: 13px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* conteúdo começa do topo */
-    align-items: flex-start; /* conteúdo alinhado à esquerda */
-}
-
-.nova-caixa p {
-    color: #102542; /* cor do texto */
-    font-family: Verdana, sans-serif;
-    font-size: 18px; /* ajusta o tamanho que quiser */
-
-    position: relative; /* permite mover sem afetar outros elementos */
-    top: 30px; /* distância do topo da caixa, ajusta para baixo */
-    left: 60px; /* distância da esquerda da caixa, ajusta pro lado */
-
-    text-align: center; /* centraliza o conteúdo do texto dentro da largura dele */
-    width: calc(
-        100% - 40px
-    ); /* opcional: deixa o texto ocupar quase toda a largura da caixa */
-}
-
-.nova-caixa .linha-conteudo {
-    display: flex; /* alinha os filhos em linha */
-    align-items: center; /* alinha verticalmente quadrado e texto */
-    gap: 15px; /* espaço entre quadrado e texto */
-}
-
-.container-quadrado {
-    position: relative; /* permite mexer no quadrado sem afetar o P */
-}
-
 /* agora você pode mover só o quadrado dentro do container */
-.mini-quadrado {
-    position: absolute; /* dentro do container */
-    top: 1px; /* ajusta pra baixo */
-    left: 0px; /* ajusta pra direita */
-    /* resto do CSS permanece igual */
-    width: 80px;
-    height: 65px;
-    background-color: #377292;
-    color: #ffffff;
-    border-radius: 11px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-family: Verdana, sans-serif;
-    font-size: 20px;
-}
 
 .sala-container {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 70px;
-    gap: 40px;
-    background: linear-gradient(to bottom right, #a3d3d7, #8bbbc0);
-    height: calc(100vh - 80px);
+    align-items: center;
+    justify-content: center;
 }
 
 .lista-usuarios {
@@ -1372,7 +1303,6 @@ body {
 }
 
 .lista-usuarios h2 {
-    margin-left: 50px;
     font-family: Verdana, sans-serif;
     color: #2f415a;
     font-size: 30px;
@@ -1439,16 +1369,13 @@ body {
 .notificacoes-container {
     width: 35%;
     max-width: 35%;
-    padding-right: 0 !important;
     background: #f4f8f8;
-    height: 700px;
+    height: 30rem;
     border-radius: 20px;
     padding: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: sticky;
-    top: 0px;
-    margin-left: auto;
 }
 
 .notif-header {
@@ -2044,4 +1971,28 @@ body.base-config main {
 .card-body .btn-primary:hover {
     background-color: #405574;
     color: #f9fcff;
+}
+
+.btn-grupo {
+    background-color: #2d3e56;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #e8e8e8;
+    width: fit-content;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-grupo:hover {
+    background-color: #e8e8e8;
+    color: #2d3e56;
+}
+
+.destroy-leave {
+    text-align: center;
+}
+main {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #a3d3d7, #8bbbc0);
 }

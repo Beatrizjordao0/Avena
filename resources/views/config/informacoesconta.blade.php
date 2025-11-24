@@ -65,8 +65,6 @@
             <p class="info-bold">Data de nascimento</p>
             <p class="info">{{ date('d/m/Y', strtotime($user->data_nascimento )) }}</p>
 
-            @if ($user->tipo_conta === 'T')
-            @endif
 
             <a href="{{ route('alterar.senha') }}" class="info-bold info-link">Alterar a sua senha?</a>
             

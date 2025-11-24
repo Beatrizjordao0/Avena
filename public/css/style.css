@@ -618,7 +618,7 @@ body {
 .container-semana {
     display: flex;
     gap: 15px;
-    margin: 20px 20px;
+    margin: 20px 10px;
 }
 
 /* retângulos de cada dia */
@@ -973,7 +973,7 @@ body {
 .retangulo2 {
     position: relative;
     z-index: 2;
-    top: 120px; /* posição do retângulo na página */
+    top: 80px; /* posição do retângulo na página */
     left: 50%;
     transform: translateX(-50%);
     width: 62.5rem;
@@ -1043,8 +1043,8 @@ body {
 }
 
 .btn-cancelar2 {
-    background-color: #ccc;
-    color: #333;
+    background-color: #ffffff;
+    color: #2d3e56;
     margin-left: 40px; /* aumenta a distância da borda esquerda do retângulo */
     margin-top: 100px; /* distância do conteúdo acima */
 }
@@ -1062,7 +1062,7 @@ body {
     font-size: 20px; /* ajusta o tamanho */
     color: #102542; /* cor do texto */
     margin: 15px 0 5px 0; /* distância em cima e embaixo */
-    text-align: left; /* alinhamento do texto dentro do retângulo */
+    text-align: center; /* alinhamento do texto dentro do retângulo */
 }
 
 /*copiar codigo*/
@@ -1385,7 +1385,7 @@ body {
     max-width: 35%;
     padding-right: 0 !important;
     background: #f4f8f8;
-    height: 800px;
+    height: 700px;
     border-radius: 20px;
     padding: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -1936,7 +1936,7 @@ main {
 .card {
     position: relative;
     z-index: 2;
-    top: 8rem;
+    top: 6rem;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;

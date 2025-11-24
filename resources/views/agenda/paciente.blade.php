@@ -4,7 +4,6 @@
     $activeMenu = 'equipes';
 @endphp
 
-
 @section('content')
 
 <h1 class="titulo-plano">

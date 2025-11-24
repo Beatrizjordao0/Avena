@@ -120,7 +120,6 @@ main {
 
 /* FIM DO MODAL */
 
-
 .main-header {
     display: flex;
     align-items: center;
@@ -142,26 +141,24 @@ main {
     font-size: 1rem;
     height: 3rem;
     display: block;
-    margin-left: 6rem; /* ajuste o valor */
     margin-right: 0;
     width: 31.26rem;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     outline: none;
 }
 
-
 .btn-usuario {
     color: #102542;
-
-    padding: 0.8rem 2rem;   /* ← padding normal, não gigante */
+    text-decoration: none;
+    padding: 0.8rem 2rem; /* ← padding normal, não gigante */
     border-radius: 0.7rem;
     border: none;
     background-color: #e8e8e8;
     transition: all 0.3s ease;
 
-    width: fit-content;     /* ← deixa o botão do tamanho do texto */
-    white-space: nowrap;    /* ← impede quebra da frase */
-    display: inline-flex;   /* ← mantém texto em linha */
+    width: fit-content; /* ← deixa o botão do tamanho do texto */
+    white-space: nowrap; /* ← impede quebra da frase */
+    display: inline-flex; /* ← mantém texto em linha */
     justify-content: center;
     align-items: center;
 }
@@ -177,8 +174,7 @@ main {
     background-color: #1e5f6f;
 }
 
-
-.nome-grupo-link{
+.nome-grupo-link {
     text-decoration: none;
     color: inherit;
     margin-left: 2rem;

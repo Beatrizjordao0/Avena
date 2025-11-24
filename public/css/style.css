@@ -1190,17 +1190,14 @@ body {
 
 /*PÁGINA EQUIPE PROFISSIONAL*/
 
-
-.avatar{
+.avatar {
     width: 3.125rem;
     height: 3.125rem;
     overflow: hidden;
     border-radius: 50%;
-    
-
 }
 
-.avatar img{
+.avatar img {
     border-radius: 50%;
     object-fit: cover;
     scale: 1.5;
@@ -1333,7 +1330,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: min-content !important;
     gap: 40px;
-    
+
     padding-right: 15px;
 }
 
@@ -1435,7 +1432,6 @@ body {
     color: #102542;
     margin-top: 10px;
 }
-
 
 /*PÁGINA DE CONFIGURAÇÕES - contas */
 
@@ -1643,16 +1639,9 @@ body.base-config main {
 } /* entre linha3 e linha4 */
 
 /* Garante que tudo dentro do main possa usar posicionamento absoluto */
-main {
-    position: relative;
-}
 
 /* Container dos retângulos — move para a DIREITA e para CIMA */
 .caixas-direita {
-    position: absolute;
-    right: 60px; /* ⬅️ afasta da borda direita */
-    top: 230px; /* ⬅️ sobe os elementos na tela */
-
     display: flex;
     flex-direction: column;
     gap: 40px; /* distância entre os dois retângulos */
@@ -1660,17 +1649,14 @@ main {
 
 /* Cada retângulo */
 .caixa-item {
-    width: 1250px;
+    width: 100rem;
     height: 85px;
-
     background: #b7cfd080;
     border: 2px solid #06090e;
     border-radius: 12px;
-
     display: flex;
     align-items: center;
     padding: 12px;
-
     font-family: Verdana, sans-serif;
     color: #102542;
 }
@@ -2000,4 +1986,3 @@ main {
     background-color: #405574;
     color: #f9fcff;
 }
-

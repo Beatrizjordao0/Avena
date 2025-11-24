@@ -34,6 +34,5 @@
                     <input type="range" min="12" max="32" value="16" class="font-slider">
                 </div>
             </div>
-
         </div>
     @endsection

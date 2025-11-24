@@ -213,16 +213,13 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
-    margin-top: -5rem;   
+    margin-left: 4rem;
 }
-
 
 .caixa-item {
     display: flex;
     justify-content: space-between;
     align-items: right;
-    margin-left: -13rem; 
     gap: 1rem;
     width: 100%;
 }

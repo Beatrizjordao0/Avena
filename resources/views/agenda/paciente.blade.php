@@ -33,7 +33,7 @@
 <!-- ================= SEMANA 1 ================= -->
 <div class="container-semana semana-1">
     
-    <a href="/equipes" class="btn-voltarplano">
+    <a href="/equipe" class="btn-voltarplano">
         <img src="/img/seta.png" alt="Voltar" class="seta-icon2">
     </a>
 

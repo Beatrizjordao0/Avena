@@ -115,14 +115,21 @@ Route::middleware(['auth'])->group(function () {
 // Agenda
 
 Route::middleware('auth')->group(function () {
-    
+
     // Paciente acessa sua agenda
-    Route::get('/agenda', [AgendaController::class, 'pacienteView'])->name('agenda.paciente');
+    Route::get('/agenda', function () {
+        $user = Auth::user();
+        return app(\App\Http\Controllers\AgendaController::class)->pacienteView($user);
+    })->name('agenda.paciente');
 
     // Terapeuta acessa a agenda de um paciente específico
-    Route::get('/agenda/terapeuta', [AgendaController::class, 'terapeutaView'])->name('agenda.terapeuta');
+    Route::get('/agenda/terapeuta', function () {
+        $user = Auth::user();
+        return app(\App\Http\Controllers\AgendaController::class)->terapeutaView($user);
+    })->name('agenda.terapeuta');
 
 });
+
 
 
 // ==============================

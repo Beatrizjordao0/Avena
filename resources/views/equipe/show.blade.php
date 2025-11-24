@@ -57,11 +57,4 @@
         <button class="btn-excluir btn-grupo">Excluir equipe</button>
     </form>  
 @endif
-
-@if($user->tipo_conta === 'P')
-    <form class="destroy-leave" action="{{ route('equipe.leave', $grupo->id) }}" method="POST">
-        @csrf
-        <button class="btn-sair-equipe btn-grupo">Sair da equipe</button>
-    </form>
-@endif
 @endsection

@@ -15,7 +15,7 @@ class AgendaController extends Controller
     {
         $user = Auth::user();
 
-        return view('agenda.paciente');
+        return view('agenda.paciente', compact('user'));
     }
 
     // Tela do terapeuta 
@@ -23,7 +23,7 @@ class AgendaController extends Controller
     {
         $user = Auth::user();
 
-       return view('agenda.terapeuta');
+       return view('agenda.terapeuta', compact('user', 'paciente'));
     }
 
 }

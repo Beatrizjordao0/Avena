@@ -18,11 +18,10 @@
             <button class="btn-usuario" style="display: inline-flex; width: auto; margin: 0;" onclick="abrirModal()">
                 Criar nova equipe
             </button>
-            <a href="{{ route('equipe.create') }}" class="btn-usuario">Criar nova equipe</a>
         @endif
 
         @if($user->tipo_conta === 'P')
-            <button class="btn-usuario" style="display: inline-flex; width: auto; margin: 0;" onclick="abrirModal()">
+            <button class="btn-usuario" style="display: inline-flex; width: auto; margin: 0;" onclick="abrirModalPaciente()">
                 Ingressar em uma nova equipe
             </button>
         @endif
@@ -39,7 +38,7 @@
 <!-- MODAL DE INGRESSAR NA EQUIPE -->
 <div id="modal-join" class="modal-overlay" style="display:none;">
     <div class="modal-box">
-        <button class="modal-close" onclick="fecharModal()">x</button>
+        <button class="modal-close" onclick="fecharModalPaciente()">x</button>
         <span>Ingresse na sua Equipe de Acompanhamento</span>
         <p>Insira o código que seu terapeuta te enviou para entrar no seu ambiente de atividades e orientações.</p>
 
@@ -52,11 +51,11 @@
 </div>
 
 <script>
-    function abrirModal() {
+    function abrirModalPaciente() {
         document.getElementById('modal-join').style.display = 'flex';
     }
 
-    function fecharModal() {
+    function fecharModalPaciente() {
         document.getElementById('modal-join').style.display = 'none';
     }
 

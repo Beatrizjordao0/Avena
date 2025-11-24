@@ -1085,11 +1085,6 @@ body {
     opacity: 1;
 }
 
-.botoes-retangulo2 {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
 
 .btn-cancelar2,
 .btn-criar2 {
@@ -1174,6 +1169,12 @@ body {
     height: auto;
 }
 
+.logo-texto{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
 .nome-avena-retangulo {
     font-family: Verdana, sans-serif;
     font-size: 28px;
@@ -1221,10 +1222,36 @@ body {
 
 /* Botão */
 .botoes-retangulo2 {
-    display: flex;
-    justify-content: center; /* centraliza o botão */
-    width: 100%;
+   padding: 0.8rem 0rem;
+    margin-top: 1rem;
+    width: 50%;
+    border-radius: 0.7rem;
+    border: none;
+    transition: all 0.3s ease;
+    background-color: #102542;
+    color: white;
+    margin-left: 1rem;
+    cursor: pointer;
 }
+
+.botoes-retangulo1 {
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    width: 50%;
+    border-radius: 0.7rem;
+    border: none;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.button-container{
+    display: flex;
+}
+
+
+
 
 .btnconcluido3 {
     padding: 15px 80px; /* distância interna do botão */

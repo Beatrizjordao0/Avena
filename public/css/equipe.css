@@ -120,8 +120,6 @@ main {
 
 /* FIM DO MODAL */
 
-.btn-usuario {
-}
 
 .main-header {
     display: flex;
@@ -170,4 +168,11 @@ main {
 
 .btn-usuario:active {
     background-color: #1e5f6f;
+}
+
+
+.nome-grupo-link{
+    text-decoration: none;
+    color: inherit;
+    margin-left: 2rem;
 }

@@ -1190,6 +1190,22 @@ body {
 
 /*PÁGINA EQUIPE PROFISSIONAL*/
 
+
+.avatar{
+    width: 3.125rem;
+    height: 3.125rem;
+    overflow: hidden;
+    border-radius: 50%;
+    
+
+}
+
+.avatar img{
+    border-radius: 50%;
+    object-fit: cover;
+    scale: 1.5;
+}
+
 .btn-criarequipe {
     position: absolute; /* fixa no canto da tela */
     top: 80px; /* distância do topo */
@@ -1283,9 +1299,22 @@ body {
     font-size: 20px;
 }
 
-/*sala de atividades*/
+.sala-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 70px;
+    gap: 40px;
+    background: linear-gradient(to bottom right, #a3d3d7, #8bbbc0);
+    height: calc(100vh - 80px);
+}
 
-/* LISTA DE USUÁRIOS */
+.lista-usuarios {
+    width: 50%;
+    max-width: 50%;
+    overflow: hidden;
+}
+
 .lista-usuarios h2 {
     margin-left: 50px;
     font-family: Verdana, sans-serif;
@@ -1293,26 +1322,33 @@ body {
     font-size: 30px;
     margin-bottom: 15px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 10px;
+}
+
+.usuarios-scroll {
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: min-content !important;
+    gap: 40px;
+    
+    padding-right: 15px;
 }
 
 .usuario-item {
-    margin-left: 80px;
     background: white;
     border-radius: 50px;
-
-    /* padding SEM ERRO */
-    padding: 30px 20px;
-
-    /* largura controlada */
-    width: 400px;
-
+    padding: 10px 20px;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    gap: 10px;
+    margin-top: 30px;
 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     font-family: Verdana, sans-serif;
     color: #102542;
 }
@@ -1320,43 +1356,43 @@ body {
 .usuario-item span {
     font-family: Verdana, sans-serif;
     font-size: 20px;
-    color: #102542;
+    padding: 8px 10px !important;
 }
 
-/* GRID DE PACIENTES */
-.usuarios-scroll {
-    height: 80vh;
-    overflow-y: auto;
-    margin-top: 50px;
-
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 40px;
-
-    justify-content: center;
-    grid-auto-rows: min-content;
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff77;
+    padding: 17px 17px;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: -100px;
+    cursor: pointer;
 }
 
-.avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
+.btn-voltar img {
+    width: 18px;
+    height: 18px;
 }
 
-/* NOTIFICAÇÕES — CONTAINER */
 .notificacoes-container {
-    margin-left: 100px;
     width: 35%;
+    max-width: 35%;
+    padding-right: 0 !important;
     background: #f4f8f8;
+    height: 800px;
     border-radius: 20px;
     padding: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 70px;
-
-    font-family: Verdana, sans-serif;
-    color: #102542;
+    position: sticky;
+    top: 0px;
+    margin-left: auto;
 }
 
 .notif-header {
@@ -1366,34 +1402,23 @@ body {
 }
 
 .notificacoes-scroll {
-    max-height: 75vh;
+    max-height: calc(100vh - 250px);
     overflow-y: auto;
 }
 
-/* TITULOS DE DATA */
-.notif-data {
-    background: linear-gradient(to right, #b4d9e6, #c1e0d5);
-    border-radius: 20px;
-    width: fit-content;
-    padding: 5px 15px;
-    font-family: Verdana, sans-serif;
-    font-weight: bold;
-    margin: 20px auto;
-}
-
-/* CARTÕES */
 .notif-card {
     background: linear-gradient(to right, #b1d5e0, #b0d8ca);
-    padding: 18px 30px; /* Aumentei para não ficar apertado */
+    padding: 18px 30px;
     border-radius: 15px;
-    width: 400px;
-    margin: 0 auto 30px; /* <-- ISSO CENTRALIZA */
-    font-family: Verdana, sans-serif;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    font-family: Verdana, sans-serif;
     font-size: 17px;
 }
 
@@ -1403,14 +1428,14 @@ body {
     opacity: 0.7;
 }
 
-/* CONTAINER PRINCIPAL */
-.sala-container {
-    display: flex;
-    padding: 70px;
-    gap: 40px;
-    background: linear-gradient(to bottom right, #a3d3d7, #8bbbc0);
-    height: calc(100vh - 80px);
+.cod-grupo {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    color: #102542;
+    margin-top: 10px;
 }
+
 
 /*PÁGINA DE CONFIGURAÇÕES - contas */
 
@@ -1975,3 +2000,4 @@ main {
     background-color: #405574;
     color: #f9fcff;
 }
+

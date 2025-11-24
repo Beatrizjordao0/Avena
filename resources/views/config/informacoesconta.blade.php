@@ -18,11 +18,7 @@
                 <input class="input" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
                 
                 <label id="file-label" class="img" for="file">Documento profissional (opcional):</label>
-                <input class="file input" id="file" type="file" name="file_doc_prof">
-                <p id="file-name" class="file-name">Nenhum arquivo selecionado</p>
-
-                <label id="file-label" class="img" for="file">Documento com foto (opcional):</label>
-                <input class="file input" id="file" type="file" name="file_rg">
+                <input class="file input" id="file" type="file" name="file_doc_prof" accept="image/*,.pdf">
                 <p id="file-name" class="file-name">Nenhum arquivo selecionado</p>
 
                 <button type="submit" class="btn-equipes">Enviar</button>
@@ -57,13 +53,20 @@
         <!-- OPÇÕES DE CONTAS -->
         <div class="contas-opcoesinfo">
             <p class="info-bold">Nome de usuário</p>
-            <p class="info">{{ $user->name }} {{ $user->sobrenome }}</p>
+            <p class="info">{{ $user->name }} {{ $user->sobrenome }}
+            @if ($user->tipo_conta === 'T')
+            - (Perfil Profissional)
+            @endif
+            </p>
 
             <p class="info-bold">E-mail</p>
             <p class="info">{{ $user->email }}</p>
 
             <p class="info-bold">Data de nascimento</p>
-            <p class="info">{{ $user->data_nascimento }}</p>
+            <p class="info">{{ date('d/m/Y', strtotime($user->data_nascimento )) }}</p>
+
+            @if ($user->tipo_conta === 'T')
+            @endif
 
             <a href="{{ route('alterar.senha') }}" class="info-bold info-link">Alterar a sua senha?</a>
             
@@ -71,14 +74,16 @@
             @csrf
 
                 <label for="perfil" class="label-foto">Mudar foto de perfil?</label>
-                <input id="perfil" type="file" name="file_foto_perfil">
+                <input id="perfil" type="file" name="file_foto_perfil" accept="image/*">
 
                 <button  class="btn-salvar-foto">Salvar nova foto</button>
             </form>
 
+            @if ($user->tipo_conta === 'P')
             <button onclick="abrirModalProf()" class="btn-terapeuta">
                 Atualizar Perfil Profissional
             </button>
+            @endif
 
         </div>
 

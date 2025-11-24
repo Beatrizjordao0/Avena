@@ -28,6 +28,7 @@ class CadastroController extends Controller
                     'data_nascimento.required' => 'O campo data de nascimento é obrigatório.',
                 ]);
 
+                // Salva dados na session temporariamente
                 session([
                     'cadastro.name' => $request->input("name"),
                     'cadastro.sobrenome' => $request->input("sobrenome"),
@@ -55,7 +56,7 @@ class CadastroController extends Controller
                 if ($request->input('email') !== $request->input('emailConfirm')) {
                     return back()->withErrors(['emailConfirm' => 'Os emails não coincidem.'])->withInput();
                 }
-
+                // Salva email na session temporariamente
                 session([
                     'cadastro.email' => $request->input("email"),
                 ]);
@@ -78,7 +79,7 @@ class CadastroController extends Controller
                 if ($request->input('senha') !== $request->input('senhaConfirm')) {
                     return back()->withErrors(['senhaConfirm' => 'As senhas não coincidem.'])->withInput();
                 }
-
+                // Salva a senha na session temporariamente
                 session([
                     'cadastro.senha' => $request->input('senha'),
                 ]);
@@ -86,7 +87,9 @@ class CadastroController extends Controller
                 return redirect()->route('cadastro.cadastro-4');
 
             case 4:
-                // Etapa 4: concluir cadastro
+                // Etapa 4: concluir cadastro 
+
+                // Os campos da session são inseridos no banco
                 $user = User::create([
                     'name' => session('cadastro.name'),
                     'sobrenome' => session('cadastro.sobrenome'),
@@ -104,18 +107,19 @@ class CadastroController extends Controller
     }
 
 
-
+// Atualiza a foto de perfil do usuário
 public function atualizarFoto(Request $request)
-{
+{   
+    // Valida a imagem
     $request->validate([
         'file_foto_perfil' => 'nullable|image|max:2048'
     ]);
 
     $user = Auth::user();
-
+    // Checa se enviou uma nova foto
     if ($request->hasFile('file_foto_perfil')) {
 
-        // Só apaga se o campo NÃO for null E o arquivo realmente existir
+        // Só apaga se o campo não for null E o arquivo realmente existir
         if (!empty($user->file_foto_perfil) && Storage::disk('public')->exists($user->file_foto_perfil)) {
             Storage::disk('public')->delete($user->file_foto_perfil);
         }

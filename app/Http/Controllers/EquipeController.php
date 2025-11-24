@@ -78,7 +78,9 @@ class EquipeController extends Controller
             return redirect()->route('equipe');
         }
 
-        return view('equipe.upgrade', compact('user'));
+        return view('config.informacoesconta', [
+            'user' => $user
+        ]);
     }
 
    // Salva upgrade do paciente para terapeuta

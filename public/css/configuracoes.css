@@ -210,17 +210,19 @@
 
 .caixas-direita {
     width: 50%;
-    margin-right: 5rem;
     display: flex;
     flex-direction: column;
-    margin: 2rem 4rem;
     gap: 2rem;
+
+    margin-top: -5rem;   
 }
+
 
 .caixa-item {
     display: flex;
     justify-content: space-between;
     align-items: right;
+    margin-left: -17rem; 
     gap: 1rem;
     width: 100%;
 }

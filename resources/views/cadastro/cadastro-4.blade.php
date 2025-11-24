@@ -15,14 +15,14 @@
             </li>
             <li><strong>Email:</strong> {{ session('cadastro.email') }}</li>
         </ul>
+        <a href="{{ route('cadastro.reiniciar') }}" class="btn-back">Refazer Cadastro</a>
     </div>
     <form action="{{ route('cadastro.salvarEtapa') }}" method="POST">
         @csrf
         <input type="hidden" name="etapa" value="4">
         
-        <a href="{{ route('cadastro.reiniciar') }}" class="btn-back">Refazer Cadastro</a>
 
-        <button type="submit" class="btn-next">Concluir Cadastro</button>
+        <button type="submit" class="btn-concluir btn-perfil">Concluir Cadastro</button>
     </form>
 @endsection
 

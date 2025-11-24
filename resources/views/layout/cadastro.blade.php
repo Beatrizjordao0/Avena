@@ -26,7 +26,7 @@
                             $etapa = intVal($__env->yieldContent('etapa'));
                         @endphp
                 <div class="top-form-help-and-back">
-                        @if ($etapa > 1 && $etapa < 5)
+                        @if ($etapa > 1 && $etapa < 6)
                             <a href="{{ route('cadastro.cadastro-' . ($etapa - 1)) }}"><i class="fa-solid fa-circle-left"></i></a>
                         @elseif ($etapa == 1)
                             <a href="/login"><i class="fa-solid fa-circle-left"></i></a>
@@ -39,14 +39,14 @@
                 <div class="nunita-normal form-container ">
                     <div class="formform-heading">
                         <h1 class="nunita-normal">
-                            @if ($etapa == 4)
+                            @if ($etapa >= 4)
                                 Cadastro Concluído! 
                             @else  
                                 Cadastre-se
                             @endif
                         </h1>
                         <p>
-                            @if ($etapa == 4)
+                            @if ($etapa >= 4)
                                 Parabéns! Seu perfil foi criado com sucesso.
                             @else 
                                 Preencha os espaços com suas Informações.
@@ -68,7 +68,7 @@
                 </div>
                 
                 <div class="etapa-atual">
-                    @yield('etapa') /4 
+                    @yield('etapa') /5 
                 </div>
             </div>
         </div>

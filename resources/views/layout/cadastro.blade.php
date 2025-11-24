@@ -52,8 +52,6 @@
                                 Preencha os espaços com suas Informações.
                             @endif
                         </p>
-
-                        @yield("form-heading")
                     </div>
                     <form class="form-row form-column form-check" action="{{ route('cadastro.salvarEtapa') }}" method="POST">
                         @csrf
@@ -68,7 +66,7 @@
                 </div>
                 
                 <div class="etapa-atual">
-                    @yield('etapa') /5 
+                    @yield('etapa') /5
                 </div>
             </div>
         </div>

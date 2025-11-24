@@ -498,12 +498,6 @@ body {
 .btn-ingressar2:hover {
     opacity: 0.9;
 }
-
-<<<<<<< HEAD
-=======
-/*logo*/
-
->>>>>>> b8d16ccb0fd31bee08a33e043bd5affe2ab1351c
 .logo-avenajoin {
     position: absolute;
     top: 73%;
@@ -973,17 +967,14 @@ body {
 .retangulo2 {
     position: relative;
     z-index: 2;
-<<<<<<< HEAD
     top: 80px; /* posição do retângulo na página */
     left: 50%;
     transform: translateX(-50%);
     width: 62.5rem;
-=======
     top: 3rem;
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
->>>>>>> 6dc0bd7 (alterações finais do css)
     height: 37.5rem;
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57);

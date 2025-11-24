@@ -903,8 +903,8 @@ body {
     top: 120px; /* posição do retângulo na página */
     left: 50%;
     transform: translateX(-50%);
-    width: 1000px;
-    height: 600px;
+    width: 62.5rem;
+    height: 37.5rem;
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;
@@ -976,8 +976,8 @@ body {
     top: 120px; /* posição do retângulo na página */
     left: 50%;
     transform: translateX(-50%);
-    width: 1000px;
-    height: 600px;
+    width: 62.5rem;
+    height: 37.5rem;
     border: 2px solid #1b3558;
     background-color: rgba(255, 255, 255, 0.57); /* transparente */
     border-radius: 13px;

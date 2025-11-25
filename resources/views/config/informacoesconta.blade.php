@@ -18,7 +18,7 @@
                 <input class="input" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
                 
                 <label id="file-label" class="img" for="file">Documento profissional (opcional):</label>
-                <input class="file input" id="file" type="file" name="file_doc_prof" accept="image/*,.pdf">
+                <input class="file input" id="file" type="file" name="file_doc_prof">
                 <p id="file-name" class="file-name">Nenhum arquivo selecionado</p>
 
                 <button type="submit" class="btn-equipes">Enviar</button>

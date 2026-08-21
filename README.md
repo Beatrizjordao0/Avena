@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="public\img\logo-avena-removebg-preview.png" alt="Minha foto" width="400" style="text-align: center;" />
+  <img src="public/img/logo-avena-removebg-preview.png" alt="Minha foto" width="400" style="text-align: center;" />
 </div>
 
 # AVENA
@@ -161,13 +161,14 @@ Clone o repositório
 Entre no diretório do projeto
 
 ```bash
-  cd avena
+  cd Avena
 ```
 
 Instale as dependências
 
 ```bash
-  composer install
+composer install
+npm install
 ```
 
 Configure o arquivo de ambiente
@@ -188,11 +189,6 @@ Inicie o servidor local
   php artisan serve
 ```
 
-Em caso de erro com o php, resolva com esta linha de comando:
-
-```bash
-rm -rf ~/.php && sed -i '/\.php\/current\/bin/d' ~/.bashrc ~/.profile 2>/dev/null; sudo apt remove --purge -y php php7.* php8.*; sudo apt autoremove -y; sudo add-apt-repository -y ppa:ondrej/php; sudo apt update; sudo apt install -y php8.2 php8.2-cli php8.2-common php8.2-mbstring php8.2-xml php8.2-curl php8.2-mysql php8.2-zip php8.2-gd php8.2-intl php8.2-sqlite3 php8.2-bcmath composer unzip; hash -r; composer install; [ ! -f .env ] && cp .env.example .env; php artisan key:generate; php artisan migrate --force; php artisan storage:link
-```
 
 ## Documentação - Pré-projeto
 
@@ -217,6 +213,9 @@ Para garantir o funcionamento adequado, recomenda-se:
 
 -   PHP 8.x ou superior
 -   Composer atualizado
+-   Node.js e npm compatíveis com o `package-lock.json`
+
+As dependências são reconstruídas com `composer install` e `npm install`; as pastas `vendor`, `node_modules` e `public/node_modules` não devem ser versionadas.
 
 A aplicação pode ser iniciada em ambiente de desenvolvimento utilizando o comando php artisan serve.
 
@@ -236,8 +235,8 @@ Esta seção apresenta funcionalidades e melhorias planejadas para futuras vers�
 
 ## Autores
 
--   Alyson Coutinho - 01812644
--   Arthur Fernandes - 01848451
--   Beatriz Jordão - 01812582
--   Júlia Evelyn - 01803734
--   Lívia Moreno - 01800123
+-   Alyson Coutinho
+-   Arthur Fernandes
+-   Beatriz Jordão
+-   Júlia Evelyn
+-   Lívia Moreno

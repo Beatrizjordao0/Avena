@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="public\img\logo-avena-removebg-preview.png" alt="Minha foto" width="400" style="text-align: center;" />
+  <img src="public/img/logo-avena-removebg-preview.png" alt="Minha foto" width="400" style="text-align: center;" />
 </div>
 
 # AVENA
@@ -161,13 +161,14 @@ Clone o repositório
 Entre no diretório do projeto
 
 ```bash
-  cd avena
+  cd Avena
 ```
 
 Instale as dependências
 
 ```bash
-  composer install
+composer install
+npm install
 ```
 
 Configure o arquivo de ambiente
@@ -217,6 +218,9 @@ Para garantir o funcionamento adequado, recomenda-se:
 
 -   PHP 8.x ou superior
 -   Composer atualizado
+-   Node.js e npm compatíveis com o `package-lock.json`
+
+As dependências são reconstruídas com `composer install` e `npm install`; as pastas `vendor`, `node_modules` e `public/node_modules` não devem ser versionadas.
 
 A aplicação pode ser iniciada em ambiente de desenvolvimento utilizando o comando php artisan serve.
 
@@ -236,8 +240,8 @@ Esta seção apresenta funcionalidades e melhorias planejadas para futuras vers�
 
 ## Autores
 
--   Alyson Coutinho - 01812644
--   Arthur Fernandes - 01848451
--   Beatriz Jordão - 01812582
--   Júlia Evelyn - 01803734
--   Lívia Moreno - 01800123
+-   Alyson Coutinho
+-   Arthur Fernandes
+-   Beatriz Jordão
+-   Júlia Evelyn
+-   Lívia Moreno

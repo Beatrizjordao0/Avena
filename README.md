@@ -189,11 +189,6 @@ Inicie o servidor local
   php artisan serve
 ```
 
-Em caso de erro com o php, resolva com esta linha de comando:
-
-```bash
-rm -rf ~/.php && sed -i '/\.php\/current\/bin/d' ~/.bashrc ~/.profile 2>/dev/null; sudo apt remove --purge -y php php7.* php8.*; sudo apt autoremove -y; sudo add-apt-repository -y ppa:ondrej/php; sudo apt update; sudo apt install -y php8.2 php8.2-cli php8.2-common php8.2-mbstring php8.2-xml php8.2-curl php8.2-mysql php8.2-zip php8.2-gd php8.2-intl php8.2-sqlite3 php8.2-bcmath composer unzip; hash -r; composer install; [ ! -f .env ] && cp .env.example .env; php artisan key:generate; php artisan migrate --force; php artisan storage:link
-```
 
 ## Documentação - Pré-projeto
 
